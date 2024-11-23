@@ -54,7 +54,7 @@ public class Boss_original : MonoBehaviour
         isMonkey = false;
 
         //순찰 포인트 미지정
-        if (wayPoints.Count == 0)
+        if (wayPoints.Count == 0 || wayPoints[0] == null)
         {
             Debug.LogError("순찰 포인트 미지정!");
 #if UNITY_EDITOR
