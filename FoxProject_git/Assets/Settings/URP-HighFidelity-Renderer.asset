@@ -40,8 +40,8 @@ MonoBehaviour:
       type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
-  - {fileID: 8806476430547532702}
-  m_RendererFeatureMap: adc0de57c6d2eee59ebba2a5a7e3367a
+  - {fileID: 3765379812766463730}
+  m_RendererFeatureMap: adc0de57c6d2eee5f2365f68fd504134
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_ClusteredRendering: 0
   m_TileSize: 32
   m_IntermediateTextureMode: 0
---- !u!114 &8806476430547532702
+--- !u!114 &3765379812766463730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,22 +91,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edc2bda8c75632d468f6c82c1bc444d1, type: 3}
-  m_Name: ScreenSpaceOutlines
+  m_Script: {fileID: 11500000, guid: 907f5fc07e93f6247bdfb5b9941c3544, type: 3}
+  m_Name: ScreenSpaceOutlinesBoss
   m_EditorClassIdentifier: 
-  m_Active: 0
-  renderPassEvent: 300
+  m_Active: 1
+  renderPassEvent: 350
   outlinesLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 64
+  outlinesLayerMask_Boss:
+    serializedVersion: 2
+    m_Bits: 256
+  outlinesLayerMask_obj1:
+    serializedVersion: 2
+    m_Bits: 128
+  outlinesLayerMask_obj2:
+    serializedVersion: 2
+    m_Bits: 1
   outlinesOccluderLayerMask:
     serializedVersion: 2
     m_Bits: 0
   outlineSettings:
-    outlineColor: {r: 1, g: 1, b: 1, a: 1}
-    outlineScale: 1
+    outlineColor: {r: 0, g: 0.06660771, b: 1, a: 1}
+    outlineColor_Boss: {r: 1, g: 0, b: 0, a: 1}
+    outlineColor_obj1: {r: 0, g: 1, b: 0, a: 1}
+    outlineColor_obj2: {r: 1, g: 1, b: 1, a: 1}
+    outlineScale: 1.21
     depthThreshold: 1.5
-    robertsCrossMultiplier: 100
+    robertsCrossMultiplier: 20
     normalThreshold: 0.4
     steepAngleThreshold: 0.2
     steepAngleMultiplier: 25
@@ -114,7 +126,7 @@ MonoBehaviour:
     colorFormat: 0
     depthBufferBits: 16
     filterMode: 0
-    backgroundColor: {r: 1, g: 0.09433961, b: 0.09433961, a: 1}
+    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
     perObjectData: 0
     enableDynamicBatching: 0
     enableInstancing: 0

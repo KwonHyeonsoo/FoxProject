@@ -13,8 +13,10 @@ public class LightReceiver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         controller = GetComponent<LightController>();
-        type = controller.type;
+        type = controller.type = light_type.receiver;
+
     }
 
     private void LateUpdate()

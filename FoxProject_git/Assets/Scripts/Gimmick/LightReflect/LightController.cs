@@ -6,8 +6,10 @@ public enum light_type { emitter, receiver, reflector };
 
 public class LightController : MonoBehaviour
 { 
-    public light_type type;
+    [HideInInspector] public light_type type;
     private RaycastHit hit;
+
+    [SerializeField] bool isClear =false;
 
     public void ReceiveRay(RaycastHit hit)
     {
@@ -20,8 +22,19 @@ public class LightController : MonoBehaviour
         return type;
     }
 
-    public void LightTrigger()
+    public void LightTrigger(RaycastHit hit)
     {
-        
+        hit = this.hit;
+
+        switch (type) 
+        {
+            case (light_type.receiver):
+                isClear = true;
+                break;
+            default:
+                break;
+
+        }
+
     }
 }

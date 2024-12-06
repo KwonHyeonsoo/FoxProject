@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 //상태에 따른 행동만 적을 것!!! 상태변화는 여기서 하는게 아님!!!!!!!111
@@ -146,8 +147,11 @@ public class LookaroundState : BossBaseStates
 
     public override void OnStateUpdate()
     {
-
-        //Debug.Log(innerTimer);
+        //좌회전
+        _boss.RotateView(Quaternion.Euler(Vector3.left), 3f);
+        //원위치
+        //우회전
+        //원위치
     }
 
     public override void OnStateEnd()

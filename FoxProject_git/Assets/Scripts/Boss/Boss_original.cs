@@ -198,6 +198,7 @@ public class Boss_original : MonoBehaviour
         //state에 따라 애니메이션 적용
     }
 
+    #region 길찾기
     public void setNewWaypoints()
     {
         int nextNumber;
@@ -264,6 +265,7 @@ public class Boss_original : MonoBehaviour
     {
         agent.isStopped = true;
     }
+    #endregion
 
     public List<Transform> getTargetsList()
     {
@@ -280,8 +282,10 @@ public class Boss_original : MonoBehaviour
     public void StartLookaround() { 
         setState(BossStateEnum.lookaround);
     }
-    public void RotateView()
+    public void RotateView(Quaternion angle, float rotationTime)
     {
-        //LayerMask = 1;
+        Quaternion newRotation = angle;
+
+        fieldofView_obj.transform.rotation = Quaternion.Slerp(fieldofView_obj.transform.rotation, newRotation , 2);
     }
 }

@@ -13,7 +13,7 @@ public class LightReflector : MonoBehaviour
     void Start()
     {
         controller = GetComponent<LightController>();
-        type = controller.type;
+        type = controller.type = light_type.reflector;
     }
 
     private void LateUpdate()

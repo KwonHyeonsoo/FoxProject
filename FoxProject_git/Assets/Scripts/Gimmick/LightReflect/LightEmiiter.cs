@@ -17,12 +17,14 @@ public class LightEmiiter : MonoBehaviour
 
     public GameObject laserObject;
     LineRenderer LRender;
-
+    LightController controller;
+    light_type type;
     // Start is called before the first frame update
     void Start()
     {
-        LRender = laserObject.GetComponent<LineRenderer>(); 
-
+        LRender = laserObject.GetComponent<LineRenderer>();
+        controller = GetComponent<LightController>();
+        type = controller.type = light_type.emitter;
 
         mask = LayerMask.GetMask("Map");
         reRaycast();
@@ -71,7 +73,9 @@ public class LightEmiiter : MonoBehaviour
                 }
                 else if (component.getLightType() == light_type.receiver)
                 {
-                    component.LightTrigger();
+                    component.LightTrigger(hit);
+
+                    break;
                 }
                 else { break; }
                     
