@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
 
     #endregion
 
-    private GameObject boss;
+    //private GameObject boss;
 
     //이동
     [Range(0.5f, 10f)] public float moveSpeed = 1;  //기본 달리기 속도
@@ -21,15 +21,18 @@ public class PlayerControl : MonoBehaviour
     Vector3 direction;  //이동 방향
     private Vector3 moveForce;  //기본 이동 * 이동 방향
 
-    //달리기
-    [Range(0.5f, 10f)] public float runSpeed = 2;  //달리기 속도
+    ////달리기
+    //[Range(0.5f, 10f)] public float runSpeed = 2;  //달리기 속도
     [Range(0.1f, 1f)] public float stealthSpeed = 0.5f;  //달리기 속도
-
+    private bool isStealth;
+    private Vector3 camNormalHeigjt;
+    private Vector3 camStealthHeigjt;
     private float currentSpeed = 1; //현재 적용할 달리기 속도
 
     //점프
     [Range(0f, 50f)] public float JumpScale;
     [Range(-0f, -50f)] public float gravity;
+    private float jumpBuffer = 0;
 
     //카메라 회전
     [SerializeField]
@@ -62,23 +65,42 @@ public class PlayerControl : MonoBehaviour
 
         #endregion
 
+        isStealth = false;
+        camNormalHeigjt = cam.transform.localPosition ;
+        camStealthHeigjt = cam.transform.localPosition + new Vector3(0f,-0.5f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        jumpBuffer -= Time.deltaTime;
     }
 
     private void FixedUpdate()
     {
         //캐릭터 이동
         characterCtrl.Move(transform.rotation * moveForce * currentSpeed * Time.deltaTime);
-
+                            //이동 방향         걷기 속도   스텔스&달리기 유무
         //중력 적용
         if (!characterCtrl.isGrounded)
         {
             moveForce.y += gravity * Time.deltaTime;
+
+            
+        }
+        else if (isStealth)   //미리 스텔스를 찍어놨다면 바닥에 닿자마자 스텔스 모드
+        {
+            currentSpeed = stealthSpeed;
+            cam.transform.localPosition = camStealthHeigjt;
+        }
+        else        
+        {
+            moveForce = direction;  //바닥에 닿았을 때 이동 버튼 뗀거 적용
+
+            if (jumpBuffer > 0)//점프 버퍼
+            {
+                moveForce.y = JumpScale;
+            }
         }
 
     }
@@ -87,118 +109,116 @@ public class PlayerControl : MonoBehaviour
 /*
  * Disabled, Waiting, Started, Performed, Canceled
  */
-public void OnMove(InputAction.CallbackContext value)
-{
-    if (characterCtrl.isGrounded)
+    public void OnMove(InputAction.CallbackContext value)
     {
-        float directionX = value.ReadValue<Vector2>().x;
-        float directionY = value.ReadValue<Vector2>().y;
-        direction = new Vector3(directionX, direction.y, directionY).normalized * moveSpeed;
-
-        moveForce = direction;
-    }
-
-}
-
-public void OnRun(InputAction.CallbackContext value)
-{
-    if (characterCtrl.isGrounded ) // && currentStamina > 0)
-    {
-        currentSpeed = 1 + (runSpeed * value.ReadValue<float>());
-
-    }
-    if (value.canceled)
-    {
-
-    }
-
-}
-
-public void OnStealth(InputAction.CallbackContext value)
-{
-    if (characterCtrl.isGrounded) // && currentStamina > 0)
-    {
-        if (value.started)
+        if (characterCtrl.isGrounded)
         {
-            currentSpeed = stealthSpeed;
-            cam.transform.position += new Vector3(0, -0.5f, 0);
-
+            float directionX = value.ReadValue<Vector2>().x;
+            float directionY = value.ReadValue<Vector2>().y;
+            direction = new Vector3(directionX, direction.y, directionY).normalized * moveSpeed;
+    
+            moveForce = direction;
         }
-        else if (value.canceled)
+        else
         {
-            currentSpeed = 1;
-            cam.transform.position += new Vector3(0, +0.5f, 0);
-
-
+            float directionX = value.ReadValue<Vector2>().x;
+            float directionY = value.ReadValue<Vector2>().y;
+            direction = new Vector3(directionX, direction.y, directionY).normalized * moveSpeed;
         }
+    
     }
 
-}
-
-public void OnJump(InputAction.CallbackContext value)
-{
-    if (characterCtrl.isGrounded)
+    public void OnStealth(InputAction.CallbackContext value)
     {
-        moveForce.y = JumpScale;
+    //if (characterCtrl.isGrounded) // && currentStamina > 0)
+        {
+            if (value.started)
+            {
+                isStealth = true;
 
+                if (characterCtrl.isGrounded) // && currentStamina > 0)
+                {
+                    currentSpeed = stealthSpeed;
+                    cam.transform.localPosition = camStealthHeigjt;
+                }
+
+            }
+            else if (value.canceled)
+            {
+               isStealth = false;
+                currentSpeed = 1;
+                cam.transform.localPosition = camNormalHeigjt;
+            }
+        }
+    
     }
-}
+
+    public void OnJump(InputAction.CallbackContext value)
+    {
+        if (characterCtrl.isGrounded && !isStealth)
+        {
+            moveForce.y = JumpScale;
+    
+        }
+        else if(!characterCtrl.isGrounded && !isStealth)  //점프 버퍼
+        {   jumpBuffer = 0.05f;    }
+    }
 
 #endregion
 
 #region Camera Rotate
-public void rotateOnOff(bool on)
-{
-    if (on)
+    public void rotateOnOff(bool on)
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        rotateLock = false;
-    }
-    else
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        rotateLock = true;
-    }
-    Debug.Log("rotatteLock : " + rotateLock);
-}
-
-public void onCameraRotate(InputAction.CallbackContext value)
-{
-    if (!rotateLock)
-    {
-        float mouseX = value.ReadValue<Vector2>().x;// - i_width / 2;
-        float mouseY = value.ReadValue<Vector2>().y;// - i_height / 2;
-
-        eulerAngleY = mouseX * rotCamXAxisSpeed * Time.fixedDeltaTime;
-        eulerAngleX = mouseY * rotCamXAxisSpeed * Time.fixedDeltaTime * ((float)i_height / i_width);
-
-        eulerAngleX = ClampAngle(eulerAngleX, limitMinX, limitMaxX);
-
-        //camera up and down rotate
-        cam.transform.rotation *= Quaternion.Euler(-eulerAngleX, 0, 0);
-
-        //gameobject transfomr left and right rotate ( for move forward direction ) dho gksrmf dkseho
-        transform.rotation *= Quaternion.Euler(0, eulerAngleY, 0);
-
-        if (cam.transform.localEulerAngles.y > 0 || cam.transform.localEulerAngles.z > 0)
+        if (on)
         {
-            cam.transform.localRotation = Quaternion.Euler(cam.transform.localRotation.eulerAngles.x, 0, 0);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            rotateLock = false;
         }
-
-
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            rotateLock = true;
+        }
+        Debug.Log("rotatteLock : " + rotateLock);
     }
-
-}
-
-private float ClampAngle(float angle, float min, float max)
-{
-    if (angle < -360) angle += 360;
-    if (angle > 360) angle -= 360;
-
-    return Mathf.Clamp(angle, min, max);
-}
-
-#endregion
+    
+    public void onCameraRotate(InputAction.CallbackContext value)
+    {
+        if (!rotateLock)
+        {
+            float mouseX = value.ReadValue<Vector2>().x;// - i_width / 2;
+            float mouseY = value.ReadValue<Vector2>().y;// - i_height / 2;
+    
+            eulerAngleY = mouseX * rotCamXAxisSpeed * Time.fixedDeltaTime;
+            eulerAngleX = mouseY * rotCamXAxisSpeed * Time.fixedDeltaTime * ((float)i_height / i_width);
+    
+            eulerAngleX = ClampAngle(eulerAngleX, limitMinX, limitMaxX);
+    
+            //camera up and down rotate
+            cam.transform.rotation *= Quaternion.Euler(-eulerAngleX, 0, 0);
+    
+            //gameobject transfomr left and right rotate ( for move forward direction ) dho gksrmf dkseho
+            transform.rotation *= Quaternion.Euler(0, eulerAngleY, 0);
+    
+            if (cam.transform.localEulerAngles.y > 0 || cam.transform.localEulerAngles.z > 0)
+            {
+                cam.transform.localRotation = Quaternion.Euler(cam.transform.localRotation.eulerAngles.x, 0, 0);
+            }
+    
+    
+        }
+    
+    }
+    
+    private float ClampAngle(float angle, float min, float max)
+    {
+        if (angle < -360) angle += 360;
+        if (angle > 360) angle -= 360;
+    
+        return Mathf.Clamp(angle, min, max);
+    }
+    
+    #endregion
 }

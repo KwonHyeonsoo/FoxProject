@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907f5fc07e93f6247bdfb5b9941c3544, type: 3}
   m_Name: ScreenSpaceOutlinesBoss
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   renderPassEvent: 350
   outlinesLayerMask:
     serializedVersion: 2
@@ -112,11 +112,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   outlineSettings:
-    outlineColor: {r: 0, g: 0.06660771, b: 1, a: 1}
-    outlineColor_Boss: {r: 1, g: 0, b: 0, a: 1}
+    outlineColor: {r: 0.1981132, g: 0.2553908, b: 1, a: 1}
+    outlineColor_Boss: {r: 0.6933962, g: 0.32053223, b: 0.32053223, a: 1}
     outlineColor_obj1: {r: 0, g: 1, b: 0, a: 1}
     outlineColor_obj2: {r: 1, g: 1, b: 1, a: 1}
-    outlineScale: 1.21
+    outlineScale: 1.4
     depthThreshold: 1.5
     robertsCrossMultiplier: 20
     normalThreshold: 0.4

@@ -6,7 +6,7 @@ using System.Drawing;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public struct Line { public Vector3 start, end; }
+public struct Line { public Vector3 start, end; }   //start 필요 없고 end만 넣으겜
 
 [RequireComponent(typeof(LightController))]
 public class LightEmiiter : MonoBehaviour
@@ -74,23 +74,32 @@ public class LightEmiiter : MonoBehaviour
                 else if (component.getLightType() == light_type.receiver)
                 {
                     component.LightTrigger(hit);
-
-                    break;
+                    return; 
+                    //break;
                 }
-                else { break; }
-                    
+                else//경로를 방해하는 물체에 부딪혔을 때
+                {
 
-
-
+                    return;
+                    break; }
             }
-            else
+            else//경로를 방해하는 물체에 부딪혔을 때
             {
+                Line tmp = new Line();
+                tmp.start = ray.origin;
+                tmp.end = hit.point;
+                lasers.Add(tmp);
+                return;
                 break;
-                
-
             }
+
         }
-        
+        //부딪히지 않았을 때 //작은 직선 내뿜기
+        Line a = new Line();
+        a.start = ray.origin;
+        a.end = ray.origin + ray.direction * 10;
+        lasers.Add(a);
+
     }
 
     private void DrawLaser()
@@ -102,7 +111,7 @@ public class LightEmiiter : MonoBehaviour
 
             laserObject.transform.rotation = Quaternion.Euler(rotateVector);
 
-            Vector3 initOffset = lasers[0].start;
+            Vector3 initOffset = lasers[0].start;   //위치 조정
 
             LRender.positionCount = lasers.Count + 1;
             LRender.SetPosition(0, lasers[0].start - initOffset);
