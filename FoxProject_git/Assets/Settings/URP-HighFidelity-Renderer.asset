@@ -95,28 +95,28 @@ MonoBehaviour:
   m_Name: ScreenSpaceOutlinesBoss
   m_EditorClassIdentifier: 
   m_Active: 0
-  renderPassEvent: 350
+  renderPassEvent: 550
   outlinesLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1
   outlinesLayerMask_Boss:
     serializedVersion: 2
     m_Bits: 256
   outlinesLayerMask_obj1:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   outlinesLayerMask_obj2:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 128
   outlinesOccluderLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   outlineSettings:
-    outlineColor: {r: 0.1981132, g: 0.2553908, b: 1, a: 1}
+    outlineColor: {r: 1, g: 1, b: 1, a: 1}
     outlineColor_Boss: {r: 0.6933962, g: 0.32053223, b: 0.32053223, a: 1}
     outlineColor_obj1: {r: 0, g: 1, b: 0, a: 1}
     outlineColor_obj2: {r: 1, g: 1, b: 1, a: 1}
-    outlineScale: 1.4
+    outlineScale: 4.1
     depthThreshold: 1.5
     robertsCrossMultiplier: 20
     normalThreshold: 0.4
@@ -126,7 +126,7 @@ MonoBehaviour:
     colorFormat: 0
     depthBufferBits: 16
     filterMode: 0
-    backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+    backgroundColor: {r: 0, g: 0, b: 0, a: 1}
     perObjectData: 0
     enableDynamicBatching: 0
     enableInstancing: 0

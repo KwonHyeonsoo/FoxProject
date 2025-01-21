@@ -16,6 +16,7 @@ public class LightReceiver : MonoBehaviour
         
         controller = GetComponent<LightController>();
         type = controller.type = light_type.receiver;
+        controller.isClear = false;
 
     }
 

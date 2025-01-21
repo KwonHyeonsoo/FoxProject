@@ -40,7 +40,7 @@ public class Boss_original : MonoBehaviour
         patrol, //순찰 걷기
         idle,   //순찰 잠깐 정지
         chase,  //플레이어 추격
-        fury,    //플레이어 더이상 추격 불가
+        fury,    //플레이어 더이상 추격 불가 땜빵용상태 아무의미 없음
         lookaround  //플레이어가 근처에 있을때 두리번 거리기
     }
     [SerializeField] protected BossStateEnum _state;
