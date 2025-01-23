@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -79,9 +80,8 @@ public class LightEmiiter : MonoBehaviour
                 }
                 else//경로를 방해하는 물체에 부딪혔을 때
                 {
-
                     return;
-                    break; }
+                }
             }
             else//경로를 방해하는 물체에 부딪혔을 때
             {
@@ -109,8 +109,9 @@ public class LightEmiiter : MonoBehaviour
             laserObject.SetActive(true);
             Vector3 rotateVector = lasers[0].end - lasers[0].start;
 
-            laserObject.transform.rotation = Quaternion.Euler(rotateVector);
-
+            laserObject.transform.rotation = quaternion.Euler (0, Quaternion.Euler(rotateVector).y, 0);
+            //laserObject.transform.eulerAngles = rotateVector;
+            //Debug.Log(rotateVector +" "+ quaternion.Euler(0, Quaternion.Euler(rotateVector).y, 0));
             Vector3 initOffset = lasers[0].start;   //위치 조정
 
             LRender.positionCount = lasers.Count + 1;

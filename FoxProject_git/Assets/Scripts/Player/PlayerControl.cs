@@ -24,6 +24,7 @@ public class PlayerControl : MonoBehaviour
     private IEnumerator raycastCoroutine;
     RaycastHit hitData;
     ////달리기
+    ///
     //[Range(0.5f, 10f)] public float runSpeed = 2;  //달리기 속도
     [Range(0.1f, 1f)] public float stealthSpeed = 0.5f;  //달리기 속도
     private bool isStealth;
@@ -31,6 +32,7 @@ public class PlayerControl : MonoBehaviour
     private Vector3 camStealthHeigjt;
     private float currentSpeed = 1; //현재 적용할 달리기 속도
     Vector3 slopeVec;
+    float height;
 
     //점프
     [Range(0f, 50f)] public float JumpScale;
@@ -38,6 +40,7 @@ public class PlayerControl : MonoBehaviour
     [Range(-0f, -50f)] public float gravity;
     private float jumpBuffer = 0;
     [Range(0f, 5f)] public float raymaxDistance = 1.1f;
+
     //카메라 회전
     [SerializeField]
     [Range(0.5f, 5f)] public float rotCamXAxisSpeed = 5; //카메라 x축 회전속도
@@ -68,6 +71,7 @@ public class PlayerControl : MonoBehaviour
 
         #endregion
 
+        height = characterCtrl.height * transform.localScale.y + 0.1f;
         isStealth = false;
         camNormalHeigjt = cam.transform.localPosition ;
         camStealthHeigjt = cam.transform.localPosition + new Vector3(0f,-0.5f, 0f);
@@ -88,7 +92,7 @@ public class PlayerControl : MonoBehaviour
         //중력 적용
         if (!IsCheckGrounded())
         {
-            Debug.Log(false);
+            //Debug.Log(false);
             moveForce.y += gravity * Time.deltaTime;
         }
         else if (isStealth)   //미리 스텔스를 찍어놨다면 바닥에 닿자마자 스텔스 모드
@@ -107,7 +111,7 @@ public class PlayerControl : MonoBehaviour
         }
         if (IsCheckGrounded())  //이동 적용
         {
-            Debug.Log(true);
+            //Debug.Log(true);
             moveForce = new Vector3(slopeVec.x, slopeVec.y, slopeVec.z);
         }
 
@@ -143,7 +147,7 @@ public class PlayerControl : MonoBehaviour
         while (true)
         {
             Ray r = new Ray(transform.position, Vector3.down);
-            Physics.Raycast(r, out hitData, 2f, ~(1 << 7));
+            Physics.Raycast(r, out hitData, height, ~(1 << 7));
             slopeVec = Vector3.ProjectOnPlane(transform.rotation * direction, hitData.normal).normalized * moveSpeed;
 
             yield return new WaitForSeconds(time);
@@ -201,7 +205,7 @@ public class PlayerControl : MonoBehaviour
         // 약간 신체에 박혀 있는 위치로부터 발사하지 않으면 제대로 판정할 수 없을 때가 있다.
         var ray = new Ray(this.transform.position , Vector3.down);
         // 탐색 거리
-        var maxDistance = raymaxDistance;
+        var maxDistance = height;
         // 광선 디버그 용도
         Debug.DrawRay(transform.position , Vector3.down * maxDistance, Color.red);
         // Raycast의 hit 여부로 판정

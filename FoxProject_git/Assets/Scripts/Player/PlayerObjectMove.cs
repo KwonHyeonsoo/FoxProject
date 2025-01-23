@@ -5,6 +5,7 @@ using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 using UnityEngine.InputSystem;
 using TMPro;
+using Unity.VisualScripting;
 
 /*
  * 
@@ -25,8 +26,9 @@ public class PlayerObjectMove : MonoBehaviour
     public float rotationAngle = 5f;
     public float rotationInterTime = 0.1f;
     private IEnumerator rotateCoroutine;
+    private bool isRotate = false;
 
-    private bool isAbleHold;
+    [SerializeField]private bool isAbleHold;
     private bool isHold;
 
     private GameObject holdingObject;
@@ -42,7 +44,7 @@ public class PlayerObjectMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(isRotate && !isAbleHold) StopCoroutine(rotateCoroutine);
     }
 
     IEnumerator CaptureObjectLoop(float time)
@@ -62,10 +64,12 @@ public class PlayerObjectMove : MonoBehaviour
         {
             rotateCoroutine = RotateObjectPerSecond(rotationInterTime, context.ReadValue<float>() > 0, rotationAngle, holdingObject);
             StartCoroutine(rotateCoroutine);
+            isRotate = true;
         }
-        else if (context.canceled)
+        else if (isRotate&& context.canceled)
         {
             StopCoroutine(rotateCoroutine);
+            isRotate= false;
         }
     }
 
@@ -97,40 +101,51 @@ public class PlayerObjectMove : MonoBehaviour
         holdText.gameObject.SetActive(false);
         isAbleHold = false;
 
-        if (Physics.Raycast(ray, out hit, 10f, mask))
+        if (Physics.Raycast(ray, out hit, 10f, mask) && hit.collider.gameObject.GetComponent<LightController>())
         {
-            //Debug.Log(Vector3.Angle(transform.forward, hit.normal));
-            if (Vector3.Angle(transform.forward, hit.normal) > viewAngle)
+            if (hit.collider.gameObject.GetComponent<LightController>().getLightType() == light_type.reflector)
             {
-                //Debug.Log("ok");
-                holdingObject = hit.collider.transform.gameObject;
-                holdText.gameObject.SetActive(true);
-                isAbleHold =true; 
+                //Debug.Log(Vector3.Angle(transform.forward, hit.normal));
+                if (Vector3.Angle(transform.forward, transform.position - hit.transform.position) > viewAngle)
+                {
+                    Debug.Log("ok");
+                    holdingObject = hit.collider.transform.gameObject;
+                    holdText.gameObject.SetActive(true);
+                    isAbleHold = true;
+                }
             }
         }
-
     }
 
-    public void Hold()
+    public GameObject decal;
+    public void Hold(InputAction.CallbackContext context)
     {
-        if (!isAbleHold) return;
 
-        isHold = !isHold;
+        if (context.performed)
+        {
+            if (!isAbleHold) return;
 
-        if (isHold)
-        {
-            holdingObject.SetActive(false);
-            holdText.text = "Holdingggg";
-            holdText.gameObject.SetActive(true);
-        }
-        else
-        {
-            holdingObject.SetActive(true);
-            holdingObject.transform.position = transform.position;
-            holdText.text = "Holdingggg";
-            holdText.gameObject.SetActive(false);
+            isHold = !isHold;
+
+            if (isHold)
+            {
+                holdingObject.SetActive(false);
+                holdText.text = "Holdingggg";
+                holdText.gameObject.SetActive(true);
+            }
+            else
+            {
+                holdingObject.SetActive(true);
+
+                holdingObject.transform.position =
+                    new Vector3(decal.transform.position.x, holdingObject.transform.position.y, decal.transform.position.z);
+                holdingObject.transform.rotation = //quaternion.identity;
+                    transform.rotation;
+                //decal 
+                holdText.text = "Hold";
+                holdText.gameObject.SetActive(false);
+            }
         }
     }
 
-    
 }
