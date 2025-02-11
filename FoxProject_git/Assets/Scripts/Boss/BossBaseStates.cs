@@ -95,7 +95,7 @@ public class ChaseState : BossBaseStates
 
     public override void OnStateUpdate()
     {
-        if(!_boss.getTarget())
+        if(_boss.getTarget())
             _boss.updateDestination(_boss.getTarget());
     }
 

@@ -20,6 +20,8 @@ public class LightEmiiter : MonoBehaviour
     LineRenderer LRender;
     LightController controller;
     light_type type;
+
+    LightController Old_receiver;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,11 @@ public class LightEmiiter : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        reRaycast();
+        DrawLaser();
+    }
     void reRaycast()
     {
         Ray ray = new Ray();
@@ -46,9 +53,12 @@ public class LightEmiiter : MonoBehaviour
         Physics.Raycast(ray, out hit, 100f, mask);
         Debug.DrawLine(ray.origin, hit.point, UnityEngine.Color.red);
         
-        while (hit.collider != null)
+        while (hit.collider != null)    
         {
+            Debug.Log("reRaycast");
             component = hit.transform.GetComponent<LightController>();
+
+            if (Old_receiver) { Old_receiver.LightUntrigger(hit); }
 
             if (component != null)
             {
@@ -75,8 +85,8 @@ public class LightEmiiter : MonoBehaviour
                 else if (component.getLightType() == light_type.receiver)
                 {
                     component.LightTrigger(hit);
+                    Old_receiver = component;
                     return; 
-                    //break;
                 }
                 else//경로를 방해하는 물체에 부딪혔을 때
                 {
@@ -90,10 +100,10 @@ public class LightEmiiter : MonoBehaviour
                 tmp.end = hit.point;
                 lasers.Add(tmp);
                 return;
-                break;
             }
 
         }
+        if (Old_receiver) { Old_receiver.LightUntrigger(hit); }
         //부딪히지 않았을 때 //작은 직선 내뿜기
         Line a = new Line();
         a.start = ray.origin;
@@ -124,9 +134,5 @@ public class LightEmiiter : MonoBehaviour
         }
         else laserObject.SetActive(false);
     }
-    private void FixedUpdate()
-    {
-        reRaycast();
-        DrawLaser();
-    }
+    
 }

@@ -122,25 +122,25 @@ MonoBehaviour:
   renderPassEvent: 550
   outlinesLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4294967295
   outlinesLayerMask_Boss:
     serializedVersion: 2
     m_Bits: 256
   outlinesLayerMask_obj1:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   outlinesLayerMask_obj2:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   outlinesOccluderLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   outlineSettings:
     outlineColor: {r: 1, g: 1, b: 1, a: 1}
     outlineColor_Boss: {r: 0.6933962, g: 0.32053223, b: 0.32053223, a: 1}
     outlineColor_obj1: {r: 0, g: 1, b: 0, a: 1}
     outlineColor_obj2: {r: 1, g: 1, b: 1, a: 1}
-    outlineScale: 4.1
+    outlineScale: 2.4
     depthThreshold: 1.5
     robertsCrossMultiplier: 20
     normalThreshold: 0.4

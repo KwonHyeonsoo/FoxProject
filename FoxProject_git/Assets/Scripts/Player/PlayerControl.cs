@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 using static System.Net.WebRequestMethods;
 
 [RequireComponent(typeof(CharacterController))]
@@ -23,6 +24,10 @@ public class PlayerControl : MonoBehaviour
     private Vector3 moveForce;  //기본 이동 * 이동 방향
     private IEnumerator raycastCoroutine;
     RaycastHit hitData;
+
+    public Collider NormalCollider;
+    public Collider StealthCollider;
+
     ////달리기
     ///
     //[Range(0.5f, 10f)] public float runSpeed = 2;  //달리기 속도
@@ -39,7 +44,7 @@ public class PlayerControl : MonoBehaviour
     private float jumpForce;
     [Range(-0f, -50f)] public float gravity;
     private float jumpBuffer = 0;
-    [Range(0f, 5f)] public float raymaxDistance = 1.1f;
+    [Range(0f, 5f)] public float raymaxDistance = 1.0f;
 
     //카메라 회전
     [SerializeField]
@@ -92,13 +97,14 @@ public class PlayerControl : MonoBehaviour
         //중력 적용
         if (!IsCheckGrounded())
         {
-            //Debug.Log(false);
             moveForce.y += gravity * Time.deltaTime;
         }
         else if (isStealth)   //미리 스텔스를 찍어놨다면 바닥에 닿자마자 스텔스 모드
         {
             currentSpeed = stealthSpeed;
-            cam.transform.localPosition = camStealthHeigjt;
+            cam.transform.DOLocalMoveY(camStealthHeigjt.y, 0.1f);
+            StealthCollider.enabled = true;
+            NormalCollider.enabled = false;
         }
         else        
         {
@@ -111,7 +117,6 @@ public class PlayerControl : MonoBehaviour
         }
         if (IsCheckGrounded())  //이동 적용
         {
-            //Debug.Log(true);
             moveForce = new Vector3(slopeVec.x, slopeVec.y, slopeVec.z);
         }
 
@@ -151,23 +156,23 @@ public class PlayerControl : MonoBehaviour
             slopeVec = Vector3.ProjectOnPlane(transform.rotation * direction, hitData.normal).normalized * moveSpeed;
 
             yield return new WaitForSeconds(time);
-
-            //Debug.Log("running");
         }
     }
 
     public void OnStealth(InputAction.CallbackContext value)
     {
-    //if (characterCtrl.isGrounded) // && currentStamina > 0)
         {
             if (value.started)
             {
                 isStealth = true;
 
-                if (characterCtrl.isGrounded) // && currentStamina > 0)
+                if (IsCheckGrounded()) // && currentStamina > 0)
                 {
                     currentSpeed = stealthSpeed;
-                    cam.transform.localPosition = camStealthHeigjt;
+
+                    cam.transform.DOLocalMoveY(camStealthHeigjt.y, 0.1f);
+                    StealthCollider.enabled = true;
+                    NormalCollider.enabled = false;
                 }
 
             }
@@ -175,7 +180,9 @@ public class PlayerControl : MonoBehaviour
             {
                isStealth = false;
                 currentSpeed = 1;
-                cam.transform.localPosition = camNormalHeigjt;
+                cam.transform.DOLocalMoveY(camNormalHeigjt.y, 0.1f);
+                StealthCollider.enabled = false;
+                NormalCollider.enabled = true;
             }
         }
     }

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PayerDecalForObjectMove
-  m_Shader: {fileID: -6465566751694194690, guid: 9b4e681081e2b4c469111bb649e2f7ee,
+  m_Shader: {fileID: -6465566751694194690, guid: 1aeb2e87e6003034680a23e3a149b3d2,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []

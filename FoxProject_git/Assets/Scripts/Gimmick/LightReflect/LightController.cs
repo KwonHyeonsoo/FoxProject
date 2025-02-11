@@ -19,6 +19,12 @@ public abstract class GimmickAbstract : MonoBehaviour
         checker.SetTrue(gimmickIndex);
         return isClear;
     }
+    public bool ReturnFalse()   
+    {
+        isClear = false;
+        checker.SetFalse(gimmickIndex);
+        return isClear;
+    }
 }
 
 public enum light_type { emitter, receiver, reflector };
@@ -58,6 +64,22 @@ public class LightController : GimmickAbstract
             case (light_type.receiver):
                 isClear = true;
                 this.ReturnTrue();
+                break;
+            default:
+                break;
+
+        }
+
+    }
+    public void LightUntrigger(RaycastHit hit)
+    {
+        hit = this.hit;
+
+        switch (type)
+        {
+            case (light_type.receiver):
+                isClear = false;
+                this.ReturnFalse();
                 break;
             default:
                 break;

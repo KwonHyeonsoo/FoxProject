@@ -42,4 +42,15 @@ public class GimmickChecker : MonoBehaviour
         }
         allGimmickIsTrue = booleans;
     }
+    public void SetFalse(int index)
+    {
+        gimmickConditions[index] = false;
+
+        bool booleans = true;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            booleans = booleans && gimmickConditions[i];
+        }
+        allGimmickIsTrue = booleans;
+    }
 }

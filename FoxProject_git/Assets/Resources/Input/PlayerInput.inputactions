@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Act",
+                    "name": "Hold",
                     "type": "Button",
                     "id": "6d6a6f1e-eaca-4688-9c75-18809a89ea67",
                     "expectedControlType": "Button",
@@ -52,12 +52,12 @@
                 },
                 {
                     "name": "Mouse",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "fc90ee5e-2f51-407d-8cdf-e9efe9dc9c20",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -156,14 +156,14 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Act",
+                    "action": "Hold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "1D Axis",
+                    "name": "2D Vector",
                     "id": "3e1da432-2bcd-4e52-8586-2bd6768fb983",
-                    "path": "1DAxis",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -172,8 +172,30 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
+                    "name": "Up",
                     "id": "01c3988b-ddbb-4fd4-a174-1a35cbde5e9b",
+                    "path": "<Mouse>/scroll/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Down",
+                    "id": "72735bf3-1625-427a-8c5e-8e0cf6305b13",
+                    "path": "<Mouse>/scroll/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Left",
+                    "id": "c002bee0-6624-4039-854a-afa4fbcb493b",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -183,8 +205,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "72735bf3-1625-427a-8c5e-8e0cf6305b13",
+                    "name": "Right",
+                    "id": "c2fbb471-0185-4c93-b46b-106ce6f850d2",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",

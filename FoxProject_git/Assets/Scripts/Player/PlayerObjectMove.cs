@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 using UnityEngine.InputSystem;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.UIElements;
+using DG.Tweening;
 
 /*
  * 
@@ -28,10 +28,17 @@ public class PlayerObjectMove : MonoBehaviour
     private IEnumerator rotateCoroutine;
     private bool isRotate = false;
 
-    [SerializeField]private bool isAbleHold;
+    private bool isAbleHold;
     private bool isHold;
 
-    private GameObject holdingObject;
+    private bool isInteractable;
+
+    public Ease ease = Ease.InQuint;
+    [SerializeField]private GameObject holdingObject;
+
+    //decal
+    public GameObject decal;
+    PlayerMoveEnable PlayerMoveEnable;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +46,9 @@ public class PlayerObjectMove : MonoBehaviour
         StartCoroutine(CaptureObjectLoop(0.02f));
         isAbleHold = false;
         isHold = false;
+        isInteractable = false;
+        decal.SetActive(false);
+        PlayerMoveEnable = decal.GetComponent<PlayerMoveEnable>();
     }
 
     // Update is called once per frame
@@ -62,9 +72,28 @@ public class PlayerObjectMove : MonoBehaviour
 
         if (context.performed)
         {
-            rotateCoroutine = RotateObjectPerSecond(rotationInterTime, context.ReadValue<float>() > 0, rotationAngle, holdingObject);
-            StartCoroutine(rotateCoroutine);
-            isRotate = true;
+            
+            Vector2 v = context.ReadValue<Vector2>();
+            Debug.Log(v);
+            if (v.y > 0)
+            {
+                holdingObject.transform.rotation *= Quaternion.Euler(rotationAngle, 0, 0);
+            }
+            else if (v.y < 0)
+            {
+                holdingObject.transform.rotation *= Quaternion.Euler(-rotationAngle, 0, 0);
+            }
+            else
+            {
+                if (!isRotate)
+                {
+                    rotateCoroutine = RotateObjectPerSecond(rotationInterTime, context.ReadValue<Vector2>(), rotationAngle, holdingObject);
+                    StartCoroutine(rotateCoroutine);
+                    isRotate = true;
+                }
+            }
+            
+            
         }
         else if (isRotate&& context.canceled)
         {
@@ -73,19 +102,22 @@ public class PlayerObjectMove : MonoBehaviour
         }
     }
 
-    IEnumerator RotateObjectPerSecond(float time, bool right, float angle, GameObject obj)
+    IEnumerator RotateObjectPerSecond(float time, Vector2 v, float angle, GameObject obj)
     {
         while (true)
         {
             yield return new WaitForSeconds(time);
-            if (right)
+            Debug.Log(v);
+
+            if (v.x > 0)
             {
                 obj.transform.rotation *= Quaternion.Euler(0, angle, 0);
             }
-            else
+            else if (v.x < 0)
             {
                 obj.transform.rotation *= Quaternion.Euler(0, -angle, 0);
             }
+
         }
     }
     void CaptureObject()
@@ -100,50 +132,84 @@ public class PlayerObjectMove : MonoBehaviour
 
         holdText.gameObject.SetActive(false);
         isAbleHold = false;
+        isInteractable = false;
 
-        if (Physics.Raycast(ray, out hit, 10f, mask) && hit.collider.gameObject.GetComponent<LightController>())
+        if (Physics.Raycast(ray, out hit, 10f, mask) )
         {
-            if (hit.collider.gameObject.GetComponent<LightController>().getLightType() == light_type.reflector)
+            if (hit.collider.gameObject.GetComponent<LightController>() &&
+                hit.collider.gameObject.GetComponent<LightController>().getLightType() == light_type.reflector)
             {
                 //Debug.Log(Vector3.Angle(transform.forward, hit.normal));
                 if (Vector3.Angle(transform.forward, transform.position - hit.transform.position) > viewAngle)
                 {
-                    Debug.Log("ok");
+                    //Debug.Log("ok");
                     holdingObject = hit.collider.transform.gameObject;
                     holdText.gameObject.SetActive(true);
+                    holdText.text = "Hold";
                     isAbleHold = true;
                 }
+            }
+            else if(hit.collider.gameObject.tag == "Interactable")
+            {
+                holdingObject = hit.collider.transform.gameObject;
+                isInteractable = true;
+                holdText.gameObject.SetActive(true);
+                holdText.text = "ride";
             }
         }
     }
 
-    public GameObject decal;
+    
     public void Hold(InputAction.CallbackContext context)
     {
 
         if (context.performed)
         {
-            if (!isAbleHold) return;
-
-            isHold = !isHold;
-
-            if (isHold)
+            if (isAbleHold)
             {
-                holdingObject.SetActive(false);
-                holdText.text = "Holdingggg";
-                holdText.gameObject.SetActive(true);
+
+                isHold = !isHold;
+
+                if (isHold)
+                {
+                    holdingObject.SetActive(false);
+                    holdText.text = "Holdingggg";
+                    holdText.gameObject.SetActive(true);
+                    decal.SetActive(true);
+                }
+                else
+                {
+                    Debug.Log(PlayerMoveEnable.getUnholdEnable());
+                    if (PlayerMoveEnable.getUnholdEnable())
+                    {
+
+                        Vector3 trans;
+                        trans =
+                        holdingObject.transform.position =
+                            new Vector3(decal.transform.position.x, holdingObject.transform.position.y + 0.2f, decal.transform.position.z);
+                        holdingObject.transform.rotation = //quaternion.identity;
+                            transform.rotation;
+
+                        holdingObject.transform.DOMoveY(trans.y - 0.2f, 0.1f).SetEase(ease);
+
+                        holdingObject.SetActive(true);
+
+                        //decal 
+                        holdText.text = "Hold";
+                        holdText.gameObject.SetActive(false);
+                        decal.SetActive(false);
+
+                    }
+                    else
+                    {
+                        isHold = !isHold;
+                    }
+                }
             }
-            else
+            else if (isInteractable)
             {
-                holdingObject.SetActive(true);
-
-                holdingObject.transform.position =
-                    new Vector3(decal.transform.position.x, holdingObject.transform.position.y, decal.transform.position.z);
-                holdingObject.transform.rotation = //quaternion.identity;
-                    transform.rotation;
-                //decal 
-                holdText.text = "Hold";
-                holdText.gameObject.SetActive(false);
+                var com = holdingObject.GetComponent<InteractableObject>();
+                com.Invoke(gameObject);
             }
         }
     }

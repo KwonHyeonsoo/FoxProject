@@ -115,17 +115,17 @@ public class Boss_original : MonoBehaviour
                 break;
             case BossStateEnum.chase:
                 //waypoint 도착
-                if (getDistanceTarget() < 0.1 && !agent.hasPath)
-                {
-                    setState(BossStateEnum.fury);
-                    break;
-                }
-                else if (ViewTargets.Count == 0 && SoundTargets.Count == 0)
-                {
-                    if (isMonkey) break;    //원숭이 쫓고 있을때는 chase유지
-                                            //setState(BossStateEnum.idle);//아니면 추격 중지
-                    setState(BossStateEnum.fury);
-                }
+                //if (getDistanceTarget() < 0.1 && !agent.hasPath)
+                //{
+                //    setState(BossStateEnum.fury);
+                //    break;
+                //}
+                //else if (ViewTargets.Count == 0 && SoundTargets.Count == 0)
+                //{
+                //    if (isMonkey) break;    //원숭이 쫓고 있을때는 chase유지
+                //                            //setState(BossStateEnum.idle);//아니면 추격 중지
+                //    setState(BossStateEnum.fury);
+                //}
                 break;
             case BossStateEnum.fury:
                 //타임 아웃

@@ -181,13 +181,13 @@ public class ScreenSpaceOutlinesBoss : ScriptableRendererFeature
             perObjectDataMaterial.SetColor("_Color", Color.white);
             perObjectDataMaterial.SetFloat("_OutlineScale", 1.0f);
             perObjectDataMaterial_Boss = new Material(Shader.Find("Hidden/UnlitColorLarge"));
-            perObjectDataMaterial_Boss.SetFloat("_OutlineScale", 1.0f);
+            perObjectDataMaterial_Boss.SetFloat("_OutlineScale", 0.1f);
             perObjectDataMaterial_Boss.SetColor("_Color", Color.red);
             perObjectDataMaterial_obj1 = new Material(Shader.Find("Hidden/UnlitColorLarge"));
-            perObjectDataMaterial_obj1.SetFloat("_OutlineScale", 1.0f);
+            perObjectDataMaterial_obj1.SetFloat("_OutlineScale", 0.1f);
             perObjectDataMaterial_obj1.SetColor("_Color", Color.green);
             perObjectDataMaterial_obj2 = new Material(Shader.Find("Hidden/UnlitColorLarge"));
-            perObjectDataMaterial_obj2.SetFloat("_OutlineScale", 1.0f);
+            perObjectDataMaterial_obj2.SetFloat("_OutlineScale", 0.1f);
             perObjectDataMaterial_obj2.SetColor("_Color", Color.blue);
 
 
