@@ -123,6 +123,7 @@ public class SCC_DrivetrainEditor : Editor {
         EditorGUILayout.PropertyField(serializedObject.FindProperty("finalDriveRatio"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("highSpeedSteerAngle"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("direction"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("scc_enable"));
 
         if (GUI.changed)
             EditorUtility.SetDirty(driveTrainScript);

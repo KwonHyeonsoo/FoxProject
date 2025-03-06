@@ -1,7 +1,7 @@
 //----------------------------------------------
 //            Simple Car Controller
 //
-// Copyright © 2014 - 2023 BoneCracker Games
+// Copyright ?2014 - 2023 BoneCracker Games
 // http://www.bonecrackergames.com
 //
 //----------------------------------------------
@@ -38,7 +38,22 @@ public class SCC_InputProcessor : MonoBehaviour {
                 inputs.brakeInput = Mathf.MoveTowards(inputs.brakeInput, SCC_InputManager.Instance.inputs.brakeInput, Time.deltaTime * smoothingFactor);
                 inputs.handbrakeInput = Mathf.MoveTowards(inputs.handbrakeInput, SCC_InputManager.Instance.inputs.handbrakeInput, Time.deltaTime * smoothingFactor);
 
-            } else {
+                //if (inputs.unride < SCC_InputManager.Instance.inputs.unride)
+                //{
+                //    inputs.unride = SCC_InputManager.Instance.inputs.unride;
+                //    SCC_InputManager.Instance.inputs.unride = 0;
+                //    Destroy(SCC_InputManager.Instance);
+                //}
+
+                //if (inputs.start < SCC_InputManager.Instance.inputs.start)
+                //{
+                //    inputs.start = SCC_InputManager.Instance.inputs.start;
+                //    SCC_InputManager.Instance.inputs.start = 0;
+                //}
+
+                inputs.cameraVector = SCC_InputManager.Instance.inputs.cameraVector;
+            }
+            else {
 
                 inputs = SCC_InputManager.Instance.inputs;
 
@@ -48,6 +63,14 @@ public class SCC_InputProcessor : MonoBehaviour {
 
     }
 
+    private void OnEnable()
+    {
+        inputs.throttleInput =
+        inputs.steerInput =
+        inputs.brakeInput =
+        inputs.handbrakeInput =
+        inputs.unride = 0;
+    }
     /// <summary>
     /// Overrides inputs with given inputs. Be sure to disable the receiveInputsFromInputManager while overriding inputs. 
     /// </summary>
@@ -64,7 +87,9 @@ public class SCC_InputProcessor : MonoBehaviour {
             inputs.steerInput = Mathf.MoveTowards(inputs.steerInput, newInputs.steerInput, Time.deltaTime * smoothingFactor);
             inputs.brakeInput = Mathf.MoveTowards(inputs.brakeInput, newInputs.brakeInput, Time.deltaTime * smoothingFactor);
             inputs.handbrakeInput = Mathf.MoveTowards(inputs.handbrakeInput, newInputs.handbrakeInput, Time.deltaTime * smoothingFactor);
+            inputs.unride = SCC_InputManager.Instance.inputs.unride;
 
+            inputs.cameraVector = SCC_InputManager.Instance.inputs.cameraVector;
         }
 
     }

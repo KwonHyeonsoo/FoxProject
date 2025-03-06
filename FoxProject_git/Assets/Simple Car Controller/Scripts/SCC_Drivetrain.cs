@@ -82,6 +82,9 @@ public class SCC_Drivetrain : MonoBehaviour {
     private float timerForReverse = 0f;     //  Detecting reverse gear.
     private bool appliedBrake = false;
 
+    public SCC_enabled scc_enable;
+
+    bool isStart = false;
     private void FixedUpdate() {
 
         Engine();
@@ -90,7 +93,8 @@ public class SCC_Drivetrain : MonoBehaviour {
         ApplyBrake();
         ApplyHandBrake();
         Others();
-
+        CarStarting();
+        //Debug.Log(wheels[0].wheelCollider.WheelCollider.brakeTorque);
     }
 
     /// <summary>
@@ -153,10 +157,18 @@ public class SCC_Drivetrain : MonoBehaviour {
             if (wheels[i].isTraction)
                 wheels[i].wheelCollider.WheelCollider.motorTorque = ((engineTorque * finalDriveRatio) * (direction == 1 ? InputProcessor.inputs.throttleInput : -InputProcessor.inputs.brakeInput)) / Mathf.Clamp(totalTractionWheels, 1, 20);
             else
+            {
                 wheels[i].wheelCollider.WheelCollider.motorTorque = 0f;
+                wheels[i].wheelCollider.WheelCollider.brakeTorque = 10000f;
+                //Debug.Log(123423);
+            }
 
             if ((speed >= maximumSpeed || wheels[i].wheelCollider.wheelRPMToSpeed >= maximumSpeed) && wheels[i].isTraction)
+            {
                 wheels[i].wheelCollider.WheelCollider.motorTorque = 0f;
+                //Debug.Log(123456);
+
+            }
 
         }
 
@@ -183,14 +195,14 @@ public class SCC_Drivetrain : MonoBehaviour {
             if (wheels[i].isBrake) {
 
                 wheels[i].wheelCollider.WheelCollider.brakeTorque = brakeTorque * (direction == 1 ? InputProcessor.inputs.brakeInput : InputProcessor.inputs.throttleInput) / Mathf.Clamp(totalBrakeWheels, 1, 20);
-
+                //Debug.Log(3);
                 if (wheels[i].wheelCollider.WheelCollider.brakeTorque >= 5f)
                     appliedBrake = true;
 
             } else {
 
-                wheels[i].wheelCollider.WheelCollider.brakeTorque = 0f;
-
+                wheels[i].wheelCollider.WheelCollider.brakeTorque = 100;
+                //Debug.Log(4);
             }
 
         }
@@ -220,12 +232,13 @@ public class SCC_Drivetrain : MonoBehaviour {
 
             if (wheels[i].isHandbrake) {
 
-                wheels[i].wheelCollider.WheelCollider.brakeTorque = brakeTorque * InputProcessor.inputs.handbrakeInput / totalBrakeWheels;
-
+                wheels[i].wheelCollider.WheelCollider.brakeTorque = brakeTorque * InputProcessor.inputs.handbrakeInput / totalBrakeWheels ;
+                //else wheels[i].wheelCollider.WheelCollider.brakeTorque = 5;
+                //Debug.Log(5);
             } else {
 
-                wheels[i].wheelCollider.WheelCollider.brakeTorque = 0f;
-
+                wheels[i].wheelCollider.WheelCollider.brakeTorque = 0;
+                //Debug.Log(6);
             }
 
         }
@@ -234,12 +247,14 @@ public class SCC_Drivetrain : MonoBehaviour {
 
     /// <summary>
     /// Other calculations and variables.
+    /// 인풋 없을때 마찰력 적용
     /// </summary>
     private void Others() {
 
         Rigid.centerOfMass = COM.localPosition;     //  Setting center of mass of the rigidbody.
         speed = Rigid.velocity.magnitude * 3.6f;        //  Speed of the vehicle.
 
+        //direction 결정
         //  If speed is below 5, and player is still pressing brake, increase timerForReverse value. If this value exceeds the limit, set direction to -1 for reverse gear.
         if (speed <= 5f && InputProcessor.inputs.brakeInput >= .75f)
             timerForReverse += Time.fixedDeltaTime;
@@ -251,6 +266,20 @@ public class SCC_Drivetrain : MonoBehaviour {
         else
             direction = 1;
 
+        //마찰력
+        if (InputProcessor.inputs.handbrakeInput != 0 || inputProcessor.inputs.throttleInput != 0 || inputProcessor.inputs.brakeInput != 0)
+            return;
+
+        for (int i = 0; i < wheels.Length; i++)
+        {
+
+            Debug.Log(wheels[i].wheelCollider.rpm); 
+            if (wheels[i].wheelCollider.rpm != 0)
+            {
+                wheels[i].wheelCollider.WheelCollider.brakeTorque = Mathf.Abs( wheels[i].wheelCollider.rpm);
+            }
+
+        }
     }
 
     private void Reset() {
@@ -286,4 +315,17 @@ public class SCC_Drivetrain : MonoBehaviour {
 
     }
 
+
+    private bool CarStarting()
+    {
+
+        if (inputProcessor.inputs.start > 0 && scc_enable)
+        {
+            Debug.Log("startingCar");
+            inputProcessor.inputs.start = 0;
+            //scc_enable.Invoke();
+            isStart = !isStart;
+        }
+        return isStart;
+    }
 }

@@ -65,7 +65,8 @@ MonoBehaviour:
   - {fileID: -1878332245247344467}
   - {fileID: 3765379812766463730}
   - {fileID: -71408199845492106}
-  m_RendererFeatureMap: adc0de57c6d2eee5f2365f68fd50413476ca28de9e4e02ff
+  - {fileID: 8051417583247125896}
+  m_RendererFeatureMap: adc0de57c6d2eee5f2365f68fd50413476ca28de9e4e02ff886dc73ba261bc6f
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -119,10 +120,10 @@ MonoBehaviour:
   m_Name: ScreenSpaceOutlinesBoss
   m_EditorClassIdentifier: 
   m_Active: 0
-  renderPassEvent: 550
+  renderPassEvent: 300
   outlinesLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   outlinesLayerMask_Boss:
     serializedVersion: 2
     m_Bits: 256
@@ -137,15 +138,15 @@ MonoBehaviour:
     m_Bits: 0
   outlineSettings:
     outlineColor: {r: 1, g: 1, b: 1, a: 1}
-    outlineColor_Boss: {r: 0.6933962, g: 0.32053223, b: 0.32053223, a: 1}
-    outlineColor_obj1: {r: 0, g: 1, b: 0, a: 1}
-    outlineColor_obj2: {r: 1, g: 1, b: 1, a: 1}
-    outlineScale: 2.4
+    outlineColor_Boss: {r: 0.69411767, g: 0.32156867, b: 0.33245546, a: 1}
+    outlineColor_obj1: {r: 0.63529414, g: 0.5619363, b: 0, a: 1}
+    outlineColor_obj2: {r: 0.3301887, g: 0.22272162, b: 0.22272162, a: 1}
+    outlineScale: 3.3
     depthThreshold: 1.5
-    robertsCrossMultiplier: 20
-    normalThreshold: 0.4
-    steepAngleThreshold: 0.2
-    steepAngleMultiplier: 25
+    robertsCrossMultiplier: 31
+    normalThreshold: 0.266
+    steepAngleThreshold: 0.53
+    steepAngleMultiplier: 17
   viewSpaceNormalsTextureSettings:
     colorFormat: 0
     depthBufferBits: 16
@@ -154,3 +155,42 @@ MonoBehaviour:
     perObjectData: 0
     enableDynamicBatching: 0
     enableInstancing: 0
+--- !u!114 &8051417583247125896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: RenderObjects
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    passTag: RenderObjects
+    Event: 400
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 64
+      PassNames: []
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60

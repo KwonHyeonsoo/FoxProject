@@ -48,9 +48,19 @@ public class PlayerObjectMove : MonoBehaviour
         isHold = false;
         isInteractable = false;
         decal.SetActive(false);
+        holdText.gameObject.SetActive(false);
         PlayerMoveEnable = decal.GetComponent<PlayerMoveEnable>();
     }
 
+    private void OnEnable()
+    {
+        StartCoroutine(CaptureObjectLoop(0.02f));
+        isAbleHold = false;
+        isHold = false;
+        isInteractable = false;
+        decal.SetActive(false);
+        holdText.gameObject.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -165,6 +175,7 @@ public class PlayerObjectMove : MonoBehaviour
 
         if (context.performed)
         {
+            //물체를 움직일때
             if (isAbleHold)
             {
 
@@ -206,10 +217,15 @@ public class PlayerObjectMove : MonoBehaviour
                     }
                 }
             }
+            //차에 탑승
             else if (isInteractable)
             {
+                isHold = false;
+                isAbleHold = false;
+                isInteractable = false;
                 var com = holdingObject.GetComponent<InteractableObject>();
                 com.Invoke(gameObject);
+                //InputManager.SwitchInput();
             }
         }
     }

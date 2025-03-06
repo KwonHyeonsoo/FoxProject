@@ -54,9 +54,12 @@ public class Boss_FieldofView : MonoBehaviour
 
     void Start()
     {
-        viewMesh = new Mesh();
-        viewMesh.name = "View Mesh";
-        viewMeshFilter.mesh = viewMesh;
+        if (DisplayView)
+        {
+            viewMesh = new Mesh();
+            viewMesh.name = "View Mesh";
+            viewMeshFilter.mesh = viewMesh;
+        }
 
         // 0.2초 간격으로 코루틴 호출
         StartCoroutine(FindTargetsWithDelay(0.2f));

@@ -923,6 +923,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20000014002602310, guid: 8fc19e181aa9add468d053e408a32aa8,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000014002602310, guid: 8fc19e181aa9add468d053e408a32aa8,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000014002602310, guid: 8fc19e181aa9add468d053e408a32aa8,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000014002602310, guid: 8fc19e181aa9add468d053e408a32aa8,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114000011086470884, guid: 8fc19e181aa9add468d053e408a32aa8,
         type: 3}
       propertyPath: distance
@@ -932,7 +952,7 @@ PrefabInstance:
         type: 3}
       propertyPath: playerCar
       value: 
-      objectReference: {fileID: 5067853484798043455}
+      objectReference: {fileID: 1363244762}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fc19e181aa9add468d053e408a32aa8, type: 3}
 --- !u!1 &519569744
@@ -3106,7 +3126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!195 &1983537936
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3510,7 +3530,7 @@ PrefabInstance:
     - target: {fileID: 2671978861168198747, guid: b83885ef725e62d4aa27e8ba5d599444,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2671978861168198747, guid: b83885ef725e62d4aa27e8ba5d599444,
         type: 3}
@@ -13889,7 +13909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &5069110997080738311
 GameObject:
   m_ObjectHideFlags: 0
@@ -14336,6 +14356,7 @@ MonoBehaviour:
   direction: 1
   finalDriveRatio: 3.2
   highSpeedSteerAngle: 100
+  scc_enable: {fileID: 0}
 --- !u!114 &5174519965247247429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14366,6 +14387,9 @@ MonoBehaviour:
     steerInput: 0
     brakeInput: 0
     handbrakeInput: 0
+    unride: 0
+    start: 0
+    cameraVector: {x: 0, y: 0}
   receiveInputsFromInputManager: 1
   smoothInputs: 1
   smoothingFactor: 5

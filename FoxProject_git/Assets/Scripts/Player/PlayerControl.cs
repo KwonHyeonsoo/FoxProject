@@ -66,7 +66,6 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         #region GetComponents
         characterCtrl = GetComponent<CharacterController>();
         Rigidbody rb;
