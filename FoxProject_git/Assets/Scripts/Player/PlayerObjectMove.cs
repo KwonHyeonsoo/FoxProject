@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UIElements;
 using DG.Tweening;
+using System.ComponentModel;
 
 /*
  * 
@@ -34,7 +35,7 @@ public class PlayerObjectMove : MonoBehaviour
     private bool isInteractable;
 
     public Ease ease = Ease.InQuint;
-    [SerializeField]private GameObject holdingObject;
+    [ReadOnly][SerializeField]private GameObject holdingObject;
 
     //decal
     public GameObject decal;

@@ -15,7 +15,6 @@ using UnityEngine;
 public class ParkBox : GimmickAbstract
 {
     public float size = 1;
-    public float height = 0;
     public LayerMask mask;
 
     void Start()
@@ -25,7 +24,7 @@ public class ParkBox : GimmickAbstract
         // Update is called once per frame
         void Update()
     {
-        if (Physics.CheckBox(transform.position, transform.lossyScale / 2f, Quaternion.identity, mask))
+        if (Physics.CheckBox(transform.position, transform.lossyScale / 2f * size, Quaternion.identity, mask))
         {
             ReturnTrue();
         }

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 
 public abstract class GimmickAbstract : MonoBehaviour
 {
-    public bool isClear;
-    public int gimmickIndex;
-    public GimmickChecker checker;
+    [ReadOnly(false)]public bool isClear;
+    [ReadOnly(false)] public int gimmickIndex;
+    [ReadOnly(false)] public GimmickChecker checker;
     void Start()
     {
         //checker = transform.GetComponentInParent<GimmickChecker>();

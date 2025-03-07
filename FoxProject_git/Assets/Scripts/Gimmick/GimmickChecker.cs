@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class GimmickChecker : MonoBehaviour
 {
-    public List<GameObject> gimmicks;
+    [ReadOnly] public List<GameObject> gimmicks;
     //List<GimmickAbstract> gimmickAbstracts;
-    public List<bool> gimmickConditions;
+    [ReadOnly] public List<bool> gimmickConditions;
 
-    public bool allGimmickIsTrue;
+    [ReadOnly]public bool allGimmickIsTrue;
     void Start()
     {
         //기믹 순회 돌면서 인덱스 부여
