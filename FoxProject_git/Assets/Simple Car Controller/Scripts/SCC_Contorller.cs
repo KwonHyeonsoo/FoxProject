@@ -30,8 +30,8 @@ public class SCC_Contorller : MonoBehaviour
     }
     void Start()
     {
-        InputManager.switchPlayer = SwitchPlayer;
-        InputManager.carInputActions.FindAction("Start").performed 
+        InputManager.Instance.switchPlayer = SwitchPlayer;
+        InputManager.Instance.carInputActions.FindAction("Start").performed 
             += EngineStartInputaction;
         
         

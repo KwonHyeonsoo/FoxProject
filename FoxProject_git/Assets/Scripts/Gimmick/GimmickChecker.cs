@@ -13,8 +13,16 @@ public class GimmickChecker : MonoBehaviour
     [ReadOnly]public bool allGimmickIsTrue;
     void Start()
     {
+        if(gimmicks.Count > 0)
+        {
+            gimmicks.Clear();
+        }
+        if (gimmickConditions.Count > 0)
+        {
+            gimmickConditions.Clear();
+        }
         //기믹 순회 돌면서 인덱스 부여
-        for(int i = 0; i< transform.childCount; i++)
+        for (int i = 0; i< transform.childCount; i++)
         {
             gimmicks.Add(transform.GetChild(i).gameObject);
             var g = gimmicks[i].GetComponent<GimmickAbstract>();

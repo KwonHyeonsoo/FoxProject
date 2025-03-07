@@ -25,7 +25,7 @@ public class SCC_enabled : InteractableObject
     public override void Invoke(GameObject playerObject)
     {
         //고정 
-        InputManager.SwitchInput(); //input 교체
+        InputManager.Instance.SwitchInput(); //input 교체
         //
         controller.SwitchPlayer();
         //foreach (var com in components)

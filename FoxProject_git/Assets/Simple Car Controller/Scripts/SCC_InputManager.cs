@@ -47,17 +47,17 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
 
         if (inputActions == null)
         {
-            //if (InputManager)
-            //{
-            //    inputActions = //new SCC_InputActions();
-            //        InputManager.carInputActions;
-            //    inputActions.Enable();
-            //}
-            //else
-            //{
+            if (InputManager.Instance)
+            {
+                inputActions = 
+                    InputManager.Instance.carInputActions;
+                inputActions.Enable();
+            }
+            else
+            {
                 SCC_GetInputs();
                 return;
-            //}
+            }
 
         }
 

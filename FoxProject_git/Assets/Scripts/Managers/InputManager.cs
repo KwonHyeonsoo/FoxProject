@@ -1,3 +1,4 @@
+using DG.Tweening.Core.Easing;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,43 +8,62 @@ using UnityEngine.InputSystem;
 
 public class InputManager : SingletonBehaviour<InputManager>
 {
-    //public static InputManager _instance;
-    public static SCC_InputActions carInputActions { get; set; }
-    private static PlayerInput playerinput;
+    ////static
+    //private static InputManager _instance;
+    //public static InputManager Instance
+    //{
+    //    get
+    //    {
+    //        if (_instance == null)
+    //        {
+    //            //씬에 이미 존재하는 InputManager 찾기
+    //            _instance = FindObjectOfType<InputManager>();
 
-    string str = "PlayerActions";
-    static bool isPlayer = true;
+    //            //없으면 새로 생성
+    //            if (_instance == null)
+    //            {
+    //                GameObject obj = new GameObject("InputManager");
+    //                _instance = obj.AddComponent<InputManager>();
+    //                DontDestroyOnLoad(obj);
+    //            }
+    //        }
+    //        return _instance;
+    //    }
+    //}
+    //general
+    public SCC_InputActions carInputActions { get; set; }   //차량 인풋 액션- 새로 생성
+    private PlayerInput playerinput;    //인간 인풋 액션 - 플레이어에서 가져옴
 
-    static GameObject player;
-    static GameObject carPlayer;
+    bool isPlayer = true;
+
+    GameObject player;
+    GameObject carPlayer;
 
     public delegate void delegateSwitch();
-    public static delegateSwitch switchPlayer;  //차량 동작 기능 활성/비활성화
+    public delegateSwitch switchPlayer;  //차량 기능 활성/비활성화
 
-    void Awake()
+    void Start()
     {
         if (carInputActions == null)
         {
-            carInputActions = new SCC_InputActions();
+            carInputActions = new SCC_InputActions();   //차량 인풋 액션 생성
         }
         if (playerinput == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player");
+            player = GameObject.FindGameObjectWithTag("Player");    //Player 찾아서 player input 가져오기//나중에 gamemanager에서 가져오느게 나을듯
             playerinput = player.GetComponent<PlayerInput>();
         }
         //playerinput.actions.FindActionMap("PlayerActions").FindAction("Hold").performed += SwitchInput;
-        carInputActions.FindAction("Unride").performed += SwitchInput;
+        carInputActions.FindAction("Unride").performed += SwitchInput;//unride할 때 인풋액션 교체 함수 추가
     }
     //차량 하차
-    public static void SwitchInput(InputAction.CallbackContext context)
+    public void SwitchInput(InputAction.CallbackContext context)
     {
         
         if (context.performed)
         {
-            Debug.Log("1switchinput" + " isPlayer " + isPlayer);
-            
-
-            SwitchInput();
+            //Debug.Log("1switchinput" + " isPlayer " + isPlayer);
+            SwitchInput();//인풋 액션 교체
             /*
             //isPlayer = !isPlayer;
             //if (isPlayer)
@@ -62,13 +82,13 @@ public class InputManager : SingletonBehaviour<InputManager>
             //}
             */
         }
-        Debug.Log("2switchinput" + " isPlayer " + isPlayer);
+        //Debug.Log("2switchinput" + " isPlayer " + isPlayer);
     }
-    //차량 탑승
-    public static void SwitchInput()
+    //차량 탑승할 때 인풋액션 교체
+    public void SwitchInput()
     {
 
-        Debug.Log("3switchinput" + " isPlayer " + isPlayer);
+        //Debug.Log("3switchinput" + " isPlayer " + isPlayer);
         isPlayer = !isPlayer;
 
         if (isPlayer)
