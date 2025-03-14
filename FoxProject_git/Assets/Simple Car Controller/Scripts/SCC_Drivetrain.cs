@@ -273,7 +273,7 @@ public class SCC_Drivetrain : MonoBehaviour {
         for (int i = 0; i < wheels.Length; i++)
         {
 
-            Debug.Log(wheels[i].wheelCollider.rpm); 
+           // Debug.Log(wheels[i].wheelCollider.rpm); 
             if (wheels[i].wheelCollider.rpm != 0)
             {
                 wheels[i].wheelCollider.WheelCollider.brakeTorque = Mathf.Abs( wheels[i].wheelCollider.rpm);

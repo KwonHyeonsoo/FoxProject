@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager
 {
+
     GameObject _defaultPlayer;
     public GameObject DefaultPlayer 
     { 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Managers : SingletonBehaviour<Managers>
 {
+    public StoryData story1;
     #region SingletonBehaviour
     /*    
 
@@ -68,6 +69,8 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     GameManager _gameManager = new GameManager();
     public static GameManager gameManager { get { return Instance._gameManager;  } }
     //스토리 진행 매니저
+    StoryManager _storyManager = new StoryManager();
+    public static StoryManager storyManager { get {return Instance._storyManager;} }
     //씬 매니저
     //사운드 매니저
     //리소스 매니저
@@ -79,11 +82,11 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     void Start()
     {
         _name = "Managers";
+        _storyManager.Start();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

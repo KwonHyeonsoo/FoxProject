@@ -9,7 +9,7 @@ public class GimmickChecker : MonoBehaviour
     [ReadOnly] public List<GameObject> gimmicks;
     //List<GimmickAbstract> gimmickAbstracts;
     [ReadOnly] public List<bool> gimmickConditions;
-
+    public int storyID;
     [ReadOnly]public bool allGimmickIsTrue;
     void Start()
     {
@@ -27,7 +27,7 @@ public class GimmickChecker : MonoBehaviour
             gimmicks.Add(transform.GetChild(i).gameObject);
             var g = gimmicks[i].GetComponent<GimmickAbstract>();
             g.gimmickIndex = i;
-            Debug.Log(g.gimmickIndex + "  " + g.isClear);
+            //Debug.Log(g.gimmickIndex + "  " + g.isClear);
             bool b = g.isClear;
             gimmickConditions.Add(b);
         }
@@ -49,6 +49,8 @@ public class GimmickChecker : MonoBehaviour
             booleans = booleans && gimmickConditions[i];
         }
         allGimmickIsTrue = booleans;
+
+        if (allGimmickIsTrue) Managers.storyManager.InvokeEvent(storyID, StoryEventCondition.ClearPuzzle);
     }
     public void SetFalse(int index)
     {

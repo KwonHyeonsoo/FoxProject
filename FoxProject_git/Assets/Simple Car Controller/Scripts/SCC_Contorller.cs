@@ -30,11 +30,11 @@ public class SCC_Contorller : MonoBehaviour
     }
     void Start()
     {
-        InputManager.Instance.switchPlayer = SwitchPlayer;
-        InputManager.Instance.carInputActions.FindAction("Start").performed 
-            += EngineStartInputaction;
-        
-        
+        InputManager.Instance.switchPlayer -= SwitchPlayer;
+        InputManager.Instance.switchPlayer += SwitchPlayer;
+
+        InputManager.Instance.carInputActions.FindAction("Start").performed += EngineStartInputaction;
+
         //SwitchPlayer();
         EngineStart();
     }
@@ -94,7 +94,7 @@ public class SCC_Contorller : MonoBehaviour
         {
             o.SetActive(!o.activeSelf);
         }
-
+        //Managers.storyManager.InvokeRIDE();
     }
     #endregion
 

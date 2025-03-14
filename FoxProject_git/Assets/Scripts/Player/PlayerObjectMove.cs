@@ -85,7 +85,7 @@ public class PlayerObjectMove : MonoBehaviour
         {
             
             Vector2 v = context.ReadValue<Vector2>();
-            Debug.Log(v);
+            //Debug.Log(v);
             if (v.y > 0)
             {
                 holdingObject.transform.rotation *= Quaternion.Euler(rotationAngle, 0, 0);
@@ -182,6 +182,7 @@ public class PlayerObjectMove : MonoBehaviour
 
                 isHold = !isHold;
 
+                Managers.storyManager.InvokeINTERACTION();
                 if (isHold)
                 {
                     holdingObject.SetActive(false);
@@ -191,7 +192,7 @@ public class PlayerObjectMove : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log(PlayerMoveEnable.getUnholdEnable());
+                   // Debug.Log(PlayerMoveEnable.getUnholdEnable());
                     if (PlayerMoveEnable.getUnholdEnable())
                     {
 
@@ -221,6 +222,7 @@ public class PlayerObjectMove : MonoBehaviour
             //Â÷¿¡ Å¾½Â
             else if (isInteractable)
             {
+                Managers.storyManager.InvokeRIDE();
                 isHold = false;
                 isAbleHold = false;
                 isInteractable = false;

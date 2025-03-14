@@ -31,7 +31,7 @@ public class InputManager : SingletonBehaviour<InputManager>
     //    }
     //}
     //general
-    public SCC_InputActions carInputActions { get; set; }   //차량 인풋 액션- 새로 생성
+    public SCC_InputActions carInputActions; //차량 인풋 액션- 새로 생성
     private PlayerInput playerinput;    //인간 인풋 액션 - 플레이어에서 가져옴
 
     bool isPlayer = true;
@@ -41,7 +41,11 @@ public class InputManager : SingletonBehaviour<InputManager>
     public delegate void delegateSwitch();
     public delegateSwitch switchPlayer;  //차량 기능 활성/비활성화
 
-    void Start()
+    public SCC_InputActions retunCarInput()
+    {
+        return carInputActions;
+    }
+    void Awake()
     {
         _name = "InputManager";
 
@@ -54,10 +58,19 @@ public class InputManager : SingletonBehaviour<InputManager>
             player = Managers.gameManager.DefaultPlayer;    //Player 찾아서 player input 가져오기//나중에 gamemanager에서 가져오느게 나을듯
             playerinput = player.GetComponent<PlayerInput>();
         }
-        //playerinput.actions.FindActionMap("PlayerActions").FindAction("Hold").performed += SwitchInput;
-        carInputActions.FindAction("Unride").performed += SwitchInput;//unride할 때 인풋액션 교체 함수 추가
+       
     }
 
+    private void Start()
+    {
+        //playerinput.actions.FindActionMap("PlayerActions").FindAction("Hold").performed += SwitchInput;
+        carInputActions.FindAction("Unride").performed += SwitchInput;//unride할 때 인풋액션 교체 함수 추가
+        carInputActions.FindAction("Throttle").performed -= Managers.storyManager.InvokeWASD;
+        carInputActions.FindAction("Steering").performed -= Managers.storyManager.InvokeWASD;
+        carInputActions.FindAction("Throttle").performed += Managers.storyManager.InvokeWASD;
+        carInputActions.FindAction("Steering").performed += Managers.storyManager.InvokeWASD;
+        playerinput.actions.FindAction("Move").performed += Managers.storyManager.InvokeWASD;
+    }
     //차량 하차
     public void SwitchInput(InputAction.CallbackContext context)
     {

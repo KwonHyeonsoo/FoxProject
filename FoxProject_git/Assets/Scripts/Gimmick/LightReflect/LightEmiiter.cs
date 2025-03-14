@@ -55,7 +55,7 @@ public class LightEmiiter : MonoBehaviour
         
         while (hit.collider != null)    
         {
-            Debug.Log("reRaycast");
+            //Debug.Log("reRaycast");
             component = hit.transform.GetComponent<LightController>();
 
             if (Old_receiver) { Old_receiver.LightUntrigger(hit); }

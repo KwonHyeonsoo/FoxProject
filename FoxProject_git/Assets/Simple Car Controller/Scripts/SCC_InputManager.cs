@@ -55,6 +55,7 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
             }
             else
             {
+                Debug.Log("No inputmanager! Excute SCC Input");
                 SCC_GetInputs();
                 return;
             }
