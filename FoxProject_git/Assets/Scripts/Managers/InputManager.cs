@@ -35,27 +35,29 @@ public class InputManager : SingletonBehaviour<InputManager>
     private PlayerInput playerinput;    //인간 인풋 액션 - 플레이어에서 가져옴
 
     bool isPlayer = true;
-
     GameObject player;
-    GameObject carPlayer;
+    //GameObject carPlayer;
 
     public delegate void delegateSwitch();
     public delegateSwitch switchPlayer;  //차량 기능 활성/비활성화
 
     void Start()
     {
+        _name = "InputManager";
+
         if (carInputActions == null)
         {
             carInputActions = new SCC_InputActions();   //차량 인풋 액션 생성
         }
         if (playerinput == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player");    //Player 찾아서 player input 가져오기//나중에 gamemanager에서 가져오느게 나을듯
+            player = Managers.gameManager.DefaultPlayer;    //Player 찾아서 player input 가져오기//나중에 gamemanager에서 가져오느게 나을듯
             playerinput = player.GetComponent<PlayerInput>();
         }
         //playerinput.actions.FindActionMap("PlayerActions").FindAction("Hold").performed += SwitchInput;
         carInputActions.FindAction("Unride").performed += SwitchInput;//unride할 때 인풋액션 교체 함수 추가
     }
+
     //차량 하차
     public void SwitchInput(InputAction.CallbackContext context)
     {
@@ -84,6 +86,7 @@ public class InputManager : SingletonBehaviour<InputManager>
         }
         //Debug.Log("2switchinput" + " isPlayer " + isPlayer);
     }
+    
     //차량 탑승할 때 인풋액션 교체
     public void SwitchInput()
     {

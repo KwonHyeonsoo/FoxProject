@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Boss
   - Interactable
+  - Car
   layers:
   - Default
   - TransparentFX
