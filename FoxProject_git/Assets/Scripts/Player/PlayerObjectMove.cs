@@ -118,7 +118,7 @@ public class PlayerObjectMove : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(time);
-            Debug.Log(v);
+           // Debug.Log(v);
 
             if (v.x > 0)
             {

@@ -16,10 +16,18 @@ MonoBehaviour:
   - eventId: 0
     evectCondition: 0
     eventFunction: 0
+    delayTime: 0
     targetTransform: {x: 0, y: 0, z: 0}
     isCutscene: 0
   - eventId: 1
-    evectCondition: 3
+    evectCondition: 4
     eventFunction: 1
+    delayTime: 1
+    targetTransform: {x: 0, y: 0, z: 0}
+    isCutscene: 0
+  - eventId: 2
+    evectCondition: 0
+    eventFunction: 10
+    delayTime: 0
     targetTransform: {x: 0, y: 0, z: 0}
     isCutscene: 0

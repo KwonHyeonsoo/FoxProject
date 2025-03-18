@@ -88,5 +88,6 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     // Update is called once per frame
     void Update()
     {
+        storyManager.Update();
     }
 }

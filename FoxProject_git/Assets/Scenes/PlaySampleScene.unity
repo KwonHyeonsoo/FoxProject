@@ -2979,7 +2979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gimmicks: []
   gimmickConditions: 
-  storyID: 76
+  storyID: 2
   allGimmickIsTrue: 0
 --- !u!1 &1525663383
 GameObject:
@@ -4147,6 +4147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SCC_Vehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 822606380181090506, guid: 4f0c377ca4ba9b146813759e1575b636,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 822606380181090510, guid: 4f0c377ca4ba9b146813759e1575b636,
         type: 3}

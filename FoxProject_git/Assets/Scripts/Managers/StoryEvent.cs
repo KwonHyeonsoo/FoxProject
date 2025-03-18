@@ -26,6 +26,7 @@ public class StoryEvent
     public int eventId; // 이벤트 id
     public StoryEventCondition evectCondition;  //이벤트가 실행될 조건
     public StoryEventFunction eventFunction;    //이벤트 실행할 함수
+    public int delayTime = 0;
     public Vector3 targetTransform; // 이동할 위치
     public bool isCutscene; // 컷신 여부
 

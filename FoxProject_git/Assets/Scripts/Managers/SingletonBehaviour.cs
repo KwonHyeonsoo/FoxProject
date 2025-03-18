@@ -21,8 +21,13 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
                 // Search for existing instance.
                     //_instance = (T)FindObjectOfType(typeof(T));
                 _instance = (T)FindAnyObjectByType(typeof(T));
+
                 // Create new instance if one doesn't already exist.
-                if (_instance != null) return _instance;
+                if (_instance != null)
+                {
+                    DontDestroyOnLoad(_instance);
+                    return _instance;
+                }
 
 
                 // Need to create a new GameObject to attach the singleton to.
@@ -37,17 +42,17 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
             }
         }
     }
-    protected virtual void Awake()
-    {
-        if (_instance != null)
-        {
-            Debug.LogError(string.Format("허용되지 않은 중복 인스턴스 => {0}", typeof(T)));
-            Destroy(this);
-            return;
-        }
+    //protected virtual void Awake()
+    //{
+    //    if (_instance != null)
+    //    {
+    //        Debug.LogError(string.Format("허용되지 않은 중복 인스턴스 => {0}", typeof(T)));
+    //        Destroy(this);
+    //        return;
+    //    }
 
-        _instance = (T)this;
-    }
+    //    _instance = (T)this;
+    //}
 
     protected virtual void OnDestroy()
     {
