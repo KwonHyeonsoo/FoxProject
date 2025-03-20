@@ -7,8 +7,8 @@ public class UI_Manager
 {
     public GameObject UI_Canvas;
     private TextMeshProUGUI holdText;
-    private TextMeshProUGUI storyText;
-    private TextMeshProUGUI guideText;
+    private PrintText storyText;
+    private PrintText guideText;
     public void Start()
     {
         //UI_Canvas = GameObject.Find("Canvas");
@@ -16,12 +16,14 @@ public class UI_Manager
         UI_Canvas = GameObject.Instantiate(Managers.Instance.Canvas);
         UI_Canvas.name = "Canvas_instance";
         GameObject storyobj = GameObject.Instantiate(Managers.Instance.stroy, UI_Canvas.transform);
-        storyText = storyobj.GetComponent<TextMeshProUGUI>();    
+        storyText = storyobj.GetComponent<PrintText>();
+        storyobj.SetActive(false);
         GameObject holdobj = GameObject.Instantiate(Managers.Instance.hold, UI_Canvas.transform);
         holdText = holdobj.GetComponent<TextMeshProUGUI>();
         holdobj.SetActive(false);
         GameObject guideobj = GameObject.Instantiate(Managers.Instance.guide, UI_Canvas.transform);
-        guideText = guideobj.GetComponent<TextMeshProUGUI>();
+        guideText = guideobj.GetComponent<PrintText>();
+        guideobj.SetActive(false);
 
 
     }
@@ -52,6 +54,20 @@ public class UI_Manager
                 break;
         }
     }
+
+    public void PrintStoryText(int eventID)
+    {
+        storyText.gameObject.SetActive(true);
+        storyText.texts.Clear();
+        do
+        {
+            storyText.texts.Add(Managers.resourceManager.PassStoryText());
+        }
+        while (Managers.resourceManager.CheckCurrentStoryID() == eventID);
+
+        storyText.PrintingText();
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -85,6 +85,8 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     //씬 매니저
     //사운드 매니저
     //리소스 매니저
+    ResourceManager _rescourceManager = new ResourceManager();
+    public static ResourceManager resourceManager { get { return Instance._rescourceManager; } }
     //세이브 시스템
 
     //(취소)input Manager
@@ -95,6 +97,7 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
         _name = "Managers";
         _storyManager.Start();
         _ui_manager.Start();
+        _rescourceManager.Start();
     }
 
     // Update is called once per frame

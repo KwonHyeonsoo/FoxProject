@@ -41,6 +41,11 @@ public class StoryEvent
             return;
         }
 
-
+        switch (eventFunction)
+        {
+            case StoryEventFunction.UI_StoryText:
+                Managers.UI_manager.PrintStoryText(eventId);
+                break;
+        }
     }
 }
