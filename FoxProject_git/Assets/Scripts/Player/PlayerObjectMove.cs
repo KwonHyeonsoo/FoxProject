@@ -22,7 +22,7 @@ public class PlayerObjectMove : MonoBehaviour
     public LayerMask mask;
     [Range(0, 360)]
     public float viewAngle;
-    public TextMeshProUGUI holdText;
+    //public TextMeshProUGUI holdText;
 
     public float rotationAngle = 5f;
     public float rotationInterTime = 0.1f;
@@ -49,7 +49,7 @@ public class PlayerObjectMove : MonoBehaviour
         isHold = false;
         isInteractable = false;
         decal.SetActive(false);
-        holdText.gameObject.SetActive(false);
+        //holdText?.gameObject.SetActive(false);
         PlayerMoveEnable = decal.GetComponent<PlayerMoveEnable>();
     }
 
@@ -60,7 +60,7 @@ public class PlayerObjectMove : MonoBehaviour
         isHold = false;
         isInteractable = false;
         decal.SetActive(false);
-        holdText.gameObject.SetActive(false);
+        //holdText?.gameObject.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -141,7 +141,8 @@ public class PlayerObjectMove : MonoBehaviour
         ray.origin = transform.position;
         ray.direction = transform.forward;
 
-        holdText.gameObject.SetActive(false);
+        //holdText?.gameObject.SetActive(false);
+        Managers.UI_manager.UI_holdTextControl(false, UI_Manager.UI_hold_status.DEFAULT);
         isAbleHold = false;
         isInteractable = false;
 
@@ -155,8 +156,9 @@ public class PlayerObjectMove : MonoBehaviour
                 {
                     //Debug.Log("ok");
                     holdingObject = hit.collider.transform.gameObject;
-                    holdText.gameObject.SetActive(true);
-                    holdText.text = "Hold";
+                    //holdText.gameObject.SetActive(true);
+                    //holdText.text = "Hold";
+                    Managers.UI_manager.UI_holdTextControl(true, UI_Manager.UI_hold_status.HOLD);
                     isAbleHold = true;
                 }
             }
@@ -164,8 +166,10 @@ public class PlayerObjectMove : MonoBehaviour
             {
                 holdingObject = hit.collider.transform.gameObject;
                 isInteractable = true;
-                holdText.gameObject.SetActive(true);
-                holdText.text = "ride";
+                //holdText?.gameObject.SetActive(true);
+                //holdText.text = "ride";
+                Managers.UI_manager.UI_holdTextControl(true, UI_Manager.UI_hold_status.INTERACT);
+
             }
         }
     }
@@ -186,8 +190,9 @@ public class PlayerObjectMove : MonoBehaviour
                 if (isHold)
                 {
                     holdingObject.SetActive(false);
-                    holdText.text = "Holdingggg";
-                    holdText.gameObject.SetActive(true);
+                    //holdText.text = "Holdingggg";
+                    //holdText?.gameObject.SetActive(true);
+                    Managers.UI_manager.UI_holdTextControl(true, UI_Manager.UI_hold_status.HOLDING);
                     decal.SetActive(true);
                 }
                 else
@@ -208,8 +213,9 @@ public class PlayerObjectMove : MonoBehaviour
                         holdingObject.SetActive(true);
 
                         //decal 
-                        holdText.text = "Hold";
-                        holdText.gameObject.SetActive(false);
+                        //holdText.text = "Hold";
+                        //holdText?.gameObject.SetActive(false);
+                        Managers.UI_manager.UI_holdTextControl(false, UI_Manager.UI_hold_status.DEFAULT);
                         decal.SetActive(false);
 
                     }

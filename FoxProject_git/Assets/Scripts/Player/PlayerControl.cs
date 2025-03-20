@@ -194,7 +194,7 @@ public class PlayerControl : MonoBehaviour
             {
                 
                 moveForce.y = JumpScale;
-                Debug.LogWarning(moveForce +" "+ IsCheckGrounded());
+                //Debug.LogWarning(moveForce +" "+ IsCheckGrounded());
 
             }
             else if (!IsCheckGrounded() && !isStealth)  //점프 버퍼
