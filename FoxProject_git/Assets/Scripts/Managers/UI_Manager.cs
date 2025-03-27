@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UI_Manager
 {
@@ -9,7 +10,9 @@ public class UI_Manager
     private TextMeshProUGUI holdText;
     private PrintText storyText;
     private PrintText guideText;
-    public void Start()
+
+    public void Start() { }
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         //UI_Canvas = GameObject.Find("Canvas");
         
@@ -24,12 +27,13 @@ public class UI_Manager
         GameObject guideobj = GameObject.Instantiate(Managers.Instance.guide, UI_Canvas.transform);
         guideText = guideobj.GetComponent<PrintText>();
         guideobj.SetActive(false);
-
+        Debug.Log("UI_manager STart");
 
     }
     public enum UI_hold_status { DEFAULT, RIDE, INTERACT, HOLD, HOLDING }
     public void UI_holdTextControl(bool activate, UI_hold_status status)
     {
+        
         holdText.gameObject.SetActive(activate);
         switch (status)
         {
@@ -68,9 +72,14 @@ public class UI_Manager
         storyText.PrintingText();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PopUP_GameOver()
     {
-        
+        GameObject pop = GameObject.Instantiate(
+            Managers.Instance.gameoverPOPUP, 
+            UI_Canvas.transform);
+        pop.SetActive(true);
+
     }
+
+
 }

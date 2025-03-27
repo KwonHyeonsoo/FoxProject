@@ -42,17 +42,19 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
             }
         }
     }
-    //protected virtual void Awake()
-    //{
-    //    if (_instance != null)
-    //    {
-    //        Debug.LogError(string.Format("허용되지 않은 중복 인스턴스 => {0}", typeof(T)));
-    //        Destroy(this);
-    //        return;
-    //    }
+    protected virtual void Awake()
+    {
+        Debug.Log("Awake");
+        if (_instance != this)
+        {
+            Debug.LogWarning(string.Format("허용되지 않은 중복 인스턴스 => {0}", typeof(T)));
+            Destroy(this);
+            return;
+        }
 
-    //    _instance = (T)this;
-    //}
+        _instance = (T)this;
+        DontDestroyOnLoad(this);
+    }
 
     protected virtual void OnDestroy()
     {

@@ -22,7 +22,7 @@ public class ParkBox : GimmickAbstract
         checker = transform.GetComponentInParent<GimmickChecker>();
     }
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
     {
         if (Physics.CheckBox(transform.position, transform.lossyScale / 2f * size, Quaternion.identity, mask))
         {

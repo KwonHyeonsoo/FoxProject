@@ -29,4 +29,9 @@ public class PrintText : MonoBehaviour
         gameObject.SetActive(false);
         texts.Clear();
     }
+
+    private void OnDestroy()
+    {
+        Debug.Log("Destroyt"+gameObject.name);
+    }
 }

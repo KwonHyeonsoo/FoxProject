@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Awake(싱글톤 override) -> Enable -> 씬로드 -> Start -> 씬종료
+//  -> (반복) -> Awake -> 씬로드 -> Start
 public class Managers : SingletonBehaviour<Managers>
 {
     public StoryData story1;
@@ -10,6 +13,7 @@ public class Managers : SingletonBehaviour<Managers>
     public GameObject stroy;
     public GameObject hold;
     public GameObject guide;
+    public GameObject gameoverPOPUP;
     #region SingletonBehaviour
     /*    
 
@@ -94,13 +98,13 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
 
     void Start()
     {
+        Debug.Log("Manager.start");
         _name = "Managers";
         _storyManager.Start();
         _ui_manager.Start();
         _rescourceManager.Start();
     }
 
-    // Update is called once per frame
     void Update()
     {
         storyManager.Update();
@@ -108,18 +112,48 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
 
     void OnEnable()
     {
+        Debug.Log("Manager.Enable");
         // 씬 매니저의 sceneLoaded에 체인을 건다.
         SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += _ui_manager.OnSceneLoaded;
+        SceneManager.sceneLoaded += _storyManager.OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnLoaded;
     }
 
     // 체인을 걸어서 이 함수는 매 씬마다 호출된다.
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Time.timeScale = 1f;
         Debug.Log("OnSceneLoaded: " + scene.name + "|| LoadSceneMode: "+ mode);
+    }
+    void OnSceneUnLoaded(Scene scene)
+    {
+        Time.timeScale = 1f;
+        Debug.Log("OnSceneUnLoad" );
     }
 
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneLoaded -= _ui_manager.OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnLoaded;
     }
+
+
+    #region General GameManager
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void GameOver()
+    {
+        _ui_manager.PopUP_GameOver();
+        //사운드 일지 정지
+        //시간 일시 정지
+        Time.timeScale = 0f;
+        Debug.Log("GameOver!");
+
+    }
+
+    #endregion
 }

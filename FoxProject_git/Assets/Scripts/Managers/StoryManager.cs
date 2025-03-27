@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class StoryManager
 {
     GameObject _Boss1, _Boss2;  //addressable로 불러오기 or 리소스 매니저 처리
@@ -16,14 +17,21 @@ public class StoryManager
     // Start is called before the first frame update
     public void Start()
     {
+
+
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
         story1 = Managers.Instance.story1;
-        currentElementID = currentEventExecute = currentStoryID = story1.events[0].eventId;
         isEventEnd = new bool[story1.events.Length];
+        currentElementID = currentEventExecute = currentStoryID = story1.events[0].eventId;
         for (int i = 0; i < story1.events.Length; i++)
         {
             isEventEnd[i] = false;
         }
         delayTime = 0;
+
     }
 
     // Update is called once per frame
