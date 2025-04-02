@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -88,11 +89,16 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
 
     //씬 매니저
     //사운드 매니저
+    SoundManager _soundManager = new SoundManager();
+    public static SoundManager soundManager { get { return Instance._soundManager; } }
     //리소스 매니저
     ResourceManager _rescourceManager = new ResourceManager();
     public static ResourceManager resourceManager { get { return Instance._rescourceManager; } }
     //세이브 시스템
 
+    //이벤트 매니저
+    EventManager _eventManager = new EventManager();
+    public static EventManager eventManager { get { return Instance._eventManager; } }
     //(취소)input Manager
     #endregion
 
@@ -100,9 +106,13 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     {
         Debug.Log("Manager.start");
         _name = "Managers";
-        _storyManager.Start();
-        _ui_manager.Start();
+        
         _rescourceManager.Start();
+
+        _ui_manager.Start();
+        _soundManager.Start();
+        _storyManager.Start();
+
     }
 
     void Update()
@@ -117,6 +127,7 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.sceneLoaded += _ui_manager.OnSceneLoaded;
         SceneManager.sceneLoaded += _storyManager.OnSceneLoaded;
+        //SceneManager.sceneLoaded += _eventManager.OnSceneLoaded;
         SceneManager.sceneUnloaded += OnSceneUnLoaded;
     }
 
@@ -136,6 +147,8 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.sceneLoaded -= _ui_manager.OnSceneLoaded;
+        SceneManager.sceneLoaded -= _storyManager.OnSceneLoaded;
+        //SceneManager.sceneLoaded -= _eventManager.OnSceneLoaded;
         SceneManager.sceneUnloaded -= OnSceneUnLoaded;
     }
 

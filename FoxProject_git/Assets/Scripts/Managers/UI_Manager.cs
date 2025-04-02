@@ -4,21 +4,22 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class UI_Manager
+public class UI_Manager : IListener
 {
     public GameObject UI_Canvas;
     private TextMeshProUGUI holdText;
     private PrintText storyText;
     private PrintText guideText;
 
-    public void Start() { }
-    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        //UI_Canvas = GameObject.Find("Canvas");
-        
-        UI_Canvas = GameObject.Instantiate(Managers.Instance.Canvas);
+    #region Default Manager Function
+
+    public void Start() { 
+        Managers.eventManager.AddListener(EVENT_TYPE.InitResourceLoaded, this);
+
+        Debug.Log("UI STart");
+        UI_Canvas = GameObject.FindObjectOfType<Canvas>().gameObject;//GameObject.Instantiate(Managers.Instance.Canvas);
         UI_Canvas.name = "Canvas_instance";
-        GameObject storyobj = GameObject.Instantiate(Managers.Instance.stroy, UI_Canvas.transform);
+        GameObject storyobj = GameObject.Instantiate(Managers.resourceManager._UI["StoryText"], UI_Canvas.transform);
         storyText = storyobj.GetComponent<PrintText>();
         storyobj.SetActive(false);
         GameObject holdobj = GameObject.Instantiate(Managers.Instance.hold, UI_Canvas.transform);
@@ -30,6 +31,14 @@ public class UI_Manager
         Debug.Log("UI_manager STart");
 
     }
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //UI_Canvas = GameObject.Find("Canvas");
+        
+
+    }
+
+    #endregion
     public enum UI_hold_status { DEFAULT, RIDE, INTERACT, HOLD, HOLDING }
     public void UI_holdTextControl(bool activate, UI_hold_status status)
     {
@@ -81,5 +90,10 @@ public class UI_Manager
 
     }
 
+    // 이벤트가 발생할 때, 리스너에서 호출할 함수
+    public void OnEvent(EVENT_TYPE EventType, Component Sender, object Param = null) 
+    {
+        Debug.Log("UI REscource done");
+    }
 
 }

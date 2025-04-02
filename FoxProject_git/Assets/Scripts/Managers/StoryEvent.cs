@@ -27,7 +27,7 @@ public class StoryEvent
     public StoryEventCondition evectCondition;  //이벤트가 실행될 조건
     public StoryEventFunction eventFunction;    //이벤트 실행할 함수
     public int delayTime = 0;
-    public Vector3 targetTransform; // 이동할 위치
+    public Transform targetTransform; // 이동할 위치
     public bool isCutscene; // 컷신 여부
 
     // ⭐ 실행 함수 추가
@@ -46,6 +46,20 @@ public class StoryEvent
             case StoryEventFunction.UI_StoryText:
                 Managers.UI_manager.PrintStoryText(eventId);
                 break;
+            case StoryEventFunction.Gameobject_Active:
+                GameObject.Instantiate<GameObject>(Managers.resourceManager.GetGameObject(eventId), targetTransform.position, targetTransform.rotation);
+                break;
+            case StoryEventFunction.Gameobject_Deactive:
+                Managers.storyManager.GameObjectSetDeActive(eventId);
+                break;
+            case StoryEventFunction.Gameobject_Perform:
+                Managers.storyManager.GameObjectPerform(eventId, targetTransform);
+                break;
+            case StoryEventFunction.Sound_PlaySound:
+                Managers.soundManager.PlayStorySoudnOneShot(eventId);
+                break;
+
+
         }
     }
 }

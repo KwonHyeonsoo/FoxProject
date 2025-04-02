@@ -14,13 +14,27 @@ public class StoryManager
     double delayTime;
     bool isEnd = false;
     bool[] isEventEnd;
+    StoryObjectController controller;
+    #region Default Manager Function
     // Start is called before the first frame update
     public void Start()
     {
+        //리소스 매니저에서 _prefabs 받고 id까지 저장
+
+        //storyObjectController 받아오기
+        controller = GameObject.FindObjectOfType<StoryObjectController>();
 
 
     }
+    public void GameObjectSetDeActive(int id) 
+    { 
+        controller.DeActivateObject(id);
+    }
 
+    public void GameObjectPerform(int id, Transform transform)
+    {
+        controller.PerformObject(id, transform);
+    }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         story1 = Managers.Instance.story1;
@@ -56,6 +70,8 @@ public class StoryManager
             if (currentEventExecute >= story1.events.Length) { isEnd = true; }
         }
     }
+
+    #endregion
     private void StoryExecuteEventsLoop(int StoryID, StoryEventCondition eventCondition)
     {
         if (delayTime > 0) return;
@@ -129,4 +145,14 @@ public class StoryManager
 
     }
 
+
+    //public void ObjectController_Instantiate(int eventID, StoryEventFunction eventFunction) 
+    //{ 
+    //    switch (eventFunction)
+    //    {
+    //        case StoryEventFunction.Gameobject_Deactive:
+    //            controller.DeActivateObject(eventID);
+    //            break;
+    //    }
+    //}
 }

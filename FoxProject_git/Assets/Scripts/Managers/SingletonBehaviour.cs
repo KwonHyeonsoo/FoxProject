@@ -17,9 +17,8 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
             {
                 if (_instance != null)
                     return _instance;
-
                 // Search for existing instance.
-                    //_instance = (T)FindObjectOfType(typeof(T));
+                //_instance = (T)FindObjectOfType(typeof(T));
                 _instance = (T)FindAnyObjectByType(typeof(T));
 
                 // Create new instance if one doesn't already exist.
@@ -44,7 +43,7 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     }
     protected virtual void Awake()
     {
-        Debug.Log("Awake");
+        Debug.Log("Awake"+ typeof(T));
         if (_instance != this)
         {
             Debug.LogWarning(string.Format("허용되지 않은 중복 인스턴스 => {0}", typeof(T)));

@@ -10,7 +10,8 @@ public class GimmickChecker : MonoBehaviour
     //List<GimmickAbstract> gimmickAbstracts;
     [ReadOnly] public List<bool> gimmickConditions;
     public int storyID;
-    [ReadOnly]public bool allGimmickIsTrue;
+    public bool allGimmickIsTrue;
+
     void Start()
     {
         if(gimmicks.Count > 0)

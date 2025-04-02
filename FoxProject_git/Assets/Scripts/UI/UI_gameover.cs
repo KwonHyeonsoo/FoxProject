@@ -15,6 +15,8 @@ public class UI_gameover : MonoBehaviour
     }
     public void OnClickRestart()
     {
+        Managers.soundManager.PlayUIEffectOneShot();
         Managers.Instance.Restart();
+        
     }
 }
