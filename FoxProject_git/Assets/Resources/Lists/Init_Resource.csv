@@ -1,0 +1,13 @@
+TYPE,NAME,,,,,,,
+UI,_GuideText,,,,,,,
+UI,_StoryText,,,,,,,
+UI,Canvas,,,,,,,
+UI,GameOverPanel,,,,,,,
+UI,HoldText,,,,,,,UI
+GameObject,Human,,,,,,,GameObject
+GameObject,SCC_Vehicle,,,,,,,StoryData
+StoryData,NewStoryData,,,,,,,Sound
+Sound,BGM01,,,,,,,Dialogue
+Sound,SFX01,,,,,,,SaveData
+Sound,SFX02,,,,,,,
+Dialogue,dialogue1,,,,,,,

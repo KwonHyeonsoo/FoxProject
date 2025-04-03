@@ -47,7 +47,7 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
 
         if (inputActions == null)
         {
-            if (InputManager.Instance)
+            if (InputManager.Instance != null)
             {
                 inputActions = 
                     InputManager.Instance.carInputActions;

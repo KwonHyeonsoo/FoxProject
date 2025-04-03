@@ -14,16 +14,32 @@ public class StoryManager
     double delayTime;
     bool isEnd = false;
     bool[] isEventEnd;
-    StoryObjectController controller;
+    public StoryObjectController controller;
     #region Default Manager Function
     // Start is called before the first frame update
     public void Start()
     {
         //리소스 매니저에서 _prefabs 받고 id까지 저장
 
+        InitResourceLoad();
         //storyObjectController 받아오기
-        controller = GameObject.FindObjectOfType<StoryObjectController>();
+        
 
+
+    }
+
+    void InitResourceLoad()
+    {
+
+        story1 = Managers.resourceManager.currentStory;
+        isEventEnd = new bool[story1.events.Length];
+        currentElementID = currentEventExecute = currentStoryID = story1.events[0].eventId;
+        for (int i = 0; i < story1.events.Length; i++)
+        {
+            isEventEnd[i] = false;
+        }
+        delayTime = 0;
+        isEnd = false;
 
     }
     public void GameObjectSetDeActive(int id) 
@@ -37,21 +53,18 @@ public class StoryManager
     }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        story1 = Managers.Instance.story1;
-        isEventEnd = new bool[story1.events.Length];
-        currentElementID = currentEventExecute = currentStoryID = story1.events[0].eventId;
-        for (int i = 0; i < story1.events.Length; i++)
+        Debug.Log("StoryManager OnSceneLoaded");
+        if (Managers.resourceManager.isLoaded)
         {
-            isEventEnd[i] = false;
+            InitResourceLoad();
         }
-        delayTime = 0;
 
     }
 
     // Update is called once per frame
     public void Update()
     {
-
+        //Debug.Log(currentEventExecute);
         if (isEnd) return;
         //Debug.Log(delayTime);
         if(delayTime > 0)

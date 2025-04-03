@@ -14,19 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events:
   - eventId: 0
-    evectCondition: 0
-    eventFunction: 8
+    evectCondition: 6
+    eventFunction: 0
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    isCutscene: 0
+  - eventId: 1
+    evectCondition: 4
+    eventFunction: 3
     delayTime: 0
     targetTransform: {fileID: 5685548680104624613, guid: 40e4a20b5653c4e48b8d4fff67611347,
       type: 3}
     isCutscene: 0
   - eventId: 2
-    evectCondition: 4
-    eventFunction: 4
+    evectCondition: 2
+    eventFunction: 2
     delayTime: 0
-    targetTransform: {fileID: 0}
+    targetTransform: {fileID: 5685548680104624613, guid: 40e4a20b5653c4e48b8d4fff67611347,
+      type: 3}
     isCutscene: 0
   - eventId: 3
+    evectCondition: 0
+    eventFunction: 4
+    delayTime: 0
+    targetTransform: {fileID: 5685548680104624613, guid: 40e4a20b5653c4e48b8d4fff67611347,
+      type: 3}
+    isCutscene: 0
+  - eventId: 4
     evectCondition: 0
     eventFunction: 5
     delayTime: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum StoryEventCondition
 {
-    WASDdown, OnEnterPoint, OnRide, ClearPuzzle, Interation, The_end
+    WASDdown, OnEnterPoint, OnRide, ClearPuzzle, Interation, The_end, EnterZone
 }
 public enum StoryEventFunction
 {
@@ -45,6 +45,9 @@ public class StoryEvent
         {
             case StoryEventFunction.UI_StoryText:
                 Managers.UI_manager.PrintStoryText(eventId);
+                break;
+            case StoryEventFunction.UI_GuideText:
+                Managers.UI_manager.PrintGuideText(eventId);
                 break;
             case StoryEventFunction.Gameobject_Active:
                 GameObject.Instantiate<GameObject>(Managers.resourceManager.GetGameObject(eventId), targetTransform.position, targetTransform.rotation);

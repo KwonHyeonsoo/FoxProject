@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 1428749783808355173}
   - component: {fileID: 3837591996610632562}
   m_Layer: 7
-  m_Name: targePlayer
+  m_Name: Human
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

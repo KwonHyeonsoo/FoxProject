@@ -19,6 +19,7 @@ public class StoryObjectController : MonoBehaviour
         {
             GameObjects.Add(transform.GetChild(i).gameObject);
         }
+        Managers.storyManager.controller = this;
     }
 
     public void DeActivateObject(int ID)

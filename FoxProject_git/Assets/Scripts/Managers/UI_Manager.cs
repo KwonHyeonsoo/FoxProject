@@ -13,28 +13,37 @@ public class UI_Manager : IListener
 
     #region Default Manager Function
 
-    public void Start() { 
-        Managers.eventManager.AddListener(EVENT_TYPE.InitResourceLoaded, this);
+    private void MakingUIObject()
+    {
 
         Debug.Log("UI STart");
         UI_Canvas = GameObject.FindObjectOfType<Canvas>().gameObject;//GameObject.Instantiate(Managers.Instance.Canvas);
         UI_Canvas.name = "Canvas_instance";
-        GameObject storyobj = GameObject.Instantiate(Managers.resourceManager._UI["StoryText"], UI_Canvas.transform);
+        GameObject storyobj = GameObject.Instantiate(Managers.resourceManager._UI["_StoryText"], UI_Canvas.transform);
         storyText = storyobj.GetComponent<PrintText>();
         storyobj.SetActive(false);
-        GameObject holdobj = GameObject.Instantiate(Managers.Instance.hold, UI_Canvas.transform);
+        GameObject holdobj = GameObject.Instantiate(Managers.resourceManager._UI["HoldText"], UI_Canvas.transform);
         holdText = holdobj.GetComponent<TextMeshProUGUI>();
         holdobj.SetActive(false);
-        GameObject guideobj = GameObject.Instantiate(Managers.Instance.guide, UI_Canvas.transform);
+        GameObject guideobj = GameObject.Instantiate(Managers.resourceManager._UI["_GuideText"], UI_Canvas.transform);
         guideText = guideobj.GetComponent<PrintText>();
         guideobj.SetActive(false);
-        Debug.Log("UI_manager STart");
+
+    }
+    public void Start() {
+        //Managers.eventManager.AddListener(EVENT_TYPE.InitResourceLoaded, this);
+        MakingUIObject();
 
     }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log("UI_Manager OnSceneLoaded");
         //UI_Canvas = GameObject.Find("Canvas");
-        
+        if (Managers.resourceManager.isLoaded)
+        {
+            MakingUIObject();
+
+        }
 
     }
 
@@ -81,10 +90,23 @@ public class UI_Manager : IListener
         storyText.PrintingText();
     }
 
+    public void PrintGuideText(int eventID)
+    {
+        guideText.gameObject.SetActive(true);
+        guideText.texts.Clear();
+        do
+        {
+            guideText.texts.Add(Managers.resourceManager.PassGuideText());
+        }
+        while (Managers.resourceManager.CheckCurrentGuideID() == eventID);
+
+        guideText.PrintingText();
+    }
+
     public void PopUP_GameOver()
     {
         GameObject pop = GameObject.Instantiate(
-            Managers.Instance.gameoverPOPUP, 
+            Managers.resourceManager._UI["GameOverPanel"], 
             UI_Canvas.transform);
         pop.SetActive(true);
 

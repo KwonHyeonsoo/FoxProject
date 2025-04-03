@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputManager : SingletonBehaviour<InputManager>
+public class InputManager : MonoBehaviour
 {
     ////static
     //private static InputManager _instance;
@@ -40,23 +40,20 @@ public class InputManager : SingletonBehaviour<InputManager>
     public delegate void delegateSwitch();
     public delegateSwitch switchPlayer;  //차량 기능 활성/비활성화
 
-    public SCC_InputActions retunCarInput()
-    {
-        return carInputActions;
-    }
+    public static InputManager Instance;
     void Awake()
     {
-        _name = "InputManager";
+       // base.Awake();
+        //_name = "InputManager";
+        Instance = this;
 
         if (carInputActions == null)
         {
             carInputActions = new SCC_InputActions();   //차량 인풋 액션 생성
         }
-        if (playerinput == null)
-        {
-            player = Managers.gameManager.DefaultPlayer;    //Player 찾아서 player input 가져오기//나중에 gamemanager에서 가져오느게 나을듯
-            playerinput = player.GetComponent<PlayerInput>();
-        }
+        player = Managers.gameManager.DefaultPlayer;    //Player 찾아서 player input 가져오기//나중에 gamemanager에서 가져오느게 나을듯
+        playerinput = player.GetComponent<PlayerInput>();
+
        
     }
 

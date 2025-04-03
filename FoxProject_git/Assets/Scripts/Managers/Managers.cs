@@ -9,12 +9,7 @@ using UnityEngine.SceneManagement;
 //  -> (반복) -> Awake -> 씬로드 -> Start
 public class Managers : SingletonBehaviour<Managers>
 {
-    public StoryData story1;
-    public GameObject Canvas;
-    public GameObject stroy;
-    public GameObject hold;
-    public GameObject guide;
-    public GameObject gameoverPOPUP;
+
     #region SingletonBehaviour
     /*    
 
@@ -92,8 +87,8 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     SoundManager _soundManager = new SoundManager();
     public static SoundManager soundManager { get { return Instance._soundManager; } }
     //리소스 매니저
-    ResourceManager _rescourceManager = new ResourceManager();
-    public static ResourceManager resourceManager { get { return Instance._rescourceManager; } }
+    ResourceManager _resourceManager = new ResourceManager();
+    public static ResourceManager resourceManager { get { return Instance._resourceManager; } }
     //세이브 시스템
 
     //이벤트 매니저
@@ -106,8 +101,11 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     {
         Debug.Log("Manager.start");
         _name = "Managers";
-        
-        _rescourceManager.Start();
+
+        Managers.eventManager.AddListener(EVENT_TYPE.InitResourceLoaded, _ui_manager);
+
+
+        _resourceManager.Start();
 
         _ui_manager.Start();
         _soundManager.Start();
@@ -125,6 +123,7 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
         Debug.Log("Manager.Enable");
         // 씬 매니저의 sceneLoaded에 체인을 건다.
         SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += _resourceManager.OnSceneLoaded;
         SceneManager.sceneLoaded += _ui_manager.OnSceneLoaded;
         SceneManager.sceneLoaded += _storyManager.OnSceneLoaded;
         //SceneManager.sceneLoaded += _eventManager.OnSceneLoaded;
@@ -145,11 +144,15 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
 
     void OnDisable()
     {
+
         SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.sceneLoaded -= _ui_manager.OnSceneLoaded;
         SceneManager.sceneLoaded -= _storyManager.OnSceneLoaded;
+        SceneManager.sceneLoaded -= _resourceManager.OnSceneLoaded;
         //SceneManager.sceneLoaded -= _eventManager.OnSceneLoaded;
         SceneManager.sceneUnloaded -= OnSceneUnLoaded;
+
+
     }
 
 

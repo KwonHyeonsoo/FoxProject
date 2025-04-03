@@ -31,6 +31,6 @@ public class PrintText : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("Destroyt"+gameObject.name);
+        //Debug.Log("Destroyt"+gameObject.name);
     }
 }
