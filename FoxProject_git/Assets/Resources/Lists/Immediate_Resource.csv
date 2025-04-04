@@ -1,7 +1,4 @@
-﻿ID,TYPE,NAME,,,,
-1,GameObject,test,,,,
-1,Sound,,,,,
-3,GameObject,test,,,,
-3,Sound,,,,,GameObject
-5,GameObject,test,,,,Sound
-5,Sound,,,,,
+﻿ID,TYPE,NAME,,,,,
+1,GameObject,test,,,,,
+1,GameObject,DeathTimer,,,,,GameObject
+1,Sound,SFX02,,,,,Sound

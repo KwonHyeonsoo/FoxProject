@@ -35,6 +35,8 @@ public class SCC_Contorller : MonoBehaviour
 
         InputManager.Instance.carInputActions.FindAction("Start").performed += EngineStartInputaction;
 
+        //사운드 매니저에게 본인 자동차 소리를 맡긴다
+
         //SwitchPlayer();
         EngineStart();
     }

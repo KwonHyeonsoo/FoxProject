@@ -1,4 +1,4 @@
-TYPE,NAME,,,,,,,
+﻿TYPE,NAME,,,,,,,
 UI,_GuideText,,,,,,,
 UI,_StoryText,,,,,,,
 UI,Canvas,,,,,,,
@@ -10,4 +10,5 @@ StoryData,NewStoryData,,,,,,,Sound
 Sound,BGM01,,,,,,,Dialogue
 Sound,SFX01,,,,,,,SaveData
 Sound,SFX02,,,,,,,
+Sound,SFX03,,,,,,,
 Dialogue,dialogue1,,,,,,,
