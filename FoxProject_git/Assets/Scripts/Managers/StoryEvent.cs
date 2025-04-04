@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum StoryEventCondition
 {
-    WASDdown, OnEnterPoint, OnRide, ClearPuzzle, Interation, The_end, EnterZone
+    WASDdown, OnRide, ClearPuzzle, Interation, The_end, EnterZone
 }
 public enum StoryEventFunction
 {
@@ -61,7 +61,9 @@ public class StoryEvent
             case StoryEventFunction.Sound_PlaySound:
                 Managers.soundManager.PlayStorySoudnOneShot(eventId);
                 break;
-
+            case StoryEventFunction.DeathTimer:
+                Managers.Instantiate<GameObject>(Managers.resourceManager.GetGameObject(eventId));
+                break;
 
         }
     }

@@ -8,6 +8,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
 
 /// <summary>
 /// Handles engine audio based on vehicle engine rpm and speed.
@@ -67,6 +68,7 @@ public class SCC_Audio : MonoBehaviour {
         GameObject engineOnGO = new GameObject("Engine On AudioSource");
         engineOnGO.transform.SetParent(transform, false);
         engineOnSource = engineOnGO.AddComponent<AudioSource>();
+        engineOnSource.outputAudioMixerGroup = Managers.soundManager.ReturnMatchingGroups("InGame");
         engineOnSource.clip = engineOn;
         engineOnSource.loop = true;
         engineOnSource.spatialBlend = 1f;
@@ -75,6 +77,8 @@ public class SCC_Audio : MonoBehaviour {
         GameObject engineOffGO = new GameObject("Engine Off AudioSource");
         engineOffGO.transform.SetParent(transform, false);
         engineOffSource = engineOffGO.AddComponent<AudioSource>();
+        engineOffSource.outputAudioMixerGroup = Managers.soundManager.ReturnMatchingGroups("InGame");
+
         engineOffSource.clip = engineOff;
         engineOffSource.loop = true;
         engineOffSource.spatialBlend = 1f;

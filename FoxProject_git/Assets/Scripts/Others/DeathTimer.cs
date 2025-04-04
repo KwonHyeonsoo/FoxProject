@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DeathTimer : MonoBehaviour
+{
+    public int TimerCount;
+    void Start()
+    {
+        //타이머 사운드 재생
+        //타이머 코루틴 시작
+        StartCoroutine(TimerStart(TimerCount));
+    }
+
+    IEnumerator TimerStart(int timer)
+    {
+        yield return new WaitForSeconds(timer);
+        //타이머 사운드 재생 중지
+        //게임 오버 호출
+        Managers.gameManager.GameOver();
+        Destroy(this);
+    }
+}

@@ -13,7 +13,7 @@ public class DeadZone : MonoBehaviour
     {
         if (Physics.CheckBox(transform.position, transform.lossyScale / 2f * size, Quaternion.identity, mask))
         {
-            Managers.Instance.GameOver();  
+            Managers.gameManager.GameOver();
         }
 
     }

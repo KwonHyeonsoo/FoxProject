@@ -40,6 +40,11 @@ public class ResourceManager
         //json 파일 읽어오기(데이터 세이브용)
         Debug.Log("resource awake");
 
+    }
+
+    private void ReadResourceALL()
+    {
+
         //CSV 읽기
         data_dialogue1 = CSVReader.Read("Dialogue/dialogue1");
         data_guidelog1 = CSVReader.Read("Dialogue/guidelog1");
@@ -56,9 +61,9 @@ public class ResourceManager
             switch (datatype)
             {
                 case "UI":
-                    _UI.Add(data_init_paths[i]["NAME"].ToString(), Resources.Load<GameObject>("Prefabs/UI/"+ data_init_paths[i]["NAME"]));
+                    _UI.Add(data_init_paths[i]["NAME"].ToString(), Resources.Load<GameObject>("Prefabs/UI/" + data_init_paths[i]["NAME"]));
                     break;
-                case "GameObject":
+                case "GameObject":  //오디오믹서
                     break;
                 case "StoryData":
                     currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + data_init_paths[i]["NAME"]);
@@ -83,13 +88,16 @@ public class ResourceManager
         //ScriptsText
 
         isLoaded = true;
-        Managers.eventManager.PostNotification(EVENT_TYPE.InitResourceLoaded, null , null);
+        Managers.eventManager.PostNotification(EVENT_TYPE.InitResourceLoaded, null, null);
 
     }
-
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("ResourceManager OnSceneLoaded");
+        if(isLoaded == false)
+        {
+            ReadResourceALL();
+        }
 
         Debug.Log("Reset cursor");
         story_cursor = 0;

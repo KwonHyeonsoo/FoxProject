@@ -156,20 +156,5 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
     }
 
 
-    #region General GameManager
-    public void Restart()
-    {
-        SceneManager.LoadScene(0);
-    }
-    public void GameOver()
-    {
-        _ui_manager.PopUP_GameOver();
-        //사운드 일지 정지
-        //시간 일시 정지
-        Time.timeScale = 0f;
-        Debug.Log("GameOver!");
 
-    }
-
-    #endregion
 }
