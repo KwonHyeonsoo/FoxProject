@@ -137,11 +137,13 @@ public class PlayerControl : MonoBehaviour
         {
             raycastCoroutine = RecayGround(0.1f);
             StartCoroutine(raycastCoroutine);
+            Managers.soundManager.PlaySoundStart(SoundManager.LoopSound._Player);
         }
         else if (value.canceled)
         {
             StopCoroutine(raycastCoroutine);
             slopeVec = Vector3.zero;
+            Managers.soundManager.PlaySoundEnd(SoundManager.LoopSound._Player);
         }
 
     }

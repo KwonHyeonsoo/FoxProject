@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: a56f37aad7f67db4fb43393b4635c918
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Branch_dead_1
+    100002: Branch_dead_2
+    100004: Branch_dead_3
+    100006: Branches
+    100008: Branches_Branch_0
+    100010: Branches_Branch_1
+    100012: Branches_branch_leaf_1
+    100014: Branches_branch_leaf_2
+    100016: Branches_branch_leaf_3
+    100018: Branches_branch_small_1
+    100020: Branches_branch_small_2
+    100022: Branches_branch_small_3
+    100024: Branches_branch_small_5
+    100026: Branches_branch_small_6
+    100028: Branches_branch_small_7
+    100030: Branches_branch_small_8
+    100032: Hair_grass
+    100034: Hair_grass_1
+    100036: Hair_grass_10
+    100038: Hair_grass_2
+    100040: Hair_grass_3
+    100042: Hair_grass_4
+    100044: Hair_grass_5
+    100046: Hair_grass_6
+    100048: Hair_grass_7
+    100050: Hair_grass_8
+    100052: Hair_grass_9
+    100054: Hair_grass_small_3
+    100056: //RootNode
+    400000: Branch_dead_1
+    400002: Branch_dead_2
+    400004: Branch_dead_3
+    400006: Branches
+    400008: Branches_Branch_0
+    400010: Branches_Branch_1
+    400012: Branches_branch_leaf_1
+    400014: Branches_branch_leaf_2
+    400016: Branches_branch_leaf_3
+    400018: Branches_branch_small_1
+    400020: Branches_branch_small_2
+    400022: Branches_branch_small_3
+    400024: Branches_branch_small_5
+    400026: Branches_branch_small_6
+    400028: Branches_branch_small_7
+    400030: Branches_branch_small_8
+    400032: Hair_grass
+    400034: Hair_grass_1
+    400036: Hair_grass_10
+    400038: Hair_grass_2
+    400040: Hair_grass_3
+    400042: Hair_grass_4
+    400044: Hair_grass_5
+    400046: Hair_grass_6
+    400048: Hair_grass_7
+    400050: Hair_grass_8
+    400052: Hair_grass_9
+    400054: Hair_grass_small_3
+    400056: //RootNode
+    2300000: Branch_dead_1
+    2300002: Branch_dead_2
+    2300004: Branch_dead_3
+    2300006: Branches_Branch_0
+    2300008: Branches_Branch_1
+    2300010: Branches_branch_leaf_1
+    2300012: Branches_branch_leaf_2
+    2300014: Branches_branch_leaf_3
+    2300016: Branches_branch_small_1
+    2300018: Branches_branch_small_2
+    2300020: Branches_branch_small_3
+    2300022: Branches_branch_small_5
+    2300024: Branches_branch_small_6
+    2300026: Branches_branch_small_7
+    2300028: Branches_branch_small_8
+    2300030: Hair_grass_1
+    2300032: Hair_grass_10
+    2300034: Hair_grass_2
+    2300036: Hair_grass_3
+    2300038: Hair_grass_4
+    2300040: Hair_grass_5
+    2300042: Hair_grass_6
+    2300044: Hair_grass_7
+    2300046: Hair_grass_8
+    2300048: Hair_grass_9
+    2300050: Hair_grass_small_3
+    3300000: Branch_dead_1
+    3300002: Branch_dead_2
+    3300004: Branch_dead_3
+    3300006: Branches_Branch_0
+    3300008: Branches_Branch_1
+    3300010: Branches_branch_leaf_1
+    3300012: Branches_branch_leaf_2
+    3300014: Branches_branch_leaf_3
+    3300016: Branches_branch_small_1
+    3300018: Branches_branch_small_2
+    3300020: Branches_branch_small_3
+    3300022: Branches_branch_small_5
+    3300024: Branches_branch_small_6
+    3300026: Branches_branch_small_7
+    3300028: Branches_branch_small_8
+    3300030: Hair_grass_1
+    3300032: Hair_grass_10
+    3300034: Hair_grass_2
+    3300036: Hair_grass_3
+    3300038: Hair_grass_4
+    3300040: Hair_grass_5
+    3300042: Hair_grass_6
+    3300044: Hair_grass_7
+    3300046: Hair_grass_8
+    3300048: Hair_grass_9
+    3300050: Hair_grass_small_3
+    4300000: Hair_grass_1
+    4300002: Hair_grass_2
+    4300004: Hair_grass_3
+    4300006: Hair_grass_4
+    4300008: Hair_grass_5
+    4300010: Hair_grass_6
+    4300012: Hair_grass_7
+    4300014: Hair_grass_small_3
+    4300016: Hair_grass_9
+    4300018: Hair_grass_8
+    4300020: Hair_grass_10
+    4300022: Branches_branch_small_1
+    4300024: Branches_branch_small_2
+    4300026: Branches_branch_small_3
+    4300028: Branches_branch_small_5
+    4300030: Branches_branch_small_6
+    4300032: Branches_Branch_0
+    4300034: Branches_Branch_1
+    4300036: Branches_branch_small_8
+    4300038: Branches_branch_small_7
+    4300040: Branch_dead_1
+    4300042: Branch_dead_2
+    4300044: Branch_dead_3
+    4300046: Branches_branch_leaf_1
+    4300048: Branches_branch_leaf_2
+    4300050: Branches_branch_leaf_3
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Branches_Tree_branches_leaves_material
+    second: {fileID: 2100000, guid: 0727d2880d33aa2428d4a610a18d2815, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -20,10 +20,6 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
 
     private void Awake() {
 
-        //  Hiding this gameobject in the hierarchy.
-        //gameObject.hideFlags = HideFlags.HideInHierarchy;
-
-        //  Creating inputs.
         inputs = new SCC_Inputs();
 
     }
@@ -51,7 +47,7 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
             {
                 inputActions = 
                     InputManager.Instance.carInputActions;
-                inputActions.Enable();
+                
             }
             else
             {
@@ -62,6 +58,8 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
 
         }
 
+        inputActions.Enable();
+
         Vector2 v = inputActions.Vehicle.MouseDelta.ReadValue<Vector2>();
         //Debug.Log(v);
 
@@ -71,21 +69,7 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
         inputs.brakeInput = inputActions.Vehicle.Brake.ReadValue<float>();
         inputs.steerInput = inputActions.Vehicle.Steering.ReadValue<float>();
         inputs.handbrakeInput = inputActions.Vehicle.Handbrake.ReadValue<float>();
-        //inputs.unride = inputActions.Vehicle.Unride.ReadValue<float>();
 
-        
-        //if (//inputs.unride != 1 && inputActions.Vehicle.Unride.phase == UnityEngine.InputSystem.InputActionPhase.Performed )
-        //    inputActions.Vehicle.Unride.triggered)
-        //{
-        //    inputs.unride = 1;
-        //    inputActions.Disable();
-            
-        //}
-        //if (inputActions.Vehicle.Start.triggered)
-        //{
-        //    inputs.start = 1;
-        //    Debug.Log("inputaction start");
-        //}
 
     }
 

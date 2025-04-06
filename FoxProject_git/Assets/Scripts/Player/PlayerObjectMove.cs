@@ -141,7 +141,6 @@ public class PlayerObjectMove : MonoBehaviour
         ray.origin = transform.position;
         ray.direction = transform.forward;
 
-        //holdText?.gameObject.SetActive(false);
         Managers.UI_manager.UI_holdTextControl(false, UI_Manager.UI_hold_status.DEFAULT);
         isAbleHold = false;
         isInteractable = false;
@@ -151,13 +150,9 @@ public class PlayerObjectMove : MonoBehaviour
             if (hit.collider.gameObject.GetComponent<LightController>() &&
                 hit.collider.gameObject.GetComponent<LightController>().getLightType() == light_type.reflector)
             {
-                //Debug.Log(Vector3.Angle(transform.forward, hit.normal));
                 if (Vector3.Angle(transform.forward, transform.position - hit.transform.position) > viewAngle)
                 {
-                    //Debug.Log("ok");
                     holdingObject = hit.collider.transform.gameObject;
-                    //holdText.gameObject.SetActive(true);
-                    //holdText.text = "Hold";
                     Managers.UI_manager.UI_holdTextControl(true, UI_Manager.UI_hold_status.HOLD);
                     isAbleHold = true;
                 }
@@ -166,8 +161,6 @@ public class PlayerObjectMove : MonoBehaviour
             {
                 holdingObject = hit.collider.transform.gameObject;
                 isInteractable = true;
-                //holdText?.gameObject.SetActive(true);
-                //holdText.text = "ride";
                 Managers.UI_manager.UI_holdTextControl(true, UI_Manager.UI_hold_status.INTERACT);
 
             }
@@ -218,6 +211,8 @@ public class PlayerObjectMove : MonoBehaviour
                         Managers.UI_manager.UI_holdTextControl(false, UI_Manager.UI_hold_status.DEFAULT);
                         decal.SetActive(false);
 
+                        Managers.soundManager.PlaySoundOneShot(SoundManager.OneShotSound._reflctor);
+
                     }
                     else
                     {
@@ -232,6 +227,7 @@ public class PlayerObjectMove : MonoBehaviour
                 isHold = false;
                 isAbleHold = false;
                 isInteractable = false;
+                Managers.UI_manager.UI_holdTextControl(false, UI_Manager.UI_hold_status.DEFAULT);
                 var com = holdingObject.GetComponent<InteractableObject>();
                 com.Invoke(gameObject);
                 //InputManager.SwitchInput();

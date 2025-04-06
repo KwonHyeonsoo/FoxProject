@@ -30,7 +30,7 @@ public class SCC_Contorller : MonoBehaviour
     }
     void Start()
     {
-        InputManager.Instance.switchPlayer -= SwitchPlayer;
+
         InputManager.Instance.switchPlayer += SwitchPlayer;
 
         InputManager.Instance.carInputActions.FindAction("Start").performed += EngineStartInputaction;
@@ -41,6 +41,11 @@ public class SCC_Contorller : MonoBehaviour
         EngineStart();
     }
 
+    private void OnDestroy()
+    {
+        InputManager.Instance.carInputActions.FindAction("Start").performed -= EngineStartInputaction;
+        InputManager.Instance.switchPlayer -= SwitchPlayer;
+    }
 
     #region 시동
     public void EngineStartInputaction(InputAction.CallbackContext context)
@@ -88,6 +93,7 @@ public class SCC_Contorller : MonoBehaviour
     #region player 교체
     public void SwitchPlayer()
     {
+        Debug.Log("Controller swtihPalyer");
         foreach (var com in playerComponents)
         {
             com.enabled = !com.enabled;

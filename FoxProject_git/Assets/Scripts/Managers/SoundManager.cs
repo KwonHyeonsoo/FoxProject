@@ -8,15 +8,25 @@ public class SoundManager
 {
     public enum Sound
     {
-        UI,
-        BGM,
+        UI, //_ui
+        BGM,    //background
         BackgroundSFX,
-        Player,    //걷기 소리, 물체 떨어뜨리는 소리
-        Boss,      //?
+        Player,    //걷기 소리loop
+        Boss,      //괴성oneshot, 달리기 loo[
         Vehicle,
-        Others,   //깡통 차량 작동음onesh,책 넘기는 소리oneshot,주차 퍼즐 클리어시 문짝 움직이는 소리oneshot
+        Others,   //_reflector, 깡통 차량 작동음onesh,책 넘기는 소리oneshot,주차 퍼즐 클리어시, 문짝 움직이는 소리oneshot
         StorySound,     //only oneshot except death timer
         MaxCount    //숫자를 세기위한 enum 값
+    }
+    public enum OneShotSound
+    {
+        _UI, DM, _reflctor
+    }
+
+    public enum LoopSound
+    {
+        _BackgroundSFX, _Player, _Timer
+
     }
 
     AudioSource[] _audioSources = new AudioSource[(int)Sound.MaxCount];
@@ -49,11 +59,11 @@ public class SoundManager
         }
         _audioClips = Managers.resourceManager._audioClips;
 
-        _audioSources[(int)Sound.BGM].clip = _audioClips["BGM01"];
+        _audioSources[(int)Sound.BGM].clip = _audioClips["_BackgroundSFX"];
         _audioSources[(int)Sound.BGM].loop = true; // bgm 재생기는 무한 반복 재생
         _audioSources[(int)Sound.BGM].Play();
 
-        _audioSources[(int)Sound.UI].clip = _audioClips["SFX01"];
+        _audioSources[(int)Sound.UI].clip = _audioClips["_UI"];
     }
 
 
@@ -84,26 +94,50 @@ public class SoundManager
         _audioClips.Clear();
     }
 
-    public void PlayEffectStart()
+    public void PlaySoundStart(LoopSound type)
     {
-
+        switch (type)
+        {
+            case LoopSound._BackgroundSFX:
+                break;
+            case LoopSound._Player:
+                _audioSources[(int)Sound.Player].clip = _audioClips[LoopSound._Player.ToString()];
+                _audioSources[(int)Sound.Player].loop = true;
+                _audioSources[(int)Sound.Player].Play();
+                break;
+        }
     }
-    public void PlayEffectEnd()
+    public void PlaySoundEnd(LoopSound type)
     {
+        switch (type)
+        {
+            case LoopSound._BackgroundSFX:
+                break;
+            case LoopSound._Player:
+                _audioSources[(int)Sound.Player].Stop();
+                break;
+        }
 
     } 
-    public void PlayEffectOneShot()
+    public void PlaySoundOneShot(OneShotSound type)
     {
+        switch (type)
+        {
+            case OneShotSound._reflctor:
+                _audioSources[(int)Sound.Others].PlayOneShot(_audioClips[OneShotSound._reflctor.ToString()]);
+                break;
+        }
 
     }
+
+
     public void PlayUIEffectOneShot() {
-        _audioSources[(int)Sound.UI].PlayOneShot(_audioClips["SFX01"]);
+        _audioSources[(int)Sound.UI].PlayOneShot(_audioClips[OneShotSound._UI.ToString()]);
     }
 
     public void PlayStorySoudnOneShot(int ID) 
     {
-        _audioSources[(int)Sound.StorySound].clip = _audioClips["SFX02"];
-        _audioSources[(int)Sound.StorySound].loop = false; 
+        _audioSources[(int)Sound.StorySound].PlayOneShot(Managers.resourceManager.GetGameAudio(ID));
         _audioSources[(int)Sound.StorySound].Play();
     }
 }

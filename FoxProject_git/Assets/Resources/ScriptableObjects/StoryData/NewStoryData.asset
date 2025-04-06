@@ -15,7 +15,7 @@ MonoBehaviour:
   events:
   - eventId: 0
     evectCondition: 0
-    eventFunction: 0
+    eventFunction: 8
     delayTime: 0
     targetTransform: {fileID: 0}
     isCutscene: 0

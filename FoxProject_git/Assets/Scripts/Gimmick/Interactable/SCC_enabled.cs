@@ -17,10 +17,12 @@ public class SCC_enabled : InteractableObject
     //interactable 상속
     public override void Invoke(GameObject playerObject)
     {
+        if (InputManager.Instance.cooltime > 0) return;
+        Debug.Log("Invoke SCCenabled");
         //고정 
         InputManager.Instance.SwitchInput(); //input 교체
         //
-        controller.SwitchPlayer();
+        controller.SwitchPlayer();  //관련 scc 컴포넌트 비활성화/활성화
 
         
     }

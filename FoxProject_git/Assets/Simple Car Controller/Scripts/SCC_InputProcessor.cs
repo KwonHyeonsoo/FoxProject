@@ -38,19 +38,6 @@ public class SCC_InputProcessor : MonoBehaviour {
                 inputs.brakeInput = Mathf.MoveTowards(inputs.brakeInput, SCC_InputManager.Instance.inputs.brakeInput, Time.deltaTime * smoothingFactor);
                 inputs.handbrakeInput = Mathf.MoveTowards(inputs.handbrakeInput, SCC_InputManager.Instance.inputs.handbrakeInput, Time.deltaTime * smoothingFactor);
 
-                //if (inputs.unride < SCC_InputManager.Instance.inputs.unride)
-                //{
-                //    inputs.unride = SCC_InputManager.Instance.inputs.unride;
-                //    SCC_InputManager.Instance.inputs.unride = 0;
-                //    Destroy(SCC_InputManager.Instance);
-                //}
-
-                //if (inputs.start < SCC_InputManager.Instance.inputs.start)
-                //{
-                //    inputs.start = SCC_InputManager.Instance.inputs.start;
-                //    SCC_InputManager.Instance.inputs.start = 0;
-                //}
-
                 inputs.cameraVector = SCC_InputManager.Instance.inputs.cameraVector;
             }
             else {

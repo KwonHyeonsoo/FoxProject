@@ -7,8 +7,11 @@ UI,HoldText,,,,,,,UI
 GameObject,Human,,,,,,,GameObject
 GameObject,SCC_Vehicle,,,,,,,StoryData
 StoryData,NewStoryData,,,,,,,Sound
-Sound,BGM01,,,,,,,Dialogue
-Sound,SFX01,,,,,,,SaveData
-Sound,SFX02,,,,,,,
-Sound,SFX03,,,,,,,
+Sound,_BackgroundSFX,,,,,,,Dialogue
+Sound,_Player,,,,,,,SaveData
+Sound,_Timer,,,,,,,
+Sound,_UI,,,,,,,
 Dialogue,dialogue1,,,,,,,
+GameObject,DeathTimer,,,,,,,
+Sound,DM-CGS-06,,,,,,,
+Sound,_reflctor,,,,,,,

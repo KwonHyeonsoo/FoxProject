@@ -141,4 +141,19 @@ public int CheckCurrentStoryID()
 
         return null;
     }
+
+    public AudioClip GetGameAudio(int ID)
+    {
+        if (ID.ToString() == data_immediate_paths[immediate_cursor]["ID"].ToString())
+        {
+            //story id에 해당하는 게임오브젝트의 id를 계산
+            if (data_immediate_paths[immediate_cursor]["TYPE"].ToString() == "Sound")
+                //해당 게임 오브젝트 id의 게임오브젝트 반환
+                return Resources.Load<AudioClip>("TestSound/" + data_immediate_paths[immediate_cursor++]["NAME"]);//_immediates["test"];
+
+        }
+        Debug.LogWarning("Mismatch ID and Gameobject Type \nCheck up Immediate path file");
+
+        return null;
+    }
 }
