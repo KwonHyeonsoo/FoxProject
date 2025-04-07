@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Searcher.Searcher.AnalyticsEvent;
+//using static UnityEditor.Searcher.Searcher.AnalyticsEvent;
 
 public enum EVENT_TYPE
 {

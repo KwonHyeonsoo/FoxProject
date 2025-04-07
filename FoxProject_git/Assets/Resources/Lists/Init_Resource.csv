@@ -6,7 +6,7 @@ UI,GameOverPanel,,,,,,,
 UI,HoldText,,,,,,,UI
 GameObject,Human,,,,,,,GameObject
 GameObject,SCC_Vehicle,,,,,,,StoryData
-StoryData,NewStoryData,,,,,,,Sound
+StoryData,MidStoryData,,,,,,,Sound
 Sound,_BackgroundSFX,,,,,,,Dialogue
 Sound,_Player,,,,,,,SaveData
 Sound,_Timer,,,,,,,

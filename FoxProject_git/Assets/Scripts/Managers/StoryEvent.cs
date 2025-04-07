@@ -15,7 +15,8 @@ public enum StoryEventFunction
     DeathTimer,
     TurnMorning,
     OutlineShaderSwtich,
-    Input_Lock, Input_Unlock
+    Input_Lock, Input_Unlock,
+    Blank
 }
 
 
