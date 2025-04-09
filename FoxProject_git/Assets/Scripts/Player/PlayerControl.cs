@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using static System.Net.WebRequestMethods;
+using UnityEngine.Playables; //배현-
+using UnityEngine.Timeline;  //배현-
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerControl : MonoBehaviour
@@ -63,6 +65,9 @@ public class PlayerControl : MonoBehaviour
 
     private bool rotateLock = false;
 
+    private PlayableDirector pd; //배현-
+    public TimelineAsset[] ta;  //배현-
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +84,15 @@ public class PlayerControl : MonoBehaviour
         isStealth = false;
         camNormalHeigjt = cam.transform.localPosition ;
         camStealthHeigjt = cam.transform.localPosition + new Vector3(0f,-0.5f, 0f);
+
+        pd = GetComponent<PlayableDirector>(); //배현-
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        other.gameObject.SetActive(false);
+        pd.Play(ta[0]);
+        //MasterAudio.Playsound3DAtTransform("bigbattle_2_LOOP", transform); 배현 - 사운드 매니저랑 겹쳐서 안되는건가
     }
 
     // Update is called once per frame

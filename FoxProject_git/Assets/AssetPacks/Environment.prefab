@@ -1,0 +1,3795 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2860117390987520008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7117484182234331449}
+  m_Layer: 0
+  m_Name: Environment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7117484182234331449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2860117390987520008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7622570218403376928}
+  - {fileID: 6665318628746661780}
+  - {fileID: 5002526618950384300}
+  - {fileID: 2402084002439104583}
+  - {fileID: 5787474871104068029}
+  - {fileID: 5145922417680222028}
+  - {fileID: 9018155895423909459}
+  - {fileID: 3175337878904982569}
+  - {fileID: 8409002876149256969}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1642949765175198880
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7117484182234331449}
+    m_Modifications:
+    - target: {fileID: 4241826666429334574, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666478822363, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666486288351, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666554907303, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666677469237, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666691822047, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699282654, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699616910, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666700211117, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666722277243, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666729139966, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666795990219, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666796438885, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802060830, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802185470, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666838548158, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666912024729, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666969858687, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666971472353, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667018781795, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667041097621, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667054027122, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667092818556, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667114762614, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667159801992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667294757566, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667313512365, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667409271164, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667435612009, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667486122094, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491723579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491985101, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667509870152, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667551897260, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667586257794, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667606655567, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667647088645, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667660678223, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667670874686, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667716664777, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667742532124, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667798690194, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800025776, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800811262, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667828060162, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667853653872, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667903359945, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667935795696, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667982489854, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667997784477, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668000802606, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668085069211, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668115095579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668227103857, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668261014727, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668281082528, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772110, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_Name
+      value: Layout_vegetation_Demo (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668514549441, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+    - {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+--- !u!4 &3175337878904982569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+    type: 3}
+  m_PrefabInstance: {fileID: 1642949765175198880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1983857957320065230
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7117484182234331449}
+    m_Modifications:
+    - target: {fileID: 4241826666429334574, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666478822363, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666486288351, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666554907303, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666677469237, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666691822047, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699282654, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699616910, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666700211117, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666722277243, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666729139966, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666795990219, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666796438885, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802060830, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802185470, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666838548158, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666912024729, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666969858687, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666971472353, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667018781795, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667041097621, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667054027122, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667092818556, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667114762614, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667159801992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667294757566, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667313512365, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667409271164, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667435612009, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667486122094, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491723579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491985101, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667509870152, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667551897260, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667586257794, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667606655567, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667647088645, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667660678223, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667670874686, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667716664777, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667742532124, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667798690194, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800025776, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800811262, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667828060162, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667853653872, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667903359945, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667935795696, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667982489854, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667997784477, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668000802606, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668085069211, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668115095579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668227103857, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668261014727, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668281082528, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -270
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772110, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_Name
+      value: Layout_vegetation_Demo (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668514549441, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+    - {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+    - {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+--- !u!4 &2402084002439104583 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+    type: 3}
+  m_PrefabInstance: {fileID: 1983857957320065230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5186761252050515674
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7117484182234331449}
+    m_Modifications:
+    - target: {fileID: 4241826666429334574, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666478822363, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666486288351, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666554907303, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666677469237, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666691822047, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699282654, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699616910, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666700211117, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666722277243, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666729139966, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666795990219, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666796438885, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802060830, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802185470, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666838548158, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666912024729, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666969858687, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666971472353, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667018781795, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667041097621, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667054027122, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667092818556, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667114762614, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667159801992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667294757566, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667313512365, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667409271164, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667435612009, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667486122094, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491723579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491985101, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667509870152, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667551897260, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667586257794, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667606655567, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667647088645, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667660678223, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667670874686, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667716664777, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667742532124, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667798690194, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800025776, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800811262, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667828060162, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667853653872, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667903359945, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667935795696, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667982489854, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667997784477, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668000802606, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668085069211, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668115095579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668227103857, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668261014727, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668281082528, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772110, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_Name
+      value: Layout_vegetation_Demo (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668514549441, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+--- !u!4 &9018155895423909459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+    type: 3}
+  m_PrefabInstance: {fileID: 5186761252050515674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5651799216426605440
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7117484182234331449}
+    m_Modifications:
+    - target: {fileID: 4241826666429334574, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666478822363, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666486288351, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666554907303, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666677469237, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666691822047, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699282654, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699616910, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666700211117, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666722277243, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666729139966, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666795990219, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666796438885, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802060830, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802185470, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666838548158, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666912024729, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666969858687, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666971472353, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667018781795, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667041097621, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667054027122, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667092818556, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667114762614, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667159801992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667294757566, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667313512365, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667409271164, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667435612009, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667486122094, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491723579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491985101, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667509870152, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667551897260, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667586257794, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667606655567, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667647088645, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667660678223, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667670874686, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667716664777, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667742532124, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667798690194, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800025776, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800811262, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667828060162, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667853653872, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667903359945, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667935795696, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667982489854, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667997784477, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668000802606, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668085069211, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668115095579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668227103857, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668261014727, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668281082528, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.000000104308114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772110, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_Name
+      value: Layout_vegetation_Demo (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668514549441, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+--- !u!4 &8409002876149256969 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+    type: 3}
+  m_PrefabInstance: {fileID: 5651799216426605440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5986746097526810537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7117484182234331449}
+    m_Modifications:
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.96955526
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.15189067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.16105016
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.104665264
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 19.162
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 17.275002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381081073492849, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -9.385
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2914
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.169
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.108
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.958
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.58096904
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.08179607
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7366685
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.33630913
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -36.195004
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 97.02801
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995381082632810531, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 19.566
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666429334574, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666478822363, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666486288351, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666554907303, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666677469237, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666691822047, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699282654, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699616910, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666700211117, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666722277243, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666729139966, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666795990219, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666796438885, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802060830, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802185470, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666838548158, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666912024729, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666969858687, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666971472353, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667018781795, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667041097621, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667054027122, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667092818556, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667114762614, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667159801992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667294757566, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667313512365, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667409271164, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667435612009, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667486122094, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491723579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491985101, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667509870152, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667551897260, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667586257794, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667606655567, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667647088645, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667660678223, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667670874686, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667716664777, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667742532124, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667798690194, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800025776, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800811262, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667828060162, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667853653872, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667903359945, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667935795696, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667982489854, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667997784477, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668000802606, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668085069211, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668115095579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668227103857, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668261014727, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668281082528, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772110, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_Name
+      value: Layout_vegetation_Demo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668514549441, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75675
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.09143
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75675
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.40144235
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.23511113
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8322968
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.30141148
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 43.669003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -133.29001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675890416478744773, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -11.917001
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+--- !u!4 &7622570218403376928 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+    type: 3}
+  m_PrefabInstance: {fileID: 5986746097526810537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7395483549762062109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7117484182234331449}
+    m_Modifications:
+    - target: {fileID: 4241826666429334574, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666478822363, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666486288351, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666554907303, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666677469237, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666691822047, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699282654, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699616910, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666700211117, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666722277243, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666729139966, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666795990219, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666796438885, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802060830, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802185470, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666838548158, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666912024729, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666969858687, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666971472353, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667018781795, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667041097621, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667054027122, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667092818556, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667114762614, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667159801992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667294757566, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667313512365, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667409271164, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667435612009, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667486122094, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491723579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491985101, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667509870152, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667551897260, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667586257794, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667606655567, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667647088645, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667660678223, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667670874686, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667716664777, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667742532124, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667798690194, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800025776, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800811262, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667828060162, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667853653872, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667903359945, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667935795696, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667982489854, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667997784477, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668000802606, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668085069211, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668115095579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668227103857, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668261014727, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668281082528, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772110, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_Name
+      value: Layout_vegetation_Demo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668514549441, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710785798106777373, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710785798106777373, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710785798106777373, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710785798106777373, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6268178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710785798106777373, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7791659
+      objectReference: {fileID: 0}
+    - target: {fileID: 6710785798106777373, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 102.369
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+--- !u!4 &6665318628746661780 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+    type: 3}
+  m_PrefabInstance: {fileID: 7395483549762062109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7677726256716402996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7117484182234331449}
+    m_Modifications:
+    - target: {fileID: 4241826666429334574, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666478822363, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666486288351, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666554907303, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666677469237, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666691822047, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699282654, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699616910, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666700211117, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666722277243, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666729139966, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666795990219, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666796438885, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802060830, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802185470, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666838548158, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666912024729, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666969858687, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666971472353, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667018781795, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667041097621, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667054027122, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667092818556, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667114762614, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667159801992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667294757566, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667313512365, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667409271164, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667435612009, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667486122094, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491723579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491985101, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667509870152, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667551897260, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667586257794, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667606655567, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667647088645, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667660678223, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667670874686, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667716664777, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667742532124, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667798690194, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800025776, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800811262, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667828060162, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667853653872, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667903359945, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667935795696, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667982489854, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667997784477, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668000802606, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668085069211, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668115095579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668227103857, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668261014727, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668281082528, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772110, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_Name
+      value: Layout_vegetation_Demo (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668514549441, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+--- !u!4 &5787474871104068029 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+    type: 3}
+  m_PrefabInstance: {fileID: 7677726256716402996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9057868932964257733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7117484182234331449}
+    m_Modifications:
+    - target: {fileID: 4241826666429334574, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666478822363, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666486288351, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666554907303, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666677469237, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666691822047, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699282654, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699616910, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666700211117, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666722277243, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666729139966, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666795990219, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666796438885, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802060830, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802185470, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666838548158, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666912024729, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666969858687, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666971472353, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667018781795, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667041097621, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667054027122, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667092818556, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667114762614, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667159801992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667294757566, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667313512365, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667409271164, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667435612009, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667486122094, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491723579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491985101, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667509870152, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667551897260, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667586257794, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667606655567, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667647088645, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667660678223, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667670874686, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667716664777, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667742532124, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667798690194, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800025776, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800811262, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667828060162, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667853653872, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667903359945, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667935795696, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667982489854, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667997784477, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668000802606, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668085069211, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668115095579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668227103857, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668261014727, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668281082528, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772110, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_Name
+      value: Layout_vegetation_Demo (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668514549441, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+--- !u!4 &5145922417680222028 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+    type: 3}
+  m_PrefabInstance: {fileID: 9057868932964257733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9201264800482734629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7117484182234331449}
+    m_Modifications:
+    - target: {fileID: 4241826666429334574, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666478822363, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666486288351, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666554907303, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666622370788, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666677469237, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666691822047, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699282654, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666699616910, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666700211117, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666722277243, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666729139966, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666765833992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666795990219, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666796438885, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802060830, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666802185470, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666838548158, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666912024729, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666969858687, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826666971472353, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667018781795, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667041097621, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667054027122, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667092818556, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667114762614, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667159801992, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667294757566, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667313512365, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667404679106, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667409271164, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667435612009, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667486122094, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491723579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667491985101, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667509870152, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667551897260, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667586257794, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667606655567, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667647088645, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667660678223, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667670874686, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667716664777, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667742532124, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667766795789, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667798690194, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800025776, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667800811262, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667828060162, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667853653872, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667903359945, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667935795696, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667982489854, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826667997784477, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668000802606, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668085069211, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668115095579, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668227103857, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668261014727, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668281082528, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668320044659, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.000000104308114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668402772110, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_Name
+      value: Layout_vegetation_Demo (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668483314287, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241826668514549441, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+        type: 3}
+      propertyPath: m_AdditionalVertexStreamMesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c7bc217550ac8343bc26c2c4e63d664, type: 3}
+--- !u!4 &5002526618950384300 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4241826668402772105, guid: 3c7bc217550ac8343bc26c2c4e63d664,
+    type: 3}
+  m_PrefabInstance: {fileID: 9201264800482734629}
+  m_PrefabAsset: {fileID: 0}
