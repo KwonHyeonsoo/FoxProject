@@ -66,7 +66,10 @@ public class SoundManager
         _audioSources[(int)Sound.UI].clip = _audioClips["_UI"];
     }
 
-
+    public void SetAudioMixer(AudioSource audioSource)
+    {
+        audioSource.outputAudioMixerGroup = AudioMixer.FindMatchingGroups("InGame")[0];
+    }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
     }

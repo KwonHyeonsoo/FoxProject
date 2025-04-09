@@ -2,17 +2,32 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Branches_Tree_branches_leaves_material
   m_Shader: {fileID: 4800000, guid: 99134b1f0c27d54469a840832a28fadf, type: 3}
-  m_ShaderKeywords: EFFECT_BUMP EFFECT_SUBSURFACE _ALPHATEST_ON _BENTNORMALMAP _DISABLE_DECALS
-    _DISABLE_SSR _DOUBLESIDED_ON _ENABLE_GEOMETRIC_SPECULAR_AA _MASKMAP _MATERIAL_FEATURE_TRANSMISSION
-    _NORMALMAP_TANGENT_SPACE _SPECULAR_OCCLUSION_FROM_BENT_NORMAL_MAP _THICKNESSMAP
-    _WINDQUALITY_NONE
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - EFFECT_BUMP
+  - EFFECT_HUE_VARIATION
+  - EFFECT_SUBSURFACE
+  - _WINDQUALITY_NONE
+  m_InvalidKeywords:
+  - _ALPHATEST_ON
+  - _BENTNORMALMAP
+  - _DISABLE_DECALS
+  - _DISABLE_SSR
+  - _DOUBLESIDED_ON
+  - _ENABLE_GEOMETRIC_SPECULAR_AA
+  - _MASKMAP
+  - _MATERIAL_FEATURE_TRANSMISSION
+  - _NORMALMAP_TANGENT_SPACE
+  - _SPECULAR_OCCLUSION_FROM_BENT_NORMAL_MAP
+  - _THICKNESSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 1
@@ -24,6 +39,7 @@ Material:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -163,6 +179,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AO: 7.52
     - _AORemapMax: 1
@@ -240,7 +257,7 @@ Material:
     - _HeightPoMAmplitude: 0.1
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
-    - _HueVariationKwToggle: 0
+    - _HueVariationKwToggle: 1
     - _InvTilingScale: 1
     - _Ior: 1.5
     - _IridescenceMask: 1
@@ -290,7 +307,7 @@ Material:
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
     - _Steps_: 50
-    - _SubsurfaceIndirect: 1
+    - _SubsurfaceIndirect: 0.138
     - _SubsurfaceKwToggle: 1
     - _SubsurfaceMask: 1
     - _SupportDecals: 0
@@ -328,7 +345,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.8908297, g: 1, b: 0.8034935, a: 1}
+    - _Color: {r: 0.7028302, g: 0.7028302, b: 0.7028302, a: 1}
     - _ColorA: {r: 0.6470588, g: 0.6470588, b: 0.6470588, a: 1}
     - _ColorBase: {r: 0.6470588, g: 0.6470588, b: 0.6470588, a: 1}
     - _DiffusionProfileAsset: {r: 2.2888926e+38, g: 1.2389358e-26, b: 7.69327e-37,
@@ -338,13 +355,13 @@ Material:
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
-    - _HueVariationColor: {r: 0.25649425, g: 0.6792453, b: 0, a: 0.1}
+    - _HueVariationColor: {r: 1, g: 0.5292666, b: 0.19339621, a: 0.1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _Noise_Color: {r: 0.9338235, g: 0.9338235, b: 0.9338235, a: 1}
     - _Spec_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SubsurfaceColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
     - _ThicknessRemap: {r: 0, g: 0.24386048, b: 0, a: 0}
     - _TranslucencyColor: {r: 0.73, g: 0.85, b: 0.40999997, a: 1}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
@@ -353,6 +370,7 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!114 &1412358681542982130
 MonoBehaviour:
   m_ObjectHideFlags: 11

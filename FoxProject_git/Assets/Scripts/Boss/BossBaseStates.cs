@@ -32,6 +32,8 @@ public class IdleState : BossBaseStates
     {
 
         _boss.setAnimator(Boss_original.BossStateEnum.idle);
+        if (UnityEngine.Random.Range(0.0f, 1.0f) < 0.2)
+            _boss.PlaySoundOneShot("Boss_growl");
     }
 
     public override void OnStateUpdate()
@@ -56,6 +58,8 @@ public class PatrolState : BossBaseStates
     }
     public override void OnStateStart()
     {
+        _boss.PlaySoundLoop(2.0f);
+
         _boss.setAnimator(Boss_original.BossStateEnum.patrol);
         _boss.setNewWaypoints();
     }
@@ -70,6 +74,7 @@ public class PatrolState : BossBaseStates
     public override void OnStateEnd()
     {
         _boss.stopWaypoint();
+        _boss.PlaySoundStop();
     }
 }
 
@@ -83,6 +88,7 @@ public class ChaseState : BossBaseStates
     }
     public override void OnStateStart()
     {
+        
         //후에 추가되는 원숭이 고려
         //[count-1]이 원숭이이면 target에 넣지 안ㄹ기
         _boss.setAnimator(Boss_original.BossStateEnum.chase);
@@ -91,16 +97,22 @@ public class ChaseState : BossBaseStates
 
         else if (_boss.getTargetsList().Count != 0 )
             _boss.updateDestination(_boss.getTargetsList()[_boss.getTargetsList().Count-1].gameObject);
+
+        _boss.PlaySoundLoop(3.0f);
+        //_boss.PlaySoundOneShot("Boss_roar");
+
     }
 
     public override void OnStateUpdate()
     {
-        if(_boss.getTarget())
+
+        if (_boss.getTarget())
             _boss.updateDestination(_boss.getTarget());
     }
 
     public override void OnStateEnd()
     {
+        _boss.PlaySoundStop();
 
     }
 }

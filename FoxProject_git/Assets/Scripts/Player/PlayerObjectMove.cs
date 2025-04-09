@@ -165,9 +165,11 @@ public class PlayerObjectMove : MonoBehaviour
 
             }
         }
+        //Debug.Log("isAbleHold" + isAbleHold + "isInteractable" + isInteractable);
+
     }
 
-    
+
     public void Hold(InputAction.CallbackContext context)
     {
 

@@ -1,2 +1,5 @@
 ﻿ID,TYPE,NAME,,,,,
-0,Sound,DM,,,,,Sound
+2,GameObject,Tree_Creature
+10,Sound,Boss_growl
+12,Sound,Boss_growl
+14,GameObject,12RestrictionCollider

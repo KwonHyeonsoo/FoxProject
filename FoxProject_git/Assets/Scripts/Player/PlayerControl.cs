@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using static System.Net.WebRequestMethods;
+using Cinemachine;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerControl : MonoBehaviour
@@ -56,7 +57,8 @@ public class PlayerControl : MonoBehaviour
     private float eulerAngleX;
     private float eulerAngleY;
 
-    public Camera cam;
+    public CinemachineVirtualCamera cam;
+
 
     int i_width;
     int i_height;

@@ -31,22 +31,63 @@ public class Boss_original : MonoBehaviour
     #region components
     private Animator animator;
     private NavMeshAgent agent;
+    private AudioSource _audioSource;
     private Boss_FieldofView fieldOfview;
     private Boss_FieldofSound fieldOfsound;
     #endregion
 
+
+    //sources
+    private AudioClip _audio_growl; //일반?
+    private AudioClip _audio_footstep;  //달릴때 피치 조정
+    private AudioClip _audio_roar;  //추격시
     public enum BossStateEnum
     {
-        patrol, //순찰 걷기
         idle,   //순찰 잠깐 정지
+        patrol, //순찰 걷기
         chase,  //플레이어 추격
         fury,    //플레이어 더이상 추격 불가 땜빵용상태 아무의미 없음
-        lookaround  //플레이어가 근처에 있을때 두리번 거리기
+        lookaround,  //플레이어가 근처에 있을때 두리번 거리기
+        GameOver
     }
     [SerializeField] protected BossStateEnum _state;
 
+    public void PlaySoundOneShot(string clip)
+    {
+        if(clip == "Boss_growl")
+            _audioSource.PlayOneShot(_audio_growl);
+        else if(clip == "Boss_roar")
+            _audioSource.PlayOneShot(_audio_roar);
+
+    }
+
+    public bool IsPlaySoundStop()
+    {
+        return _audioSource.isPlaying;
+    }
+    public void PlaySoundLoop(float pitch) 
+    {
+        if(_audioSource.clip == null) _audioSource.clip = _audio_footstep;
+        _audioSource.pitch = pitch;
+        _audioSource.loop = true;
+        _audioSource.Play();
+    }
+    public void PlaySoundStop() 
+    {
+        _audioSource.Pause();
+    }
     void Start()
     {
+
+        #region components
+        animator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        _audioSource = GetComponent<AudioSource>();
+        fieldOfview = fieldofView_obj.GetComponent<Boss_FieldofView>();
+        fieldOfsound = fieldofSound_obj.GetComponent<Boss_FieldofSound>();
+        #endregion
+        //agent.isStopped = true;
+
         _state = BossStateEnum.idle;
         _fsm = new BossFSM(new IdleState(this));
         setState(BossStateEnum.idle);
@@ -62,29 +103,38 @@ public class Boss_original : MonoBehaviour
 #endif
         }
 
+        agent.stoppingDistance = 1.0f;
 
-
-        #region components
-        animator = GetComponent<Animator>();
-        agent = GetComponent<NavMeshAgent>();
-
-        fieldOfview = fieldofView_obj.GetComponent<Boss_FieldofView>();
-        fieldOfsound = fieldofSound_obj.GetComponent<Boss_FieldofSound>();
-        #endregion 
-        //agent.isStopped = true;
-
+        if (Managers.resourceManager.isLoaded)
+        {
+            _audio_growl = Managers.resourceManager._audioClips["Boss_growl"];
+            _audio_footstep = Managers.resourceManager._audioClips["Boss_footstep"];
+            _audio_roar = Managers.resourceManager._audioClips["Boss_roar"];  //
+        }
+        Managers.soundManager?.SetAudioMixer(_audioSource);
+        _audioSource.spatialBlend = 1.0f;
         StartCoroutine(updateTargetWithDelay(0.2f));    //시작하자마자 세팅하면 에러뜨더라고..
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(_audio_footstep == null)
+        {
+            if (Managers.resourceManager.isLoaded)
+            {
+                _audio_growl = Managers.resourceManager._audioClips["Boss_growl"];
+                _audio_footstep = Managers.resourceManager._audioClips["Boss_footstep"];
+                _audio_roar = Managers.resourceManager._audioClips["Boss_roar"];  //
+            }
+        }
         switch (_state)
         {
             case BossStateEnum.idle:
                 //타겟 발견
                 if(ViewTargets.Count > 0 || SoundTargets.Count > 0 || isMonkey)
                 {
+                    
                     setState(BossStateEnum.chase);
                     break;
                 }
@@ -104,10 +154,9 @@ public class Boss_original : MonoBehaviour
                     setState(BossStateEnum.chase);
                     break;
                 }
-
-
+                //Debug.Log("agent" + agent.remainingDistance + " hasPath "+ agent.hasPath);
                 //waypoint 도착
-                if (getDistanceTarget() < 0.1)
+                if (agent.remainingDistance < agent.stoppingDistance)
                 {
                     setState(BossStateEnum.idle);
                     break;
@@ -149,6 +198,7 @@ public class Boss_original : MonoBehaviour
                 break;        
         }
 
+        //Debug.Log("_audioSource.isPlaying "+ _audioSource.isPlaying);
 
         //==========현재 상태 실행==============
         _fsm.UpdateState(); //fsm내부의 UpdateState 실행 -> state의 OnStateUpdate 실행
@@ -166,11 +216,13 @@ public class Boss_original : MonoBehaviour
         {
             //setState 내부에 startOn이 포함되어 있음
             case BossStateEnum.idle:    //특정 시간 (5~10 초 동안 유지하고 patrol로 넘어가기)
+                agent.isStopped = true;
                 _fsm.setState(new IdleState(this));
                 innerTimer = 0;
-                innerRandomTime = 1;// Random.Range(1, 1);
+                innerRandomTime = 5;// Random.Range(1, 1);
                 break;
             case BossStateEnum.patrol:  //이동 위치를 정하고 거기까지 전진
+                agent.isStopped = false;
                 _fsm.setState(new PatrolState(this));
                 agent.speed = patrolSpeed;
                 break;
@@ -195,7 +247,25 @@ public class Boss_original : MonoBehaviour
 
     public void setAnimator(BossStateEnum nextState)
     {
+        /*
+        idle,   //순찰 잠깐 정지 <0>
+        patrol, //순찰 걷기 정지<1>
+        chase,  //플레이어 추격<2>
+        fury,    //플레이어 더이상 추격 불가 땜빵용상태 아무의미 없음<3>
+        lookaround  //플레이어가 근처에 있을때 두리번 거리기<4>
+
+        */
         //state에 따라 애니메이션 적용
+        Debug.Log("setAnimator" + nextState);
+        switch (nextState)
+        {
+            case BossStateEnum.GameOver:
+                animator.SetTrigger("Trigger_GameOver");
+                break;
+            default:
+                animator.SetInteger("State", (int)nextState);
+                break;
+        }
     }
 
     #region 길찾기
@@ -207,8 +277,10 @@ public class Boss_original : MonoBehaviour
 
         currentWaypointNumber = nextNumber;
 
+        if (Vector3.Distance(wayPoints[currentWaypointNumber].transform.position, this.transform.position) < agent.stoppingDistance) return;
         agent.isStopped = false;
         agent.SetDestination(wayPoints[currentWaypointNumber].transform.position);
+
 
     }
 

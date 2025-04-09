@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum StoryEventCondition
 {
-    WASDdown, OnRide, ClearPuzzle, Interation, The_end, EnterZone
+    WASDdown, OnRide, ClearPuzzle, Interation, The_end, EnterZone, Blank
 }
 public enum StoryEventFunction
 {
@@ -11,12 +11,14 @@ public enum StoryEventFunction
     Gameobject_Active, Gameobject_Deactive, Gameobject_Perform,
     Save,
     Camera_Moving,
+    Play_cinemachine,
     Sound_PlaySound,
-    DeathTimer,
+    DeathTimer, CancelDeathTimer,
     TurnMorning,
     OutlineShaderSwtich,
-    Input_Lock, Input_Unlock,
+    Input_Lock, Input_Unlock, 
     Blank
+
 }
 
 
@@ -29,18 +31,18 @@ public class StoryEvent
     public StoryEventFunction eventFunction;    //이벤트 실행할 함수
     public int delayTime = 0;
     public Transform targetTransform; // 이동할 위치
-    public bool isCutscene; // 컷신 여부
+    public string desc;
 
     // ⭐ 실행 함수 추가
     public void ExecuteEvent()
     {
         Debug.Log($"스토리 진행: {eventId} - {evectCondition}=>{eventFunction}");
 
-        if (isCutscene)
-        {
-            Debug.Log("컷신 시작!");
-            return;
-        }
+        //if (isCutscene)
+        //{
+        //    Debug.Log("컷신 시작!");
+        //    return;
+        //}
 
         switch (eventFunction)
         {
@@ -48,7 +50,7 @@ public class StoryEvent
                 Managers.UI_manager.PrintStoryText(eventId);
                 break;
             case StoryEventFunction.UI_GuideText:
-                Managers.UI_manager.PrintGuideText(eventId);
+                Managers.UI_manager.PrintGuideText(eventId, desc);
                 break;
             case StoryEventFunction.Gameobject_Active:
                 GameObject.Instantiate<GameObject>(Managers.resourceManager.GetGameObject(eventId), targetTransform.position, targetTransform.rotation);
@@ -63,8 +65,13 @@ public class StoryEvent
                 Managers.soundManager.PlayStorySoudnOneShot(eventId);
                 break;
             case StoryEventFunction.DeathTimer:
-                Managers.Instantiate<GameObject>(Managers.resourceManager.GetGameObject(eventId));
+                GameObject go = Managers.Instantiate<GameObject>(Managers.resourceManager.GetGameObject(eventId));
+                go.tag = "DeathTimer";
                 break;
+            case StoryEventFunction.CancelDeathTimer:
+                GameObject.FindWithTag("DeathTimer").GetComponent<DeathTimer>().Destroy();
+                break;
+
 
         }
     }

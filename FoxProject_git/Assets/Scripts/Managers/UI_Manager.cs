@@ -90,15 +90,16 @@ public class UI_Manager : IListener
         storyText.PrintingText();
     }
 
-    public void PrintGuideText(int eventID)
+    public void PrintGuideText(int eventID,  string text)
     {
         guideText.gameObject.SetActive(true);
         guideText.texts.Clear();
-        do
-        {
-            guideText.texts.Add(Managers.resourceManager.PassGuideText());
-        }
-        while (Managers.resourceManager.CheckCurrentGuideID() == eventID);
+        //do
+        //{
+            //guideText.texts.Add(Managers.resourceManager.PassGuideText());
+            guideText.texts.Add(text);
+        //}
+        //while (Managers.resourceManager.CheckCurrentGuideID() == eventID);
 
         guideText.PrintingText();
     }

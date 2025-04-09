@@ -8,6 +8,7 @@ public class DeathTimer : MonoBehaviour
     void Start()
     {
         //타이머 사운드 재생
+
         //타이머 코루틴 시작
         StartCoroutine(TimerStart(TimerCount));
     }
@@ -19,5 +20,10 @@ public class DeathTimer : MonoBehaviour
         //게임 오버 호출
         Managers.gameManager.GameOver();
         Destroy(this);
+    }
+
+    public void Destroy()
+    {
+        Destroy(this.gameObject);
     }
 }

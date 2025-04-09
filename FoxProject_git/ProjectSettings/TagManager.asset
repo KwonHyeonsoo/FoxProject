@@ -7,6 +7,8 @@ TagManager:
   - Boss
   - Interactable
   - Car
+  - DeathTimer
+  - CutScene
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,7 @@ public class StoryManager
     int currentStoryID; //스토리 id 인덱스
     double delayTime;
     bool isEnd = false;
-    bool[] isEventEnd;
+    bool[] isEventEnd;  //해당조건이 완료되었는지
     public StoryObjectController controller;
     #region Default Manager Function
     // Start is called before the first frame update
@@ -23,9 +23,12 @@ public class StoryManager
 
         InitResourceLoad();
         //storyObjectController 받아오기
-        
+        Debug.Log("story1.events[0].eventId;"+story1.events[0].eventId);
 
-
+        if  (story1.events[0].evectCondition == StoryEventCondition.Blank)
+        {
+            BlankInvoke();
+        }
     }
 
     void InitResourceLoad()
@@ -33,7 +36,8 @@ public class StoryManager
 
         story1 = Managers.resourceManager.currentStory;
         isEventEnd = new bool[story1.events.Length];
-        currentElementID = currentEventExecute = currentStoryID = story1.events[0].eventId;
+        currentElementID = currentEventExecute = 0;
+        currentStoryID = story1.events[0].eventId;
         for (int i = 0; i < story1.events.Length; i++)
         {
             isEventEnd[i] = false;
@@ -61,6 +65,7 @@ public class StoryManager
 
     }
 
+
     // Update is called once per frame
     public void Update()
     {
@@ -80,6 +85,7 @@ public class StoryManager
                 
                 //Debug.Log(delayTime);
             }
+
             if (currentEventExecute >= story1.events.Length) { isEnd = true; }
         }
     }
@@ -97,13 +103,12 @@ public class StoryManager
                 
                 isEventEnd[currentElementID] = true;
                 currentStoryID = story1.events[currentElementID].eventId;
-                //story1.events[currentElementID].ExecuteEvent();
                 currentElementID++;
-                //Debug.Log(currentElementID);
-                
             }
 
         }
+        BlankInvoke();  //다음 이벤트의 조건이 blank일때 실행
+
     }
     public void InvokeWASD(InputAction.CallbackContext context)
     {
@@ -140,32 +145,18 @@ public class StoryManager
 
     }
 
-    public void InvokeEvent(StoryEventCondition eventCondition)
+    private void BlankInvoke()
     {
-        if (isEnd) return;
+        if (currentElementID >= story1.events.Length) return;
 
-        if (eventCondition == story1.events[currentElementID].evectCondition)
+        //Debug.Log("Blank");
+        while (currentElementID < story1.events.Length && story1.events[currentElementID].evectCondition == StoryEventCondition.Blank)
         {
-            int id = story1.events[currentElementID].eventId;
-            while (id == story1.events[currentElementID].eventId)
-            {
-                story1.events[currentElementID].ExecuteEvent();
-                currentElementID++;
-            }
-        }
-        currentStoryID++;
-        if (currentStoryID >= story1.events.Length) isEnd = true;
 
+            isEventEnd[currentElementID] = true;
+            currentStoryID = story1.events[currentElementID].eventId;
+            currentElementID++;
+        }
     }
 
-
-    //public void ObjectController_Instantiate(int eventID, StoryEventFunction eventFunction) 
-    //{ 
-    //    switch (eventFunction)
-    //    {
-    //        case StoryEventFunction.Gameobject_Deactive:
-    //            controller.DeActivateObject(eventID);
-    //            break;
-    //    }
-    //}
 }

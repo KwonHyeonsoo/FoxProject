@@ -9,6 +9,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Input receiver through the Unity's new Input System.
@@ -16,7 +17,7 @@ using UnityEngine;
 public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
 
     public SCC_Inputs inputs;       //  Actual inputs.
-    private static SCC_InputActions inputActions;
+    public static SCC_InputActions inputActions;
 
     private void Awake() {
 
@@ -57,8 +58,7 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
             }
 
         }
-
-        inputActions.Enable();
+        //inputActions.Enable();
 
         Vector2 v = inputActions.Vehicle.MouseDelta.ReadValue<Vector2>();
         //Debug.Log(v);

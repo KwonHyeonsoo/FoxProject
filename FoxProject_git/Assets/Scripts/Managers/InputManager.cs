@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-
+    private static readonly object m_Lock = new object();
     public SCC_InputActions carInputActions; //차량 인풋 액션- 새로 생성
     private PlayerInput playerinput;    //인간 인풋 액션 - 플레이어에서 가져옴
 
@@ -26,10 +26,12 @@ public class InputManager : MonoBehaviour
        // base.Awake();
         //_name = "InputManager";
         Instance = this;
-
+        //Debug.Log("carInputActions+" + carInputActions != null);
         if (carInputActions == null)
         {
             carInputActions = new SCC_InputActions();   //차량 인풋 액션 생성
+            SCC_InputManager.inputActions = carInputActions;
+            //carInputActions.Enable();
         }
         player = Managers.gameManager.DefaultPlayer;    //Player 찾아서 player input 가져오기//나중에 gamemanager에서 가져오느게 나을듯
         playerinput = player.GetComponent<PlayerInput>();
@@ -40,7 +42,7 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         //playerinput.actions.FindActionMap("PlayerActions").FindAction("Hold").performed += SwitchInput;
-        carInputActions.FindAction("Unride").performed += SwitchInput;//unride할 때 인풋액션 교체 함수 추가
+       // carInputActions.FindAction("Unride").performed += SwitchInput;//unride할 때 인풋액션 교체 함수 추가
         carInputActions.FindAction("Throttle").performed -= Managers.storyManager.InvokeWASD;
         carInputActions.FindAction("Steering").performed -= Managers.storyManager.InvokeWASD;
         carInputActions.FindAction("Throttle").performed += Managers.storyManager.InvokeWASD;
@@ -61,6 +63,7 @@ public class InputManager : MonoBehaviour
     }
     public void SwitchInput(InputAction.CallbackContext context)
     {
+        Debug.Log("uride");
         if (cooltime > 0) return;
         if (context.performed)
         {
@@ -72,29 +75,40 @@ public class InputManager : MonoBehaviour
     //차량 탑승할 때 인풋액션 교체
     public void SwitchInput()
     {
-        if (cooltime > 0) return;
-
-        cooltime = 1;
-        Debug.Log("Invoke inputmanager");
-        //Debug.Log("3switchinput" + " isPlayer " + isPlayer);
-        isPlayer = !isPlayer;
-
-        if (isPlayer)
+        lock (m_Lock)
         {
-            carInputActions.Vehicle.Disable();
-            playerinput.enabled = true;
-            switchPlayer();//scc
-            player.transform.position = Managers.gameManager.CarPlayer.transform.position + Managers.gameManager.CarPlayer.transform.right *-2;
-            player.SetActive(true);
+            if (cooltime > 0) return;
 
-            Debug.Log(Managers.gameManager.CarPlayer.transform.position);
-        }
-        else//탑승
-        {
-            carInputActions.Vehicle.Enable();
-            playerinput.enabled = false;
-            //switchPlayer();//scc
-            player.SetActive(false);
+            cooltime = 1;
+            Debug.Log("Invoke inputmanager");
+            //Debug.Log("3switchinput" + " isPlayer " + isPlayer);
+            isPlayer = !isPlayer;
+
+            if (isPlayer)
+            {
+
+                RenderSettings.fogDensity = 0.1f;
+                carInputActions.FindAction("Unride").performed -= SwitchInput;//unride할 때 인풋액션 교체 함수 추가
+
+                carInputActions.Vehicle.Disable();
+
+                playerinput.enabled = true;
+                switchPlayer();//scc
+                player.transform.position = Managers.gameManager.CarPlayer.transform.position + Managers.gameManager.CarPlayer.transform.right * -2;
+                player.SetActive(true);
+
+                Debug.Log(Managers.gameManager.CarPlayer.transform.position);
+            }
+            else//탑승
+            {
+                RenderSettings.fogDensity = 0.02f;
+                carInputActions.Vehicle.Enable();
+                carInputActions.FindAction("Unride").performed += SwitchInput;//unride할 때 인풋액션 교체 함수 추가
+
+                playerinput.enabled = false;
+                //switchPlayer();//scc
+                player.SetActive(false);
+            }
         }
     }
 
