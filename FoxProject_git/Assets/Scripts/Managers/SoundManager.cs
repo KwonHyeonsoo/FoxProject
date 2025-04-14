@@ -20,7 +20,7 @@ public class SoundManager
     }
     public enum OneShotSound
     {
-        _UI, DM, _reflctor
+        _UI, DM, _reflctor, ClearSound
     }
 
     public enum LoopSound
@@ -72,6 +72,7 @@ public class SoundManager
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        _audioSources[(int)Sound.BGM]?.Play();
     }
     void OnSceneUnLoaded(Scene scene)
     {
@@ -97,6 +98,12 @@ public class SoundManager
         _audioClips.Clear();
     }
 
+    public void Stop()
+    {
+
+        foreach(AudioSource audioSource in _audioSources) { audioSource.Stop(); }
+    }
+
     public void PlaySoundStart(LoopSound type)
     {
         switch (type)
@@ -107,6 +114,11 @@ public class SoundManager
                 _audioSources[(int)Sound.Player].clip = _audioClips[LoopSound._Player.ToString()];
                 _audioSources[(int)Sound.Player].loop = true;
                 _audioSources[(int)Sound.Player].Play();
+                break;
+            case LoopSound._Timer:
+                _audioSources[(int)Sound.Others].clip = _audioClips[LoopSound._Timer.ToString()];
+                _audioSources[(int)Sound.Others].loop = true;
+                _audioSources[(int)Sound.Others].Play();
                 break;
         }
     }
@@ -119,6 +131,9 @@ public class SoundManager
             case LoopSound._Player:
                 _audioSources[(int)Sound.Player].Stop();
                 break;
+            case LoopSound._Timer:
+                _audioSources[(int)Sound.Others].Stop();
+                break;
         }
 
     } 
@@ -129,6 +144,11 @@ public class SoundManager
             case OneShotSound._reflctor:
                 _audioSources[(int)Sound.Others].PlayOneShot(_audioClips[OneShotSound._reflctor.ToString()]);
                 break;
+            case OneShotSound.ClearSound:
+                _audioSources[(int)Sound.Others].PlayOneShot(_audioClips[OneShotSound.ClearSound.ToString()]);
+                break;
+
+
         }
 
     }

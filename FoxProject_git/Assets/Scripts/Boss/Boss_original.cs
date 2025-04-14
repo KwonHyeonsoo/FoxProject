@@ -119,6 +119,7 @@ public class Boss_original : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("isOnNavMesh "+agent.isOnNavMesh);
         if(_audio_footstep == null)
         {
             if (Managers.resourceManager.isLoaded)
@@ -156,7 +157,15 @@ public class Boss_original : MonoBehaviour
                 }
                 //Debug.Log("agent" + agent.remainingDistance + " hasPath "+ agent.hasPath);
                 //waypoint µµÂø
-                if (agent.remainingDistance < agent.stoppingDistance)
+                if (!agent.isOnNavMesh)
+                {
+                    NavMeshHit hit;
+                    if (NavMesh.SamplePosition(transform.position, out hit, 5.0f, NavMesh.AllAreas))
+                    {
+                        agent.Warp(hit.position);
+                    }
+                }
+                else if (agent.remainingDistance < agent.stoppingDistance)
                 {
                     setState(BossStateEnum.idle);
                     break;

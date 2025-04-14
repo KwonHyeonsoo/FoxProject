@@ -107,6 +107,11 @@ public class SCC_Audio : MonoBehaviour {
         engineOnSource.pitch = Mathf.Lerp(minimumPitch, maximumPitch, Drivetrain.currentEngineRPM / Drivetrain.maximumEngineRPM);
         engineOffSource.pitch = engineOnSource.pitch;
 
+        if (Managers.gameManager.IsGameOver)
+        {
+            engineOnSource.Stop();
+            engineOffSource.Stop();
+        }
     }
 
 }

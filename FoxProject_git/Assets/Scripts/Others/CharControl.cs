@@ -9,6 +9,7 @@ public class CharControl : MonoBehaviour
     PlayableDirector pd;
     public TimelineAsset[] ta;
 
+    int index = 0;
     public static CharControl Instance;
 
 
@@ -21,10 +22,13 @@ public class CharControl : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "CutScene")
+        if (ta.Length > index)
         {
-            other.gameObject.SetActive(false);
-            pd.Play(ta[0]);
+            if (other.tag == "CutScene")
+            {
+                other.gameObject.SetActive(false);
+                pd.Play(ta[index++]);
+            }
         }
         //사운드 호출
 

@@ -199,7 +199,7 @@ public class PlayerObjectMove : MonoBehaviour
                         Vector3 trans;
                         trans =
                         holdingObject.transform.position =
-                            new Vector3(decal.transform.position.x, holdingObject.transform.position.y + 0.2f, decal.transform.position.z);
+                            new Vector3(decal.transform.position.x, transform.position.y + 0.5f, decal.transform.position.z);
                         holdingObject.transform.rotation = //quaternion.identity;
                             transform.rotation;
 

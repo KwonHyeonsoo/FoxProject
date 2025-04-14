@@ -42,6 +42,8 @@ public class GimmickChecker : MonoBehaviour
     
     public void SetTrue(int index)
     {
+        if (allGimmickIsTrue) return;
+
         gimmickConditions[index] = true;
 
         bool booleans = true;
@@ -51,10 +53,16 @@ public class GimmickChecker : MonoBehaviour
         }
         allGimmickIsTrue = booleans;
 
-        if (allGimmickIsTrue) Managers.storyManager.InvokeEvent(storyID, StoryEventCondition.ClearPuzzle);
+        if (allGimmickIsTrue) {
+            Debug.Log("ClearPuzzle");
+            Managers.storyManager.InvokeEvent(storyID, StoryEventCondition.ClearPuzzle);
+            Managers.soundManager.PlaySoundOneShot(SoundManager.OneShotSound.ClearSound);
+        }
     }
     public void SetFalse(int index)
     {
+        if (allGimmickIsTrue) return;
+
         gimmickConditions[index] = false;
 
         bool booleans = true;

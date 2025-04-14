@@ -14,6 +14,7 @@ public enum StoryEventFunction
     Play_cinemachine,
     Sound_PlaySound,
     DeathTimer, CancelDeathTimer,
+    ChaseEnded,
     TurnMorning,
     OutlineShaderSwtich,
     Input_Lock, Input_Unlock, 
@@ -69,9 +70,19 @@ public class StoryEvent
                 go.tag = "DeathTimer";
                 break;
             case StoryEventFunction.CancelDeathTimer:
-                GameObject.FindWithTag("DeathTimer").GetComponent<DeathTimer>().Destroy();
+                foreach (GameObject e in GameObject.FindGameObjectsWithTag("DeathTimer"))
+                {
+                    GameObject.Destroy(e);
+                }                break;
+            case StoryEventFunction.ChaseEnded:
+                foreach( GameObject e in GameObject.FindGameObjectsWithTag("Boss")){
+                    GameObject.Destroy(e);
+                }
                 break;
-
+            case StoryEventFunction.TurnMorning:
+                GameObject.FindAnyObjectByType<Light>().intensity = 2;
+                RenderSettings.skybox = Managers.resourceManager.getDaySkybox();
+                break;
 
         }
     }
