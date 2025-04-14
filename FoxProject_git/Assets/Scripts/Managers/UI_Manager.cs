@@ -37,6 +37,8 @@ public class UI_Manager : IListener
     }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         Debug.Log("UI_Manager OnSceneLoaded");
         //UI_Canvas = GameObject.Find("Canvas");
         if (Managers.resourceManager.isLoaded)

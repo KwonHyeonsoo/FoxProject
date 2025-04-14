@@ -43,11 +43,23 @@ public class GameManager
     #region General GameManager
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void GameOver()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Managers.UI_manager.PopUP_GameOver();
+        Managers.soundManager.Stop();
+        foreach (AudioSource e  in CarPlayer.GetComponentsInChildren<AudioSource>())
+        {
+            e.enabled = false;
+        }
+
+        foreach ( GameObject e in GameObject.FindGameObjectsWithTag("Boss"))
+        {
+            e.GetComponent<AudioSource>().Stop();
+        }
         //사운드 일지 정지
         //시간 일시 정지
         Time.timeScale = 0f;

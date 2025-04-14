@@ -128,6 +128,10 @@ public int CheckCurrentStoryID()
     //실시간으로 오브젝트 생성할 때
     public GameObject GetGameObject(int ID)
     {
+        //while(ID > immediate_cursor)
+        //{
+        //    immediate_cursor++;
+        //}
         if (ID.ToString() == data_immediate_paths[immediate_cursor]["ID"].ToString()) {
             //story id에 해당하는 게임오브젝트의 id를 계산
             if (data_immediate_paths[immediate_cursor]["TYPE"].ToString() == "GameObject")
@@ -135,11 +139,15 @@ public int CheckCurrentStoryID()
                 return Resources.Load<GameObject>("Prefabs/" + data_immediate_paths[immediate_cursor++]["NAME"]);//_immediates["test"];
 
         }
-        Debug.LogWarning("Mismatch ID and Gameobject Type \nCheck up Immediate path file");
+        Debug.LogWarning($"Mismatch ID and Gameobject Type \nCheck up Immediate path file  ID : {ID} immediate_cursor{immediate_cursor}");
 
         return null;
     }
 
+    public Material getDaySkybox()
+    {
+        return Resources.Load<Material>("Skybox/DaySky");
+    }
     public AudioClip GetGameAudio(int ID)
     {
         if (ID.ToString() == data_immediate_paths[immediate_cursor]["ID"].ToString())

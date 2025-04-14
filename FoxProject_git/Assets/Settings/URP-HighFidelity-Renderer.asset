@@ -159,10 +159,10 @@ MonoBehaviour:
     m_Bits: 0
   outlineSettings:
     outlineColor: {r: 1, g: 1, b: 1, a: 1}
-    outlineColor_Boss: {r: 0.69411767, g: 0.32156867, b: 0.33245546, a: 1}
-    outlineColor_obj1: {r: 0.63529414, g: 0.5619363, b: 0, a: 1}
-    outlineColor_obj2: {r: 0.3301887, g: 0.22272162, b: 0.22272162, a: 1}
-    outlineScale: 3.3
+    outlineColor_Boss: {r: 1, g: 1, b: 1, a: 1}
+    outlineColor_obj1: {r: 1, g: 1, b: 1, a: 1}
+    outlineColor_obj2: {r: 1, g: 1, b: 1, a: 1}
+    outlineScale: 0.65
     depthThreshold: 1.5
     robertsCrossMultiplier: 31
     normalThreshold: 0.266
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
   m_Name: RenderObjects
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   settings:
     passTag: RenderObjects
     Event: 400
@@ -196,7 +196,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 64
+        m_Bits: 320
       PassNames: []
     overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0

@@ -8,6 +8,7 @@ public class DeathTimer : MonoBehaviour
     void Start()
     {
         //타이머 사운드 재생
+        Managers.soundManager.PlaySoundStart(SoundManager.LoopSound._Timer);
 
         //타이머 코루틴 시작
         StartCoroutine(TimerStart(TimerCount));
@@ -16,7 +17,7 @@ public class DeathTimer : MonoBehaviour
     IEnumerator TimerStart(int timer)
     {
         yield return new WaitForSeconds(timer);
-        //타이머 사운드 재생 중지
+
         //게임 오버 호출
         Managers.gameManager.GameOver();
         Destroy(this);
@@ -25,5 +26,11 @@ public class DeathTimer : MonoBehaviour
     public void Destroy()
     {
         Destroy(this.gameObject);
+    }
+
+    public void OnDestroy()
+    {
+        //타이머 사운드 재생 중지
+        Managers.soundManager.PlaySoundEnd(SoundManager.LoopSound._Timer);
     }
 }

@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MidExhibit/PlaySampleScene 1.unity
-    guid: f1ec8d39ac06fe74297d8cc8f31eb4c9
+    path: Assets/Scenes/StartScene.unity
+    guid: 68001f51fd0b7f5428fa244365a70242
+  - enabled: 1
+    path: Assets/Scenes/MidExhibit/PlaySampleScene 2-2.unity
+    guid: 02d684060c1b210438b1befa0a4979a9
+  - enabled: 1
+    path: Assets/Scenes/TrailerScene.unity
+    guid: 952c7e9b9ad600144b4cb6faa022bbdc
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: aec29d8595d99dc43b1234ee2523bea0,
       type: 2}

@@ -119,6 +119,7 @@ public class PlayerControl : MonoBehaviour
         if (IsCheckGrounded())  //이동 적용
         {
             moveForce = new Vector3(slopeVec.x, slopeVec.y, slopeVec.z);
+
         }
 
     }
@@ -199,6 +200,9 @@ public class PlayerControl : MonoBehaviour
                 
                 moveForce.y = JumpScale;
                 //Debug.LogWarning(moveForce +" "+ IsCheckGrounded());
+
+                //
+                Managers.soundManager.PlaySoundEnd(SoundManager.LoopSound._Player);
 
             }
             else if (!IsCheckGrounded() && !isStealth)  //점프 버퍼
