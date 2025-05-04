@@ -19,6 +19,7 @@ using System.ComponentModel;
  */
 public class PlayerObjectMove : MonoBehaviour
 {
+    public GameObject Cam;
     public LayerMask mask;
     [Range(0, 360)]
     public float viewAngle;
@@ -32,6 +33,7 @@ public class PlayerObjectMove : MonoBehaviour
     private bool isAbleHold;
     private bool isHold;
 
+    
     private bool isInteractable;
 
     public Ease ease = Ease.InQuint;
@@ -139,7 +141,7 @@ public class PlayerObjectMove : MonoBehaviour
         RaycastHit hit;
 
         ray.origin = transform.position;
-        ray.direction = transform.forward;
+        ray.direction = Cam.transform.forward;
 
         Managers.UI_manager.UI_holdTextControl(false, UI_Manager.UI_hold_status.DEFAULT);
         isAbleHold = false;

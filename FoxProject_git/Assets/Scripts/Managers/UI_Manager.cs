@@ -10,6 +10,7 @@ public class UI_Manager : IListener
     private TextMeshProUGUI holdText;
     private PrintText storyText;
     private PrintText guideText;
+    private UI_TextObject_Panel objectText;
 
     #region Default Manager Function
 
@@ -28,7 +29,9 @@ public class UI_Manager : IListener
         GameObject guideobj = GameObject.Instantiate(Managers.resourceManager._UI["_GuideText"], UI_Canvas.transform);
         guideText = guideobj.GetComponent<PrintText>();
         guideobj.SetActive(false);
-
+        GameObject textobj = GameObject.Instantiate(Managers.resourceManager._UI["_TextObject_Panel"], UI_Canvas.transform);
+        objectText = textobj.GetComponent<UI_TextObject_Panel>();
+        textobj.SetActive(false);
     }
     public void Start() {
         //Managers.eventManager.AddListener(EVENT_TYPE.InitResourceLoaded, this);
@@ -105,7 +108,11 @@ public class UI_Manager : IListener
 
         guideText.PrintingText();
     }
-
+    public void PrintObjectText(string text1, string text2)
+    {
+        objectText.gameObject.SetActive(true);
+        objectText.PrintText(text1, text2);
+    }
     public void PopUP_GameOver()
     {
         GameObject pop = GameObject.Instantiate(
