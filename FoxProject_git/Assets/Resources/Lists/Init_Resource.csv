@@ -2,6 +2,7 @@
 UI,_GuideText,,,,,,,
 UI,_StoryText,,,,,,,
 UI,Canvas,,,,,,,
+UI,_TextObject_Panel,,,,,,,
 UI,GameOverPanel,,,,,,,
 UI,HoldText,,,,,,,UI
 GameObject,Human,,,,,,,GameObject
