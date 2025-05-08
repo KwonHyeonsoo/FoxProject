@@ -110,6 +110,7 @@ public class UI_Manager : IListener
     }
     public void PrintObjectText(string text1, string text2)
     {
+        Managers.gameManager.IsInputLock = true;
         objectText.gameObject.SetActive(true);
         objectText.PrintText(text1, text2);
     }

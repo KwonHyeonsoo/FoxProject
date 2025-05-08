@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class DeathTimer : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class DeathTimer : MonoBehaviour
         yield return new WaitForSeconds(timer);
 
         //게임 오버 호출
-        Managers.gameManager.GameOver();
+        Managers.gameManager.CarPlayer.GetComponent<PlayableDirector>().Play();
         Destroy(this);
     }
 

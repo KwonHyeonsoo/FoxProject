@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 /*
  * 
  * <<±â´É>>
@@ -40,7 +41,10 @@ public class SCC_Contorller : MonoBehaviour
         //SwitchPlayer();
         EngineStart();
     }
-
+    private void OnEnable()
+    {
+        GetComponent<PlayableDirector>().stopped += Managers.gameManager.OnGameOver;
+    }
     private void OnDestroy()
     {
         InputManager.Instance.carInputActions.FindAction("Start").performed -= EngineStartInputaction;
