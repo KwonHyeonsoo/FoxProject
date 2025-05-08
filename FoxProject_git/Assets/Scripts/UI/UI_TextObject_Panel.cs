@@ -15,4 +15,9 @@ public class UI_TextObject_Panel : MonoBehaviour
         title.text = t;
         content.text = c;
     }
+
+    private void OnDisable()
+    {
+        Managers.gameManager.IsInputLock = false;
+    }
 }

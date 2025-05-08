@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class GameManager
@@ -40,10 +41,39 @@ public class GameManager
         get { return isGameOver; }
         set { }
     }
+
+    bool isInputLock;
+    public bool IsInputLock
+    {
+        get { return isInputLock; }
+        set { isInputLock = value; }
+    }
     #region General GameManager
     public void Restart()
     {
         SceneManager.LoadScene(1);
+    }
+    public void OnGameOver(PlayableDirector pd)
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Managers.UI_manager.PopUP_GameOver();
+        Managers.soundManager.Stop();
+        foreach (AudioSource e in CarPlayer.GetComponentsInChildren<AudioSource>())
+        {
+            e.enabled = false;
+        }
+
+        foreach (GameObject e in GameObject.FindGameObjectsWithTag("Boss"))
+        {
+            e.SetActive(false);
+            //e.GetComponent<AudioSource>()?.Stop();
+        }
+        //사운드 일지 정지
+        //시간 일시 정지
+        Time.timeScale = 0f;
+        Debug.Log("GameOver!");
+
     }
     public void GameOver()
     {
@@ -58,7 +88,7 @@ public class GameManager
 
         foreach ( GameObject e in GameObject.FindGameObjectsWithTag("Boss"))
         {
-            e.GetComponent<AudioSource>().Stop();
+            e.GetComponent<AudioSource>()?.Stop();
         }
         //사운드 일지 정지
         //시간 일시 정지

@@ -91,6 +91,8 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Managers.gameManager.IsInputLock) return;
+
         //캐릭터 이동
         characterCtrl.Move(moveForce * currentSpeed *      Time.deltaTime);
         //이동 방향         걷는 방향   스텔스&달리기 유무
@@ -165,6 +167,8 @@ public class PlayerControl : MonoBehaviour
 
     public void OnStealth(InputAction.CallbackContext value)
     {
+        if (Managers.gameManager.IsInputLock) return;
+
         {
             if (value.started)
             {
@@ -193,6 +197,8 @@ public class PlayerControl : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext value)
     {
+        if (Managers.gameManager.IsInputLock) return;
+
         if (value.performed)
         {
             if (IsCheckGrounded() && !isStealth)
@@ -247,6 +253,8 @@ public class PlayerControl : MonoBehaviour
     
     public void onCameraRotate(InputAction.CallbackContext value)
     {
+        if (Managers.gameManager.IsInputLock) return;
+
         if (!rotateLock)
         {
             float mouseX = value.ReadValue<Vector2>().x;// - i_width / 2;

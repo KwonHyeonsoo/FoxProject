@@ -81,6 +81,7 @@ public class PlayerObjectMove : MonoBehaviour
     
     public void RotateObject(InputAction.CallbackContext context)
     {
+        if (Managers.gameManager.IsInputLock) return;
         if (!isAbleHold) return;
 
         if (context.performed)
@@ -135,6 +136,7 @@ public class PlayerObjectMove : MonoBehaviour
     }
     void CaptureObject()
     {
+        if (Managers.gameManager.IsInputLock) return;
         if (isHold) return;
 
         Ray ray = new Ray();
@@ -174,6 +176,7 @@ public class PlayerObjectMove : MonoBehaviour
 
     public void Hold(InputAction.CallbackContext context)
     {
+        if (Managers.gameManager.IsInputLock) return;
 
         if (context.performed)
         {
@@ -209,9 +212,6 @@ public class PlayerObjectMove : MonoBehaviour
 
                         holdingObject.SetActive(true);
 
-                        //decal 
-                        //holdText.text = "Hold";
-                        //holdText?.gameObject.SetActive(false);
                         Managers.UI_manager.UI_holdTextControl(false, UI_Manager.UI_hold_status.DEFAULT);
                         decal.SetActive(false);
 

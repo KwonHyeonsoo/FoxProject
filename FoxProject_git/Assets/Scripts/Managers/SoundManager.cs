@@ -14,6 +14,7 @@ public class SoundManager
         Player,    //걷기 소리loop
         Boss,      //괴성oneshot, 달리기 loo[
         Vehicle,
+        Deathtimer,
         Others,   //_reflector, 깡통 차량 작동음onesh,책 넘기는 소리oneshot,주차 퍼즐 클리어시, 문짝 움직이는 소리oneshot
         StorySound,     //only oneshot except death timer
         MaxCount    //숫자를 세기위한 enum 값
@@ -116,9 +117,9 @@ public class SoundManager
                 _audioSources[(int)Sound.Player].Play();
                 break;
             case LoopSound._Timer:
-                _audioSources[(int)Sound.Others].clip = _audioClips[LoopSound._Timer.ToString()];
-                _audioSources[(int)Sound.Others].loop = true;
-                _audioSources[(int)Sound.Others].Play();
+                _audioSources[(int)Sound.Deathtimer].clip = _audioClips[LoopSound._Timer.ToString()];
+                _audioSources[(int)Sound.Deathtimer].loop = true;
+                _audioSources[(int)Sound.Deathtimer].Play();
                 break;
         }
     }
@@ -160,7 +161,9 @@ public class SoundManager
 
     public void PlayStorySoudnOneShot(int ID) 
     {
-        _audioSources[(int)Sound.StorySound].PlayOneShot(Managers.resourceManager.GetGameAudio(ID));
+        _audioSources[(int)Sound.StorySound].Stop();
+        //_audioSources[(int)Sound.StorySound].PlayOneShot(Managers.resourceManager.GetGameAudio(ID));
+        _audioSources[(int)Sound.StorySound].clip = Managers.resourceManager.GetGameAudio(ID);
         _audioSources[(int)Sound.StorySound].Play();
     }
 }

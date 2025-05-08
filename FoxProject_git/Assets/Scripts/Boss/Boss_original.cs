@@ -135,7 +135,6 @@ public class Boss_original : MonoBehaviour
                 //Å¸°Ù ¹ß°ß
                 if(ViewTargets.Count > 0 || SoundTargets.Count > 0 || isMonkey)
                 {
-                    
                     setState(BossStateEnum.chase);
                     break;
                 }
