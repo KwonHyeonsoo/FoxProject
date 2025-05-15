@@ -28,6 +28,9 @@ public class ResourceManager
     public Dictionary<string, GameObject> _UI = new Dictionary<string, GameObject>();
     public Dictionary<string, AudioClip> _audioClips = new Dictionary<string, AudioClip>();
     public StoryData currentStory;
+    private string _currentStoryName;
+    private int maxStoryCount = 5;
+    private int currentStoryCount = 1;
     private int story_cursor = 0;
     private int guide_cursor = 0;
     private int immediate_cursor = 0;   // 실시간으로 불러올 리소스 가리키는 커서
@@ -64,7 +67,8 @@ public class ResourceManager
                 case "GameObject":  //오디오믹서
                     break;
                 case "StoryData":
-                    currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + data_init_paths[i]["NAME"]);
+                    _currentStoryName = (string)data_init_paths[i]["NAME"];
+                    currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + data_init_paths[i]["NAME"] +" "+ currentStoryCount);
                     break;
                 case "Sound":
                     _audioClips.Add(data_init_paths[i]["NAME"].ToString(), Resources.Load<AudioClip>("TestSound/" + data_init_paths[i]["NAME"]));
@@ -88,6 +92,14 @@ public class ResourceManager
         isLoaded = true;
         Managers.eventManager.PostNotification(EVENT_TYPE.InitResourceLoaded, null, null);
 
+    }
+    public StoryData GetNewStory()
+    {
+        if (currentStoryCount > 5) return null;
+        Debug.Log(currentStoryCount + " is Loaded");
+        StoryData tmp = currentStory;
+        currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + _currentStoryName + " "+(++currentStoryCount));
+        return tmp;
     }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

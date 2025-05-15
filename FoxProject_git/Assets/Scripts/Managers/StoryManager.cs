@@ -21,7 +21,7 @@ public class StoryManager
     {
         //리소스 매니저에서 _prefabs 받고 id까지 저장
 
-        InitResourceLoad();
+        InitResourceLoad(Managers.resourceManager.GetNewStory());
         //storyObjectController 받아오기
         Debug.Log("story1.events[0].eventId;"+story1.events[0].eventId);
 
@@ -31,10 +31,10 @@ public class StoryManager
         }
     }
 
-    void InitResourceLoad()
+    void InitResourceLoad(StoryData s)
     {
-
-        story1 = Managers.resourceManager.currentStory;
+        if (s == null) return;
+        story1 = s;
         isEventEnd = new bool[story1.events.Length];
         currentElementID = currentEventExecute = 0;
         currentStoryID = story1.events[0].eventId;
@@ -60,7 +60,7 @@ public class StoryManager
         Debug.Log("StoryManager OnSceneLoaded");
         if (Managers.resourceManager.isLoaded)
         {
-            InitResourceLoad();
+            InitResourceLoad(Managers.resourceManager.currentStory);
         }
 
     }
@@ -70,7 +70,9 @@ public class StoryManager
     public void Update()
     {
         //Debug.Log(currentEventExecute);
-        if (isEnd) return;
+        if (isEnd) { Debug.Log("The Story is over!");
+            InitResourceLoad(Managers.resourceManager.GetNewStory());
+        }
         //Debug.Log(delayTime);
         if(delayTime > 0)
         {
@@ -112,6 +114,7 @@ public class StoryManager
     }
     public void InvokeWASD(InputAction.CallbackContext context)
     {
+        if (Managers.gameManager.IsInputLock) return;
         if (isEnd) return;
         StoryEventCondition eventCondition = StoryEventCondition.WASDdown;
         int id = story1.events[currentElementID].eventId;

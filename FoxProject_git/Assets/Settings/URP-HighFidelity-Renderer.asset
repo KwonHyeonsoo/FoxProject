@@ -141,22 +141,22 @@ MonoBehaviour:
   m_Name: ScreenSpaceOutlinesBoss
   m_EditorClassIdentifier: 
   m_Active: 0
-  renderPassEvent: 300
+  renderPassEvent: 350
   outlinesLayerMask:
     serializedVersion: 2
     m_Bits: 1
   outlinesLayerMask_Boss:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   outlinesLayerMask_obj1:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   outlinesLayerMask_obj2:
     serializedVersion: 2
     m_Bits: 0
   outlinesOccluderLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 272
   outlineSettings:
     outlineColor: {r: 1, g: 1, b: 1, a: 1}
     outlineColor_Boss: {r: 1, g: 1, b: 1, a: 1}
@@ -191,12 +191,12 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: RenderObjects
-    Event: 400
+    Event: 550
     filterSettings:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 320
+        m_Bits: 16
       PassNames: []
     overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0
