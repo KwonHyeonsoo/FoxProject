@@ -1,0 +1,315 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c4f7f8f01c9be419f3414c3f1149db, type: 3}
+  m_Name: MidStoryData
+  m_EditorClassIdentifier: 
+  events:
+  - eventId: 0
+    evectCondition: 2
+    eventFunction: 5
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC8FC\uCC28\uD37C\uC990 -> \uB4F1\uB300\uBB38\uC774 \uC5F4\uB9B0\uB2E4."
+  - eventId: 16
+    evectCondition: 2
+    eventFunction: 2
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "E\uB97C \uB20C\uB7EC \uD558\uCC28"
+  - eventId: 17
+    evectCondition: 5
+    eventFunction: 6
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC800\uC7A5"
+  - eventId: 17
+    evectCondition: 5
+    eventFunction: 2
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC800\uC7A5 \uC911"
+  - eventId: 17
+    evectCondition: 5
+    eventFunction: 2
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uBAA8\uB4E0 \uC624\uBE0C\uC81D\uD2B8\uB294 E\uB85C \uC0C1\uD638\uC791\uC6A9
+      \uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  - eventId: 17
+    evectCondition: 5
+    eventFunction: 1
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: ...
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 8
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uBE5B\uC758 \uD37C\uC990 \uC644\uC131 -> \uC2DC\uB124\uBA38\uC2E0"
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 1
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: ...
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 6
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC800\uC7A5 \uC911"
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 2
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC800\uC7A5 \uC911"
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 9
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uAD34\uBB3C \uC0AC\uC6B4\uB4DC"
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 4952993461703993861, guid: dbab9ed7d96bf4b408c45a6361ea34ac,
+      type: 3}
+    desc: 
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 10
+    delayTime: 0
+    targetTransform: {fileID: 3579895041997055307, guid: b33cb9907bb486146ad5ad13f2144e46,
+      type: 3}
+    desc: 0
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 4131493386135177222, guid: 29e132077213d6146b913f02ac6d6a88,
+      type: 3}
+    desc: 
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 287097488010008101, guid: 995db0a53168b644194d9abefbdd4b9a,
+      type: 3}
+    desc: 
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 2
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uB2F9\uC7A5 \uCC28\uB97C \uD0C0\uACE0 \uD0C8\uCD9C\uD558\uC2DC\uC624"
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 2793238620394126590, guid: dd0ac865ae2e4a34fa10639749493e03,
+      type: 3}
+    desc: 
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 5852995253484674423, guid: ccfe4466ae6a0d84fba7d4d6c1928bf2,
+      type: 3}
+    desc: 
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 1793100983740956557, guid: 6638ae448c8ac944b8670e9ddd908e2f,
+      type: 3}
+    desc: 
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 3163127276193972599, guid: 6d7e9bb3f81eed743ae6a3dc6dc91d7e,
+      type: 3}
+    desc: 
+  - eventId: 18
+    evectCondition: 2
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 1476853869292411641, guid: b90883355a768074e850c4e6df837836,
+      type: 3}
+    desc: 
+  - eventId: 19
+    evectCondition: 1
+    eventFunction: 11
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: 
+  - eventId: 20
+    evectCondition: 5
+    eventFunction: 8
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC2DC\uB124\uBA38\uC2E0"
+  - eventId: 21
+    evectCondition: 5
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 1508403475313684019, guid: 47c78079529188c468f35193c608b407,
+      type: 3}
+    desc: "\uB9F5\uC774\uB3D9 \uC81C\uD55C \uCF5C\uB77C\uC774\uB354"
+  - eventId: 22
+    evectCondition: 6
+    eventFunction: 2
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC8FC\uCC28\uD37C\uC990\uC744 \uC644\uB8CC\uD558\uC138\uC694"
+  - eventId: 23
+    evectCondition: 2
+    eventFunction: 5
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uB4F1\uB300\uBB38\uC774 \uC5F4\uB9B0\uB2E4"
+  - eventId: 23
+    evectCondition: 2
+    eventFunction: 7
+    delayTime: 2
+    targetTransform: {fileID: 0}
+    desc: "\uCE74\uBA54\uB77C\uAC00 \uBB38\uC744 \uC751\uC2DC"
+  - eventId: 23
+    evectCondition: 6
+    eventFunction: 2
+    delayTime: 4
+    targetTransform: {fileID: 0}
+    desc: "E\uB97C \uB20C\uB7EC \uD558\uCC28"
+  - eventId: 24
+    evectCondition: 5
+    eventFunction: 6
+    delayTime: 1
+    targetTransform: {fileID: 0}
+    desc: '-'
+  - eventId: 24
+    evectCondition: 5
+    eventFunction: 2
+    delayTime: 4
+    targetTransform: {fileID: 0}
+    desc: "\uC800\uC7A5\uC911"
+  - eventId: 24
+    evectCondition: 5
+    eventFunction: 2
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uBAA8\uB4E0 \uC624\uBE0C\uC81D\uD2B8\uB294 E\uB97C \uD1B5\uD574 \uC0C1\uD638\uC791\uC6A9\uD560
+      \uC218 \uC788\uC2B5\uB2C8\uB2E4. "
+  - eventId: 24
+    evectCondition: 5
+    eventFunction: 1
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: ...
+  - eventId: 25
+    evectCondition: 2
+    eventFunction: 8
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: ...
+  - eventId: 25
+    evectCondition: 2
+    eventFunction: 1
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC2A4\uD1A0\uB9AC\uD14D\uC2A4\uD2B8-\uC800\uAC8C\uBB50\uC9C0"
+  - eventId: 25
+    evectCondition: 2
+    eventFunction: 6
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC800\uC7A5"
+  - eventId: 25
+    evectCondition: 2
+    eventFunction: 2
+    delayTime: 2
+    targetTransform: {fileID: 0}
+    desc: "\uC800\uC7A5 \uC911"
+  - eventId: 25
+    evectCondition: 2
+    eventFunction: 9
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uAD34\uBB3C\uC18C\uB9AC"
+  - eventId: 25
+    evectCondition: 2
+    eventFunction: 1
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: ...
+  - eventId: 25
+    evectCondition: 2
+    eventFunction: 2
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uB2F9\uC7A5 \uB3C4\uB9DD\uCE58\uC2DC\uC624"
+  - eventId: 25
+    evectCondition: 2
+    eventFunction: 10
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC989\uC0AC\uAE30"
+  - eventId: 26
+    evectCondition: 1
+    eventFunction: 7
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: 
+  - eventId: 26
+    evectCondition: 1
+    eventFunction: 11
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: 
+  - eventId: 27
+    evectCondition: 5
+    eventFunction: 8
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: 
+  - eventId: 27
+    evectCondition: 5
+    eventFunction: 16
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uCD94\uACA9 \uC885\uB8CC"
+  - eventId: 28
+    evectCondition: 5
+    eventFunction: 5
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uAD6C\uBBF8\uD638 \uC190\uAC00\uB77D \uC560\uB2C8\uBA54\uC774\uD305"
+  - eventId: 28
+    evectCondition: 5
+    eventFunction: 12
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC544\uCE68\uC73C\uB85C"
+  - eventId: 28
+    evectCondition: 5
+    eventFunction: 2
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC544\uCE68\uC774\uC57C..."
+  - eventId: 28
+    evectCondition: 5
+    eventFunction: 13
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uC544\uCE68\uC774\uC57C..."

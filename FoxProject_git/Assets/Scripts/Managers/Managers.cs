@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 //  -> (¹Ýº¹) -> Awake -> ¾À·Îµå -> Start
 public class Managers : SingletonBehaviour<Managers>
 {
-
     #region SingletonBehaviour
     /*    
 

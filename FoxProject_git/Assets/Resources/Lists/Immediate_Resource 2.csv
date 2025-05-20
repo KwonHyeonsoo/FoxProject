@@ -1,0 +1,5 @@
+﻿ID,TYPE,NAME,,,,,
+0,GameObject,StoryProgression2
+3,Sound,Boss_growl
+3,GameObject,DeathTimer
+3,GameObject,BossSpawn1

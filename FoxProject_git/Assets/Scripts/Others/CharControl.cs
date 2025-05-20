@@ -9,14 +9,12 @@ public class CharControl : MonoBehaviour
     PlayableDirector pd;
     public TimelineAsset[] ta;
 
-    int index = 0;
-    public static CharControl Instance;
+    public string target_tag;
 
+    int index = 0;
 
     private void Start()
     {
-        
-        Instance = this;
         pd = GetComponent<PlayableDirector>();
 
     }
@@ -24,9 +22,8 @@ public class CharControl : MonoBehaviour
     {
         if (ta.Length > index)
         {
-            if (other.tag == "CutScene")
+            if (other.tag == target_tag)
             {
-                other.gameObject.SetActive(false);
                 pd.Play(ta[index++]);
             }
         }

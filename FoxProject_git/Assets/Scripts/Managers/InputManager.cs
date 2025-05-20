@@ -63,7 +63,7 @@ public class InputManager : MonoBehaviour
     }
     public void SwitchInput(InputAction.CallbackContext context)
     {
-        Debug.Log("uride");
+        Debug.Log("unride");
         if (cooltime > 0) return;
         if (context.performed)
         {
@@ -78,6 +78,7 @@ public class InputManager : MonoBehaviour
         lock (m_Lock)
         {
             if (cooltime > 0) return;
+            if (Managers.gameManager.IsInputLock) return;
 
             cooltime = 1;
             Debug.Log("Invoke inputmanager");

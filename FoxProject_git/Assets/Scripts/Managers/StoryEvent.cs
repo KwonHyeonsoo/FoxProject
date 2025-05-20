@@ -47,6 +47,8 @@ public class StoryEvent
 
         switch (eventFunction)
         {
+            case StoryEventFunction.UI_PlayVideo:
+                Managers.UI_manager.PlayVideo(); break;
             case StoryEventFunction.UI_StoryText:
                 Managers.UI_manager.PrintStoryText(eventId);
                 break;

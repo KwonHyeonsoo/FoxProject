@@ -14,6 +14,7 @@ using UnityEngine.Playables;
 
 public class SCC_Contorller : MonoBehaviour
 {
+    private bool isStartWithCar = false;
     [HideInInspector]public bool isEngineStart;
     [HideInInspector]public bool isPlayer;
 
@@ -23,9 +24,10 @@ public class SCC_Contorller : MonoBehaviour
     public List<GameObject> engineObjs = new List<GameObject>();
     private SCC_Audio audio;
     private float defaultMaxVolume;
+
     private void Awake()
     {
-        isEngineStart = isPlayer = true;
+        isEngineStart = isPlayer = !isStartWithCar;
         audio = GetComponent<SCC_Audio>();
         defaultMaxVolume = audio.maximumVolume;
     }
@@ -39,7 +41,7 @@ public class SCC_Contorller : MonoBehaviour
         //사운드 매니저에게 본인 자동차 소리를 맡긴다
 
         //SwitchPlayer();
-        EngineStart();
+        if(!isStartWithCar) EngineStart();
     }
     private void OnEnable()
     {
@@ -97,6 +99,7 @@ public class SCC_Contorller : MonoBehaviour
     #region player 교체
     public void SwitchPlayer()
     {
+        if (Managers.gameManager.IsInputLock) return;
         Debug.Log("Controller swtihPalyer");
         foreach (var com in playerComponents)
         {

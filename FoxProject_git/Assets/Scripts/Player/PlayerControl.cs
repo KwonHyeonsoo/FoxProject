@@ -77,7 +77,7 @@ public class PlayerControl : MonoBehaviour
 
         #endregion
 
-        height = characterCtrl.height * transform.localScale.y + 0.1f;
+        height = characterCtrl.height * transform.localScale.y + 0.0f;
         isStealth = false;
         camNormalHeigjt = cam.transform.localPosition ;
         camStealthHeigjt = cam.transform.localPosition + new Vector3(0f,-0.5f, 0f);

@@ -28,6 +28,9 @@ public class ResourceManager
     public Dictionary<string, GameObject> _UI = new Dictionary<string, GameObject>();
     public Dictionary<string, AudioClip> _audioClips = new Dictionary<string, AudioClip>();
     public StoryData currentStory;
+    private string _currentStoryName;
+    private int maxStoryCount = 5;
+    private int currentStoryCount = 1;
     private int story_cursor = 0;
     private int guide_cursor = 0;
     private int immediate_cursor = 0;   // 실시간으로 불러올 리소스 가리키는 커서
@@ -42,13 +45,13 @@ public class ResourceManager
 
     private void ReadResourceALL()
     {
-
+        currentStoryCount = 1;
         //CSV 읽기
         data_dialogue1 = CSVReader.Read("Dialogue/dialogue1");
         data_guidelog1 = CSVReader.Read("Dialogue/guidelog1");
 
         data_init_paths = CSVReader.Read("Lists/Init_Resource");
-        data_immediate_paths = CSVReader.Read("Lists/Immediate_Resource");
+        data_immediate_paths = CSVReader.Read("Lists/Immediate_Resource "+currentStoryCount);
         //data_paths = CSVReader.Read("");
 
         //Resource 폴더 읽기(preLoad)
@@ -64,7 +67,8 @@ public class ResourceManager
                 case "GameObject":  //오디오믹서
                     break;
                 case "StoryData":
-                    currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + data_init_paths[i]["NAME"]);
+                    _currentStoryName = (string)data_init_paths[i]["NAME"];
+                    currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + data_init_paths[i]["NAME"] +" "+ currentStoryCount);
                     break;
                 case "Sound":
                     _audioClips.Add(data_init_paths[i]["NAME"].ToString(), Resources.Load<AudioClip>("TestSound/" + data_init_paths[i]["NAME"]));
@@ -89,10 +93,21 @@ public class ResourceManager
         Managers.eventManager.PostNotification(EVENT_TYPE.InitResourceLoaded, null, null);
 
     }
+    public StoryData GetNewStory()
+    {
+        if (currentStoryCount > 5) return null;
+        Debug.Log(currentStoryCount + " is Loaded");
+        data_immediate_paths = CSVReader.Read("Lists/Immediate_Resource " + currentStoryCount);
+        immediate_cursor = 0;
+        currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + _currentStoryName + " "+(currentStoryCount++));
+
+
+        return currentStory;
+    }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("ResourceManager OnSceneLoaded");
-        if(isLoaded == false)
+        //if(isLoaded == false)
         {
             ReadResourceALL();
         }

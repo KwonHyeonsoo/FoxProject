@@ -1,5 +1,6 @@
 ﻿TYPE,NAME,,,,,,,
 UI,_GuideText,,,,,,,
+UI,VideoPanel,,,,,,,
 UI,_StoryText,,,,,,,
 UI,Canvas,,,,,,,
 UI,_TextObject_Panel,,,,,,,
