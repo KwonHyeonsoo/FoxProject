@@ -133,6 +133,7 @@ public class SoundManager
                 _audioSources[(int)Sound.Player].Stop();
                 break;
             case LoopSound._Timer:
+                _audioSources[(int)Sound.Deathtimer].Stop();
                 _audioSources[(int)Sound.Others].Stop();
                 break;
         }

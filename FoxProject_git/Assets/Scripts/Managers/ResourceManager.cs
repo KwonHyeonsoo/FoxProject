@@ -45,13 +45,13 @@ public class ResourceManager
 
     private void ReadResourceALL()
     {
-
+        currentStoryCount = 1;
         //CSV 읽기
         data_dialogue1 = CSVReader.Read("Dialogue/dialogue1");
         data_guidelog1 = CSVReader.Read("Dialogue/guidelog1");
 
         data_init_paths = CSVReader.Read("Lists/Init_Resource");
-        data_immediate_paths = CSVReader.Read("Lists/Immediate_Resource");
+        data_immediate_paths = CSVReader.Read("Lists/Immediate_Resource "+currentStoryCount);
         //data_paths = CSVReader.Read("");
 
         //Resource 폴더 읽기(preLoad)
@@ -97,14 +97,17 @@ public class ResourceManager
     {
         if (currentStoryCount > 5) return null;
         Debug.Log(currentStoryCount + " is Loaded");
-        StoryData tmp = currentStory;
-        currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + _currentStoryName + " "+(++currentStoryCount));
-        return tmp;
+        data_immediate_paths = CSVReader.Read("Lists/Immediate_Resource " + currentStoryCount);
+        immediate_cursor = 0;
+        currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + _currentStoryName + " "+(currentStoryCount++));
+
+
+        return currentStory;
     }
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("ResourceManager OnSceneLoaded");
-        if(isLoaded == false)
+        //if(isLoaded == false)
         {
             ReadResourceALL();
         }

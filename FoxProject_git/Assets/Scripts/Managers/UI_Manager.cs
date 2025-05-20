@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UI_Manager : IListener
 {
@@ -67,16 +68,16 @@ public class UI_Manager : IListener
                 holdText.text = "-";
                 break;
             case UI_hold_status.RIDE:
-                holdText.text = "Ride";
+                holdText.text = "[E]탑승";
                 break;
             case UI_hold_status.INTERACT:
-                holdText.text = "Act";
+                holdText.text = "[E]";
                 break;
             case UI_hold_status.HOLD:
-                holdText.text = "Hold";
+                holdText.text = "[E]줍기 [좌우클릭]수평회전 [스크롤]수직회전";
                 break;
             case UI_hold_status.HOLDING:
-                holdText.text = "Holding";
+                holdText.text = "[E]내려놓기]";
                 break;
             default:
                 holdText.text = "NONE";
@@ -111,11 +112,11 @@ public class UI_Manager : IListener
 
         guideText.PrintingText();
     }
-    public void PrintObjectText(string text1, string text2)
+    public void PrintObjectText(string text1, string text2, Sprite i)
     {
         Managers.gameManager.IsInputLock = true;
         objectText.gameObject.SetActive(true);
-        objectText.PrintText(text1, text2);
+        objectText.PrintText(text1, text2,i);
     }
     public void PopUP_GameOver()
     {

@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 
 public class DeathTimer : MonoBehaviour
 {
+    public bool isKillByBoss;
     public int TimerCount;
     void Start()
     {
@@ -20,7 +21,7 @@ public class DeathTimer : MonoBehaviour
         yield return new WaitForSeconds(timer);
 
         //게임 오버 호출
-        Managers.gameManager.CarPlayer.GetComponent<PlayableDirector>().Play();
+        //Managers.gameManager.CarPlayer.GetComponent<PlayableDirector>().Play();
         Destroy(this);
     }
 

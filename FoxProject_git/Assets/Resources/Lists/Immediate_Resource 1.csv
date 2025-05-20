@@ -1,0 +1,16 @@
+﻿ID,TYPE,NAME,,,,,
+0,GameObject,StoryProgression1
+12,Sound,Boss_growl
+18,Sound,Boss_growl
+18,GameObject,DeathTimer
+18,GameObject,18Tree_Creature (1) Variant
+18,GameObject,18Tree_Creature (2) Variant
+18,GameObject,18Tree_Creature (3) Variant
+18,GameObject,18Tree_Creature (4) Variant
+18,GameObject,18Tree_Creature (5) Variant
+18,GameObject,18Tree_Creature (6) Variant
+18,GameObject,18Tree_Creature (7) Variant
+18,GameObject,18Tree_Creature Variant
+21,GameObject,21RestrictionCollider
+25,Sound,Boss_growl
+25,GameObject,DeathTimer

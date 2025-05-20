@@ -111,9 +111,11 @@ public class Boss_original : MonoBehaviour
             _audio_footstep = Managers.resourceManager._audioClips["Boss_footstep"];
             _audio_roar = Managers.resourceManager._audioClips["Boss_roar"];  //
         }
-        Managers.soundManager?.SetAudioMixer(_audioSource);
+
         _audioSource.spatialBlend = 1.0f;
-        StartCoroutine(updateTargetWithDelay(0.2f));    //시작하자마자 세팅하면 에러뜨더라고..
+        SoundTargets = new List<Transform>();
+        ViewTargets = new List<Transform>();
+        StartCoroutine(updateTargetWithDelay(1f));    //시작하자마자 세팅하면 에러뜨더라고..
     }
 
     // Update is called once per frame
@@ -127,13 +129,15 @@ public class Boss_original : MonoBehaviour
                 _audio_growl = Managers.resourceManager._audioClips["Boss_growl"];
                 _audio_footstep = Managers.resourceManager._audioClips["Boss_footstep"];
                 _audio_roar = Managers.resourceManager._audioClips["Boss_roar"];  //
+                Managers.soundManager?.SetAudioMixer(_audioSource);
             }
         }
+        if(Managers.soundManager != null) Managers.soundManager?.SetAudioMixer(_audioSource);
         switch (_state)
         {
             case BossStateEnum.idle:
                 //타겟 발견
-                if(ViewTargets.Count > 0 || SoundTargets.Count > 0 || isMonkey)
+                if(ViewTargets?.Count > 0 || SoundTargets?.Count > 0 || isMonkey)
                 {
                     setState(BossStateEnum.chase);
                     break;
@@ -149,7 +153,7 @@ public class Boss_original : MonoBehaviour
                 break;
             case BossStateEnum.patrol:
                 //타겟 발견
-                if (ViewTargets.Count > 0 || SoundTargets.Count > 0 || isMonkey)
+                if (ViewTargets?.Count > 0 || SoundTargets?.Count > 0 || isMonkey)
                 {
                     setState(BossStateEnum.chase);
                     break;
@@ -218,7 +222,7 @@ public class Boss_original : MonoBehaviour
     {
         _state = nextState;
 
-        Debug.Log(_state);
+        //Debug.Log(_state);
 
         switch (_state)
         {
@@ -264,7 +268,7 @@ public class Boss_original : MonoBehaviour
 
         */
         //state에 따라 애니메이션 적용
-        Debug.Log("setAnimator" + nextState);
+        //Debug.Log("setAnimator" + nextState);
         switch (nextState)
         {
             case BossStateEnum.GameOver:
@@ -296,8 +300,8 @@ public class Boss_original : MonoBehaviour
     {
         while (true)
         {
-            updateTarget();
             yield return new WaitForSeconds(delay);
+            updateTarget();
         }
     }
 

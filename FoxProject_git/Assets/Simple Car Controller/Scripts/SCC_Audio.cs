@@ -72,7 +72,7 @@ public class SCC_Audio : MonoBehaviour {
         engineOnSource.clip = engineOn;
         engineOnSource.loop = true;
         engineOnSource.spatialBlend = 1f;
-        engineOnSource.Play();
+
 
         GameObject engineOffGO = new GameObject("Engine Off AudioSource");
         engineOffGO.transform.SetParent(transform, false);
@@ -82,6 +82,11 @@ public class SCC_Audio : MonoBehaviour {
         engineOffSource.clip = engineOff;
         engineOffSource.loop = true;
         engineOffSource.spatialBlend = 1f;
+
+        engineOnSource.volume = minimumVolume;
+        engineOffSource.volume = minimumVolume;
+
+        engineOnSource.Play();
         engineOffSource.Play();
 
     }

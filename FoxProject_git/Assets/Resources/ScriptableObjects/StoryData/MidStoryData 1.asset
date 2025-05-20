@@ -23,7 +23,7 @@ MonoBehaviour:
   - eventId: 0
     evectCondition: 6
     eventFunction: 2
-    delayTime: 2
+    delayTime: 0
     targetTransform: {fileID: 0}
     desc: "[WASD] \uC774\uB3D9"
   - eventId: 1

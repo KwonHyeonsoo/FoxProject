@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class GimmickChecker : MonoBehaviour
 {
+
     [ReadOnly] public List<GameObject> gimmicks;
     //List<GimmickAbstract> gimmickAbstracts;
     [ReadOnly] public List<bool> gimmickConditions;
     public int storyID;
     public bool allGimmickIsTrue;
-
+    public bool isCutscene;
     void Start()
     {
         if(gimmicks.Count > 0)
@@ -57,6 +59,10 @@ public class GimmickChecker : MonoBehaviour
             Debug.Log("ClearPuzzle");
             Managers.storyManager.InvokeEvent(storyID, StoryEventCondition.ClearPuzzle);
             Managers.soundManager.PlaySoundOneShot(SoundManager.OneShotSound.ClearSound);
+            if (isCutscene) 
+            { // ÄÆ½Å Àç»ý
+                GetComponent<PlayableDirector>().Play();
+            }
         }
     }
     public void SetFalse(int index)

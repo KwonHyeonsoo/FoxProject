@@ -154,7 +154,7 @@ public class PlayerObjectMove : MonoBehaviour
             if (hit.collider.gameObject.GetComponent<LightController>() &&
                 hit.collider.gameObject.GetComponent<LightController>().getLightType() == light_type.reflector)
             {
-                if (Vector3.Angle(transform.forward, transform.position - hit.transform.position) > viewAngle)
+                //if (Vector3.Angle(transform.forward, transform.position - hit.transform.position) > viewAngle)
                 {
                     holdingObject = hit.collider.transform.gameObject;
                     Managers.UI_manager.UI_holdTextControl(true, UI_Manager.UI_hold_status.HOLD);

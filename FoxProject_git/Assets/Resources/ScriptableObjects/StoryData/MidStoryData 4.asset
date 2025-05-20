@@ -14,8 +14,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events:
   - eventId: 0
-    evectCondition: 0
-    eventFunction: 6
+    evectCondition: 6
+    eventFunction: 3
+    delayTime: 0
+    targetTransform: {fileID: 3393183876261923403, guid: bdc4e1978ff20194a8edb16e1bac548f,
+      type: 3}
+    desc: "\uC0DD\uC131"
+  - eventId: 1
+    evectCondition: 6
+    eventFunction: 17
+    delayTime: 0
+    targetTransform: {fileID: 3117297441614970129, guid: bda7ade26e286434e88e9f09cf2aabce,
+      type: 3}
+    desc: "\uC22B\uC790\uACB9\uCCD0\uC11C 5\uBD80\uD130 \uC2DC\uC791"
+  - eventId: 2
+    evectCondition: 6
+    eventFunction: 17
     delayTime: 0
     targetTransform: {fileID: 0}
-    desc: 
+    desc: "\uC65C \uB354\uC774\uC0C1 \uCAD3\uC544\uC624\uC9C0 \uC54A\uC9C0?"
+  - eventId: 3
+    evectCondition: 6
+    eventFunction: 17
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uB4DC\uB514\uC5B4 \uB3C4\uB2EC\uD588\uB2E4"
+  - eventId: 4
+    evectCondition: 6
+    eventFunction: 17
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: 0
+  - eventId: 5
+    evectCondition: 6
+    eventFunction: 17
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: 0
+  - eventId: 6
+    evectCondition: 5
+    eventFunction: 2
+    delayTime: 4
+    targetTransform: {fileID: 0}
+    desc: "\uC65C \uB354\uC774\uC0C1 \uCAD3\uC544\uC624\uC9C0 \uC54A\uC9C0?"
+  - eventId: 7
+    evectCondition: 6
+    eventFunction: 2
+    delayTime: 4
+    targetTransform: {fileID: 0}
+    desc: "\uB4DC\uB514\uC5B4 \uB3C4\uB2EC\uD588\uB2E4"
+  - eventId: 8
+    evectCondition: 5
+    eventFunction: 2
+    delayTime: 4
+    targetTransform: {fileID: 0}
+    desc: "\uC800 \uBC18\uC9DD\uC774\uB294 \uAC74 \uBB58\uAE4C?"
+  - eventId: 9
+    evectCondition: 6
+    eventFunction: 2
+    delayTime: 4
+    targetTransform: {fileID: 0}
+    desc: "\uC800\uAC74 \uC5EC\uC6B0\uAD6C\uC2AC?"
