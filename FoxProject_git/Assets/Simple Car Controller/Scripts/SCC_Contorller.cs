@@ -47,7 +47,7 @@ public class SCC_Contorller : MonoBehaviour
     {
         GetComponent<PlayableDirector>().stopped += Managers.gameManager.OnGameOver;
     }
-    private void OnDestroy()
+    private void OnDisable()
     {
         InputManager.Instance.carInputActions.FindAction("Start").performed -= EngineStartInputaction;
         InputManager.Instance.switchPlayer -= SwitchPlayer;

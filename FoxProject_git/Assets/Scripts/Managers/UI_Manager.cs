@@ -60,7 +60,8 @@ public class UI_Manager : IListener
     public enum UI_hold_status { DEFAULT, RIDE, INTERACT, HOLD, HOLDING }
     public void UI_holdTextControl(bool activate, UI_hold_status status)
     {
-        
+
+        if (holdText == null) MakingUIObject();
         holdText.gameObject.SetActive(activate);
         switch (status)
         {
@@ -88,6 +89,9 @@ public class UI_Manager : IListener
 
     public void PrintStoryText(int eventID)
     {
+        if (storyText == null) MakingUIObject();
+
+
         storyText.gameObject.SetActive(true);
         storyText.texts.Clear();
         do
@@ -101,6 +105,8 @@ public class UI_Manager : IListener
 
     public void PrintGuideText(int eventID,  string text)
     {
+        if (guideText == null) MakingUIObject();
+
         guideText.gameObject.SetActive(true);
         guideText.texts.Clear();
         //do

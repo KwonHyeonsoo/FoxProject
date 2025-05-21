@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 6912846315459891520}
   content: {fileID: 8924059627894065324}
-  image: {fileID: 0}
+  image: {fileID: 5700970515911558905}
 --- !u!1 &2143214621050381956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,8 +1209,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6209358039105274997}
   m_HandleRect: {fileID: 5221672310928575616}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.2519547
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

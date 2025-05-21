@@ -107,10 +107,14 @@ public class ResourceManager
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("ResourceManager OnSceneLoaded");
-        //if(isLoaded == false)
+        if(isLoaded == false)
         {
             ReadResourceALL();
         }
+
+        currentStoryCount = 1;
+        currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + _currentStoryName + " " + currentStoryCount);
+
 
         Debug.Log("Reset cursor");
         story_cursor = 0;

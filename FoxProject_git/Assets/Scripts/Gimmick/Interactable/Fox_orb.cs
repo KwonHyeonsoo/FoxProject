@@ -12,5 +12,9 @@ public class Fox_orb : InteractableObject
         Instantiate(black_clyliner, transform);
         //시네머신, 여우 손 애니메이션, 엔딩크레딧
         GetComponent<PlayableDirector>().Play();
+
+        //하늘색도 바꾸고
+
+        //몇도뒤에 엔딩크레딧도 올리고
     }
 }

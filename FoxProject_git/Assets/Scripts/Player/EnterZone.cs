@@ -15,7 +15,7 @@ public class EnterZone : MonoBehaviour
         if (Physics.CheckBox(transform.position, transform.lossyScale / 2f * size, Quaternion.identity, mask))
         {
             Managers.storyManager.InvokeEvent(eventID, StoryEventCondition.EnterZone);  
-
+            this.gameObject.SetActive(false);
         }
 
     }

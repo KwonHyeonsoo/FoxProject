@@ -26,7 +26,7 @@ public class GameManager
     {
         get
         {
-            if (_carPlayer == null)
+            //if (_carPlayer == null)
                 _carPlayer = GameObject.FindGameObjectWithTag("Car");
             return _carPlayer;
         }

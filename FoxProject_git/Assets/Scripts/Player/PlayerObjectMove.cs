@@ -142,14 +142,17 @@ public class PlayerObjectMove : MonoBehaviour
         Ray ray = new Ray();
         RaycastHit hit;
 
-        ray.origin = transform.position;
+        ray.origin = Cam.transform.position;
         ray.direction = Cam.transform.forward;
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.red, 0.3f);
 
         Managers.UI_manager.UI_holdTextControl(false, UI_Manager.UI_hold_status.DEFAULT);
         isAbleHold = false;
         isInteractable = false;
 
-        if (Physics.Raycast(ray, out hit, 10f, mask) )
+
+        //if (Physics.Raycast(ray, out hit, 10f, mask) )
+        if (Physics.SphereCast(ray.origin,0.1f, ray.direction * 10, out hit, 10f, mask))
         {
             if (hit.collider.gameObject.GetComponent<LightController>() &&
                 hit.collider.gameObject.GetComponent<LightController>().getLightType() == light_type.reflector)
