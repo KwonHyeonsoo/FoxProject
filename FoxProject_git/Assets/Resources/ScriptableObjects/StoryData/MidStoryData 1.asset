@@ -44,3 +44,9 @@ MonoBehaviour:
     delayTime: 0
     targetTransform: {fileID: 0}
     desc: "\uC81C\uBAA9 \uD2B8\uB808\uC77C\uB7EC"
+  - eventId: 4
+    evectCondition: 5
+    eventFunction: 17
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: "\uB3C4\uCC29"

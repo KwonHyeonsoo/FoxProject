@@ -41,7 +41,22 @@ public class SCC_Contorller : MonoBehaviour
         //사운드 매니저에게 본인 자동차 소리를 맡긴다
 
         //SwitchPlayer();
-        if(!isStartWithCar) EngineStart();
+
+        Vector3[] t = Managers.resourceManager.getInitalTransform();
+
+        if (transform.position.x < -1000)
+        {
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.MovePosition(t[0] + Vector3.right * 5f);
+            if (t[1].x == 1)
+            {
+                rb.MovePosition(new Vector3(-1459f, 37.6f, -48.39999f));
+
+            }
+            rb.MoveRotation(Quaternion.Euler(t[1]));
+
+        }
+        if (!isStartWithCar) EngineStart();
     }
     private void OnEnable()
     {

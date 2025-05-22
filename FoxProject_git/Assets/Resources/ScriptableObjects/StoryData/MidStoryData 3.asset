@@ -76,3 +76,9 @@ MonoBehaviour:
     delayTime: 0
     targetTransform: {fileID: 0}
     desc: 
+  - eventId: 5
+    evectCondition: 5
+    eventFunction: 17
+    delayTime: 0
+    targetTransform: {fileID: 0}
+    desc: 

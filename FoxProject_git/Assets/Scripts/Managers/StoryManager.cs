@@ -21,7 +21,10 @@ public class StoryManager
     {
         //리소스 매니저에서 _prefabs 받고 id까지 저장
 
-        InitResourceLoad(Managers.resourceManager.GetNewStory());
+        //>>>>>>
+        //InitResourceLoad(Managers.resourceManager.GetNewStory());
+        //>>>>>>>>
+
         //storyObjectController 받아오기
         Debug.Log("story1.events[0].eventId;"+story1.events[0].eventId);
 
@@ -58,9 +61,10 @@ public class StoryManager
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("StoryManager OnSceneLoaded");
-        if (Managers.resourceManager.isLoaded)
+        //if (Managers.resourceManager.isLoaded)
         {
-            InitResourceLoad(Managers.resourceManager.currentStory);
+            InitResourceLoad(Managers.resourceManager.GetNewStory());
+
         }
 
     }
