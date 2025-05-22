@@ -20,6 +20,7 @@ public class DeathTimer : MonoBehaviour
     {
         yield return new WaitForSeconds(timer);
 
+        Managers.gameManager.GameOver();
         //게임 오버 호출
         //Managers.gameManager.CarPlayer.GetComponent<PlayableDirector>().Play();
         Destroy(this);

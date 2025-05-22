@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 enum ResourceType
@@ -30,7 +31,7 @@ public class ResourceManager
     public StoryData currentStory;
     private string _currentStoryName;
     private int maxStoryCount = 5;
-    private int currentStoryCount = 1;
+    private int currentStoryCount = -1;
     private int story_cursor = 0;
     private int guide_cursor = 0;
     private int immediate_cursor = 0;   // 실시간으로 불러올 리소스 가리키는 커서
@@ -83,7 +84,7 @@ public class ResourceManager
             }
 
         }
-        Debug.Log(_UI.Count);
+        //Debug.Log(_UI.Count);
         _immediates.Add("test", Resources.Load<GameObject>("Prefabs/test"));
 
         //ScriptableObject
@@ -95,8 +96,28 @@ public class ResourceManager
     }
     public StoryData GetNewStory()
     {
-        if (currentStoryCount > 5) return null;
+        if (currentStoryCount >= 5) {
+            currentStoryCount = 1;
+        }
+        if (currentStoryCount == -1)
+        {
+            if (PlayerPrefs.HasKey("Save"))
+            {
+                currentStoryCount = PlayerPrefs.GetInt("Save");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Save", 1);
+                currentStoryCount = 1;
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Save", currentStoryCount);
+
+        }
         Debug.Log(currentStoryCount + " is Loaded");
+
         data_immediate_paths = CSVReader.Read("Lists/Immediate_Resource " + currentStoryCount);
         immediate_cursor = 0;
         currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + _currentStoryName + " "+(currentStoryCount++));
@@ -107,20 +128,68 @@ public class ResourceManager
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("ResourceManager OnSceneLoaded");
-        if(isLoaded == false)
+        if (isLoaded == false)
         {
             ReadResourceALL();
         }
+        else
+        {
+            currentStoryCount = 1;
+            if (PlayerPrefs.HasKey("Save"))
+            {
+                currentStoryCount = PlayerPrefs.GetInt("Save");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Save", 1);
+                currentStoryCount = 1;
+            }
+            currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + _currentStoryName + " " + currentStoryCount);
+            //Debug.Log("CurrentStory: " + currentStoryCount + "PlayerPrefs" + PlayerPrefs.GetInt("Save"));
 
-        currentStoryCount = 1;
-        currentStory = Resources.Load<StoryData>("ScriptableObjects/StoryData/" + _currentStoryName + " " + currentStoryCount);
-
-
+        }
         Debug.Log("Reset cursor");
         story_cursor = 0;
         guide_cursor = 0;
         immediate_cursor = 0;   // 실시간으로 불러올 리소스 가리키는 커서
 
+    }
+
+    public Vector3[] getInitalTransform()
+    {
+        Vector3[] tranforms = new Vector3[2];
+
+        switch (currentStoryCount)
+        {
+            case 1:
+                tranforms[0] = new Vector3(-1498.2f, 36.3f, -43.7f);
+                tranforms[1] = new Vector3(-0f, -90f, -0);
+
+                break;
+            case 2://시작
+                tranforms[0] = new Vector3(-1498.2f, 36.3f, -43.7f);
+                tranforms[1] = new Vector3(1f, 90f, -0);
+
+                break;
+            case 3://첫번째 등대에서 시작
+                tranforms[0] = new Vector3(-138.7f, -43.2f, -130.1f);
+                tranforms[1] = new Vector3(-0f, 90f, -0);
+
+
+                break;
+            case 4://두번째 등대
+                tranforms[0] = new Vector3(-154.9f, -52.7f, -3507.4f);
+                tranforms[1] = new Vector3(-0f, 90f, -0);
+
+                break;
+            case 5://여우 앞에서 시작
+                tranforms[0] = new Vector3(-1343.14f, -61.996f, -3636.27f);
+                tranforms[1] = new Vector3(-0f, -87.911f, -0);
+
+                break;
+        }
+        //Debug.Log(tranforms[0]);
+        return tranforms;
     }
 public int CheckCurrentStoryID()
     {

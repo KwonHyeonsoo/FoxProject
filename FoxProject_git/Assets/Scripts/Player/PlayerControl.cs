@@ -70,7 +70,6 @@ public class PlayerControl : MonoBehaviour
     {
         #region GetComponents
         characterCtrl = GetComponent<CharacterController>();
-        Rigidbody rb;
         //È¸Àü
         i_width = Screen.width;
         i_height = Screen.height;
@@ -81,6 +80,14 @@ public class PlayerControl : MonoBehaviour
         isStealth = false;
         camNormalHeigjt = cam.transform.localPosition ;
         camStealthHeigjt = cam.transform.localPosition + new Vector3(0f,-0.5f, 0f);
+
+        Vector3[] t = Managers.resourceManager.getInitalTransform();
+        //Debug.Log("t" + t[0]);
+
+        characterCtrl.enabled = false;
+        transform.position = t[0];
+        transform.rotation = Quaternion.Euler(Vector3.zero);
+        characterCtrl.enabled = true;
     }
 
     // Update is called once per frame

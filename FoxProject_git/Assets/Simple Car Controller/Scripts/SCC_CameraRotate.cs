@@ -61,7 +61,7 @@ public class SCC_CameraRotate : MonoBehaviour
         if (!rotateLock)
         {
             float mouseX = value.x;// - i_width / 2;
-            float mouseY = value.y;// - i_height / 2;
+            float mouseY = 0;// - i_height / 2;
 
             eulerAngleY = mouseX * rotCamXAxisSpeed * Time.deltaTime;
             eulerAngleX = mouseY * rotCamXAxisSpeed * Time.deltaTime * ((float)i_height / i_width);
